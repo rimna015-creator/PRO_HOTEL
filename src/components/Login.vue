@@ -1,0 +1,84 @@
+<template>
+<!-- Form Area -->
+<div class="space-y-8 p-8 sm:p-12">
+  <!-- Email Field -->
+  <div>
+    <label for="email" class="block text-base font-semibold text-zinc-900">
+      Email Address
+    </label>
+    <div class="relative mt-2.5">
+      <input
+        id="email"
+        v-model="email"
+        type="email"
+        placeholder="you@email.com"
+        class="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-5 py-4 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100 sm:text-lg"
+      />
+    </div>
+  </div>
+
+  <!-- Password Field -->
+  <div>
+    <div class="flex items-center justify-between">
+      <label for="password" class="block text-base font-semibold text-zinc-900">
+        Password
+      </label>
+      <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-700">
+        Forgot password?
+      </a>
+    </div>
+    <div class="relative mt-2.5">
+      <input
+        id="password"
+        v-model="password"
+        type="password"
+        placeholder="••••••••••••"
+        class="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-5 py-4 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100 sm:text-lg"
+      />
+    </div>
+  </div>
+
+  <!-- Actions & Sign In Button -->
+  <div class="pt-2">
+    <button
+      @click="login"
+      class="flex w-full items-center justify-center rounded-2xl bg-blue-600 px-8 py-4 text-lg font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-blue-500/30 focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.98]"
+    >
+      Sign In to Your Account
+    </button>
+  </div>
+
+  <!-- Footer/Sign Up Link -->
+  <div class="pt-4 text-center">
+    <p class="text-zinc-600">
+      Don't have an account yet? 
+      <a href="#" class="font-semibold text-blue-600 hover:text-blue-700">
+        Create one for free
+      </a>
+    </p>
+  </div>
+</div>
+</template>
+
+
+<script setup lang="ts">
+
+import { ref } from 'vue'
+
+const email = ref('')
+const password = ref('')
+
+const login = () => {
+
+  if (!email.value || !password.value) {
+    alert('Please enter your email and password')
+    return
+  }
+
+  // Tell App.vue that login was successful
+  emit('login-success')
+}
+
+const emit = defineEmits(['login-success'])
+
+</script>

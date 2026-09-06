@@ -1,7 +1,18 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue';
+import Login from './components/Login.vue';
+
+
+
+const showLogin=ref(true)
+const loginSuccess=()=>{
+  showLogin.value=false
+}
 </script>
 
 <template>
-  <HelloWorld />
+  <!-- Login Popup-->
+ <Login v-if="showLogin"
+    @login-success="loginSuccess"/>
+ 
 </template>
