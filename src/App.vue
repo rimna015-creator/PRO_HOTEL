@@ -6,21 +6,27 @@ import CreateAccount from './components/CreateAccount.vue';
 
 
 const showLogin=ref(true)
-const loginSuccess=()=>{
-  showLogin.value=false
-}
 const showCreateAccount=ref(false)
 const gotocreateAccount=()=>{
   showLogin.value=false
   showCreateAccount.value=true
 }
+const goToLogin=()=>{
+  showCreateAccount.value=false
+  showLogin.value=true
+}
+const loginSuccess = () => {
+  showLogin.value = false
+}
 </script>
 
 <template>
   <!-- Login Popup-->
- <Login v-if="showLogin"
+ <Login 
+    v-if="showLogin"
     @login-success="loginSuccess"
-    @create-account="showCreateAccount=true"/>
- <CreateAccount v-if="showCreateAccount"
-  @back-to-login="showCreateAccount=false"/>
+    @create-account="gotocreateAccount"/>
+ <CreateAccount 
+    v-if="showCreateAccount"
+    @go-to-login="goToLogin"/>
 </template>

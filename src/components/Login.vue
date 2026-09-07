@@ -30,14 +30,26 @@
       </a>
     </div>
     <div class="relative mt-2.5">
-      <input
-        id="password"
-        v-model="password"
-        type="password"
-        placeholder="••••••••••••"
-        class="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100 "
-      />
-    </div>
+
+  <input
+    id="password"
+    v-model="password"
+    :type="showPassword ? 'text' : 'password'"
+    placeholder="••••••••••••"
+    class="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 pr-12 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+  />
+
+  <button
+    type="button"
+    @click="showPassword = !showPassword"
+    class="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-blue-600"
+  >
+   <i
+    :class="showPassword ? 'bi bi-eye-slash' : 'bi bi-eye'"
+  ></i> 
+  </button>
+
+</div>
   </div>
 
   <!-- Actions & Sign In Button -->
@@ -57,7 +69,8 @@
       <button
       @click="gotocreateAccount"
       class="font-semibold text-blue-600 hover:text-blue-700"
-      >Create one for free</button>
+      >Create one for free
+      </button>
     </p>
   </div>
 </div>
@@ -69,7 +82,7 @@ import { ref } from 'vue'
 
 const email = ref('')
 const password = ref('')
-
+const showPassword=ref(false)
 const login = () => {
 
   if (!email.value || !password.value) {
