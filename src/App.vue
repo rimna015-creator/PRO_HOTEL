@@ -18,6 +18,10 @@ const goToLogin=()=>{
 const loginSuccess = () => {
   showLogin.value = false
 }
+const createSuccess = () => {
+  showCreateAccount.value = false
+  showLogin.value = true
+}
 </script>
 
 <template>
@@ -28,5 +32,6 @@ const loginSuccess = () => {
     @create-account="gotocreateAccount"/>
  <CreateAccount 
     v-if="showCreateAccount"
-    @go-to-login="goToLogin"/>
+    @go-to-login="goToLogin"
+    @create-success="createSuccess"/>
 </template>

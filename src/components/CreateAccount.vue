@@ -1,7 +1,7 @@
 <template>
   <!-- Create Account Form -->
 
-  <div class="space-y-5 p-6 sm:p-8">
+  <div v-if="!accountCreated" class="space-y-5 p-6 sm:p-8">
 
     <!-- Full Name -->
 
@@ -147,6 +147,37 @@
     </div>
 
   </div>
+    <div
+    v-else
+    class="p-8 text-center sm:p-10"
+  >
+
+    <div
+      class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-green-100"
+    >
+      <i class="bi bi-check-lg text-3xl text-green-600"></i>
+    </div>
+
+    <h2 class="text-2xl font-bold text-zinc-900">
+      Account Created Successfully!
+    </h2>
+
+    <p class="mt-3 text-zinc-600">
+      Your AngkorBooking account has been created.
+    </p>
+
+    <p class="text-zinc-600">
+      Please sign in to continue.
+    </p>
+
+    <button
+      @click="goToLogin"
+      class="mt-6 w-full rounded-2xl bg-blue-600 px-6 py-3 text-lg font-bold text-white hover:bg-blue-700"
+    >
+      Sign In
+    </button>
+
+  </div>
 </template>
 
 
@@ -160,7 +191,7 @@ const confirmPassword = ref('')
 
 const showPassword = ref(false)
 const showConfirmPassword = ref(false)
-
+const accountCreated=ref(false)
 const emit = defineEmits([
   'create-success',
   'go-to-login'
@@ -168,7 +199,6 @@ const emit = defineEmits([
 
 
 const createAccount = () => {
-
   if (
     !name.value ||
     !email.value ||
@@ -183,13 +213,8 @@ const createAccount = () => {
     alert('Passwords do not match')
     return
   }
-
-  alert('Account created successfully!')
-
-  emit('create-success')
+  accountCreated.value=true
 }
-
-
 const goToLogin = () => {
   emit('go-to-login')
 }
