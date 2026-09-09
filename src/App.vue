@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import Login from './components/Login.vue';
 import CreateAccount from './components/CreateAccount.vue';
-
+import Navbar from './components/Navbar.vue';
 
 
 const showLogin=ref(true)
@@ -25,13 +25,32 @@ const createSuccess = () => {
 </script>
 
 <template>
+  <nav>  
+  <Navbar/>
+  </nav>
+  <router-view></router-view>
   <!-- Login Popup-->
- <Login 
+  <div
     v-if="showLogin"
-    @login-success="loginSuccess"
-    @create-account="gotocreateAccount"/>
- <CreateAccount 
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
+  >
+    <div class="w-full max-w-md">
+      <Login
+        @login-success="loginSuccess"
+        @create-account="gotocreateAccount"
+      />
+    </div>
+  </div>
+<!-- Create Account -->
+  <div
     v-if="showCreateAccount"
-    @go-to-login="goToLogin"
-    @create-success="createSuccess"/>
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
+  >
+    <div class="w-full max-w-md">
+      <CreateAccount
+        @go-to-login="goToLogin"
+        @create-success="createSuccess"
+      />
+    </div>
+  </div>
 </template>

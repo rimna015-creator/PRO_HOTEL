@@ -1,6 +1,6 @@
 <template>
 <!-- Form Area -->
-<div class="space-y-5 p-6 sm:p-8">
+<div class="space-y-5 p-6 sm:p-8 bg-white rounded-2xl">
   <div class="text-2xl text-center font-bold mb-1">Welcome back</div>
   <div class="text-2xl text-center font-bold">Sign In</div>
   <!-- Email Field -->

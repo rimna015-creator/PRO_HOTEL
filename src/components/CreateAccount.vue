@@ -1,6 +1,6 @@
 <template>
   <!-- Create Account Form -->
-
+  <div class="text-center font-bold text-2xl p-3">Create An Account</div>
   <div v-if="!accountCreated" class="space-y-5 p-6 sm:p-8">
 
     <!-- Full Name -->
