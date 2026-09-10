@@ -1,7 +1,7 @@
 <template>
   <div class="px-6 pb-10 pt-24">
 
-    <h1 class="mb-6 text-3xl font-bold text-gray-800">
+    <h1 class="mb-6 text-3xl font-bold text-gray-800 text-center">
       Hotels in Siem Reap
     </h1>
 

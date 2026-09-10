@@ -5,6 +5,7 @@ export interface Hotel {
   stars: number
   location: string
   price: number
+  reviewer:number
   rating: number
   image: string
   facilities: string[]
@@ -19,6 +20,7 @@ export const hotels: Hotel[] = [
     stars: 5,
     location: "Siem Reap",
     price: 80,
+    reviewer:19,
     rating: 4.8,
     image: "/images/hotel1.jpg",
     facilities: [
@@ -42,6 +44,7 @@ export const hotels: Hotel[] = [
     location: "Siem Reap",
     price: 45,
     rating: 4.6,
+    reviewer:25,
     image: "/images/hotel2.jpg",
     facilities: [
       "Swimming Pool",
@@ -59,6 +62,7 @@ export const hotels: Hotel[] = [
     location: "Siem Reap",
     price: 25,
     rating: 4.5,
+    reviewer:54,
     image: "/images/hotel3.jpg",
     facilities: [
       "Free Wi-Fi",
@@ -76,6 +80,7 @@ export const hotels: Hotel[] = [
     location: "Siem Reap",
     price: 25,
     rating: 4.5,
+    reviewer:58,
     image: "/images/hotel3.jpg",
     facilities: [
       "Free Wi-Fi",

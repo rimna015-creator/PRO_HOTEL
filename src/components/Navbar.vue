@@ -6,9 +6,9 @@
       <!-- Website Name -->
       <RouterLink
         to="/"
-        class="text-2xl font-bold text-white"
       >
-        AngkorBooking
+      <span class="text-2xl font-bold text-yellow-400 font-sans">Angkor</span>
+      <span class="text-sm text-white font-serif">Booking.</span>
       </RouterLink>
 
 

@@ -1,7 +1,8 @@
 <template>
   <!-- Create Account Form -->
-  <div class="text-center font-bold text-2xl p-3">Create An Account</div>
-  <div v-if="!accountCreated" class="space-y-5 p-6 sm:p-8">
+<div class="space-y-5 sm:p-2 bg-white rounded-2xl">
+  <div class="text-center font-bold text-2xl p-0">Create An Account</div>
+  <div v-if="!accountCreated" class="space-y-5 sm:p-3">
 
     <!-- Full Name -->
 
@@ -178,6 +179,7 @@
     </button>
 
   </div>
+</div>
 </template>
 
 
