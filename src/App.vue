@@ -2,6 +2,7 @@
 import Login from './components/Login.vue';
 import CreateAccount from './components/CreateAccount.vue';
 import Navbar from './components/Navbar.vue';
+import Footer from './components/Footer.vue';
 import { saveUser, type UserAccount } from './store/user';
 import {
   showLoginModal,
@@ -64,4 +65,6 @@ const createSuccess = (data: { name: string; email: string }) => {
       />
     </div>
   </div>
+
+  <Footer />
 </template>

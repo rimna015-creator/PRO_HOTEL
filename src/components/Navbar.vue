@@ -1,7 +1,7 @@
 <template>
   <nav class="fixed top-0 left-0 z-40 w-full bg-blue-800 shadow-md">
     
-    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-4 lg:px-2">
 
       <!-- Website Name -->
       <RouterLink
@@ -17,6 +17,7 @@
 
         <RouterLink
           to="/"
+          exact-active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
           Home
@@ -24,6 +25,7 @@
 
         <RouterLink
           to="/hotel"
+          active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
           Hotel
@@ -31,26 +33,40 @@
 
         <RouterLink
           to="/explore"
+          active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
           Explore
         </RouterLink>
 
         <RouterLink
+          to="/promotion"
+          active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
+          class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
+        >
+          Promotion
+        </RouterLink>
+
+        <RouterLink
           to="/my-booking"
+          active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
           My Booking
         </RouterLink>
 
+      </div>
+
+      <!-- My Account (right edge, near border) -->
+      <div class="flex items-center gap-3">
+
         <RouterLink
           to="/my-account"
-          class="rounded-lg bg-white px-4 py-2 font-medium text-blue-600 transition hover:bg-blue-50"
+          active-class="bg-blue-50 ring-2 ring-blue-300"
+          class="hidden items-center rounded-full bg-white px-4 py-2 font-medium text-blue-700 shadow-sm transition hover:scale-105 md:flex"
         >
           {{ displayName }}
         </RouterLink>
-
-      </div>
 
 
       <!-- Mobile Menu Button -->
@@ -93,6 +109,7 @@
       </button>
 
     </div>
+    </div>
 
 
     <!-- Mobile Menu -->
@@ -105,6 +122,7 @@
         <RouterLink
           to="/"
           @click="isMenuOpen = false"
+          exact-active-class="bg-blue-500 text-white"
           class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105 "
         >
           Home
@@ -113,6 +131,7 @@
         <RouterLink
           to="/hotel"
           @click="isMenuOpen = false"
+          active-class="bg-blue-500 text-white"
           class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
         >
           Hotel
@@ -121,14 +140,25 @@
         <RouterLink
           to="/explore"
           @click="isMenuOpen = false"
+          active-class="bg-blue-500 text-white"
           class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
         >
           Explore
         </RouterLink>
 
         <RouterLink
+          to="/promotion"
+          @click="isMenuOpen = false"
+          active-class="bg-blue-500 text-white"
+          class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
+        >
+          Promotion
+        </RouterLink>
+
+        <RouterLink
           to="/my-booking"
           @click="isMenuOpen = false"
+          active-class="bg-blue-500 text-white"
           class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
         >
           My Booking
@@ -137,7 +167,8 @@
         <RouterLink
           to="/my-account"
           @click="isMenuOpen = false"
-          class="px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105 "
+          active-class="bg-blue-500 text-white"
+          class="px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
         >
           {{ displayName }}
         </RouterLink>

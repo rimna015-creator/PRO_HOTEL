@@ -15,6 +15,19 @@ export interface BookingRecord {
   price: number
   status: "Confirmed" | "Cancelled"
   bookedAt: string
+  paymentMethod?: string
+  paymentPlan?: string
+  amountPaid?: number
+  balanceDue?: number
+  cardLast4?: string
+}
+
+export interface PaymentInfo {
+  method: string
+  plan: "full" | "deposit" | "hotel"
+  amountPaid: number
+  balanceDue: number
+  cardLast4?: string
 }
 
 const STORAGE_KEY = "angkorbc_bookings"
@@ -46,4 +59,15 @@ export const cancelBooking = (id: string) => {
     booking.status = "Cancelled"
     persist()
   }
+}
+
+export const updateBookingEmail = (oldEmail: string, newEmail: string) => {
+  let changed = false
+  bookings.value.forEach((b) => {
+    if (b.email === oldEmail) {
+      b.email = newEmail
+      changed = true
+    }
+  })
+  if (changed) persist()
 }

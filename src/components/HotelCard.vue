@@ -1,19 +1,31 @@
 <template>
   <div
-    class="w-[300px] overflow-hidden rounded-xl bg-blue-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+    class="w-[340px] overflow-hidden rounded-xl bg-blue-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
   >
 
     <!-- Hotel Image -->
-    <img
-      :src="hotel.image"
-      :alt="hotel.name"
-      class="h-[200px] w-full object-cover"
-    />
+    <div class="relative">
+      <img
+        :src="hotel.image"
+        :alt="hotel.name"
+        class="h-[200px] w-full object-cover"
+      />
+      <button
+        @click="handleFavorite"
+        class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow transition duration-200 hover:scale-110"
+        :aria-label="isFav ? 'Remove from favorites' : 'Add to favorites'"
+      >
+        <i
+          class="text-lg"
+          :class="isFav ? 'bi bi-heart-fill text-red-500' : 'bi bi-heart text-gray-600'"
+        ></i>
+      </button>
+    </div>
 
     <div class="p-[18px]">
 
       <!-- Hotel Name -->
-      <h2 class="mb-2 text-xl font-semibold text-gray-800">
+      <h2 class="mb-2 text-lg font-semibold text-gray-800">
         {{ hotel.name }}
       </h2>
       
@@ -85,11 +97,25 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue"
 import type { Hotel } from "../Data/Hotel"
+import { isFavorite, toggleFavorite } from "../store/favorite"
+import { isLoggedIn } from "../store/user"
+import { openLogin } from "../store/ui"
 
 const props = defineProps<{
   hotel: Hotel
 }>()
+
+const isFav = computed(() => isFavorite(props.hotel.id))
+
+const handleFavorite = () => {
+  if (!isLoggedIn.value) {
+    openLogin()
+    return
+  }
+  toggleFavorite(props.hotel.id)
+}
 
 const openGoogleMaps = () => {
   const query = encodeURIComponent(`${props.hotel.name} ${props.hotel.location}`)

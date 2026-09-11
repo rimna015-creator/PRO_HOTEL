@@ -45,6 +45,18 @@
             <span class="text-sm text-gray-500">Total</span>
             <span class="text-lg font-bold text-gray-900">${{ lastBooking.price }}</span>
           </div>
+          <div class="mt-2 flex items-center justify-between rounded-lg bg-emerald-50 px-3 py-2">
+            <span class="text-sm font-medium text-emerald-700">Paid Now</span>
+            <span class="font-bold text-emerald-700">${{ lastBooking.amountPaid ?? lastBooking.price }}</span>
+          </div>
+          <div class="mt-2 flex items-center justify-between">
+            <span class="text-sm text-gray-500">Payment Method</span>
+            <span class="text-sm font-semibold text-gray-800">{{ lastBooking.paymentMethod }}</span>
+          </div>
+          <div v-if="(lastBooking.balanceDue ?? 0) > 0" class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">Balance at Check-in</span>
+            <span class="text-sm font-semibold text-amber-600">${{ lastBooking.balanceDue }}</span>
+          </div>
         </div>
 
         <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
@@ -220,15 +232,14 @@
           </div>
         </div>
 
-        <!-- Submit -->
-        <button
-          @click="submitBooking"
-          class="mt-6 w-full rounded-2xl bg-blue-600 px-6 py-3 text-lg font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.98]"
-        >
-          <i class="bi bi-check-circle mr-1"></i>
-          Confirm Booking
-        </button>
-      </div>
+        </div>
+
+      <!-- Payment Section -->
+      <PaymentSection
+        :amount="totalPrice"
+        :before-pay="validateGuestInfo"
+        @payment-success="onPaymentSuccess"
+      />
     </div>
 
   </div>
@@ -238,8 +249,9 @@
 import { ref, computed } from "vue"
 import { useRoute } from "vue-router"
 import { hotelDetails } from "../Data/hotelDetail"
-import { addBooking, type BookingRecord } from "../store/booking"
+import { addBooking, type BookingRecord, type PaymentInfo } from "../store/booking"
 import { currentUser } from "../store/user"
+import PaymentSection from "../components/PaymentSection.vue"
 
 const route = useRoute()
 
@@ -291,24 +303,27 @@ const formatDate = (date: string) => {
   })
 }
 
-const submitBooking = () => {
+const validateGuestInfo = (): boolean => {
   if (!fullName.value || !email.value || !phone.value) {
     alert("Please fill in your name, email and phone number")
-    return
+    return false
   }
   if (!checkIn.value || !checkOut.value) {
     alert("Please select check-in and check-out dates")
-    return
+    return false
   }
   if (nights.value <= 0) {
     alert("Check-out date must be after the check-in date")
-    return
+    return false
   }
   if (!selectedRoom.value || totalPrice.value <= 0) {
     alert("Please select a valid room type")
-    return
+    return false
   }
+  return true
+}
 
+const onPaymentSuccess = (payment: PaymentInfo) => {
   const booking: BookingRecord = {
     id: "BK-" + Date.now().toString(36).toUpperCase(),
     hotelId: hotelDetail.value!.id,
@@ -323,7 +338,12 @@ const submitBooking = () => {
     guests: guests.value,
     price: totalPrice.value,
     status: "Confirmed",
-    bookedAt: new Date().toISOString()
+    bookedAt: new Date().toISOString(),
+    paymentMethod: payment.method,
+    paymentPlan: payment.plan,
+    amountPaid: payment.amountPaid,
+    balanceDue: payment.balanceDue,
+    cardLast4: payment.cardLast4
   }
 
   addBooking(booking)

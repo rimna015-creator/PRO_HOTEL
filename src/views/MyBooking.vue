@@ -83,6 +83,29 @@
             </p>
           </div>
 
+          <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
+            <span class="flex items-center gap-2">
+              <i
+                :class="booking.amountPaid && booking.amountPaid > 0
+                  ? 'bi bi-check-circle-fill text-emerald-600'
+                  : 'bi bi-circle text-gray-400'"
+              ></i>
+              <span>
+                <strong class="text-emerald-700">${{ booking.amountPaid ?? booking.price }}</strong>
+                paid via {{ booking.paymentMethod || "Not specified" }}
+              </span>
+            </span>
+            <span v-if="(booking.balanceDue ?? 0) > 0" class="flex items-center gap-2">
+              <i class="bi bi-hotel-fill text-amber-500"></i>
+              <strong class="text-amber-600">${{ booking.balanceDue }}</strong>
+              at check-in
+            </span>
+            <span v-if="booking.cardLast4" class="flex items-center gap-2">
+              <i class="bi bi-credit-card-2-front text-blue-500"></i>
+              Card •••• {{ booking.cardLast4 }}
+            </span>
+          </div>
+
           <div class="mt-4 flex items-center justify-between border-t border-gray-100 pt-4">
             <strong class="text-xl font-bold text-gray-900">
               ${{ booking.price }}

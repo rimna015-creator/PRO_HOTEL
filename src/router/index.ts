@@ -6,6 +6,7 @@ import Explore from "../views/Explore.vue";
 import BookNow from "../views/BookNow.vue";
 import MyBooking from "../views/MyBooking.vue";
 import MyAccount from "../views/MyAccount.vue";
+import Promotion from "../views/Promotion.vue";
 
 
 
@@ -17,6 +18,7 @@ const router=createRouter({
         {path:"/hotel/:id",component:HotelDetail},
         {path:"/hotel/:id/book",component:BookNow},
         {path:"/explore",component:Explore},
+        {path:"/promotion",component:Promotion},
         {path:"/my-booking",component:MyBooking},
         {path:"/my-account",component:MyAccount}
     ]

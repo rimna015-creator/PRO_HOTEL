@@ -143,50 +143,50 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section class="bg-slate-900 py-20 text-white">
+    <section class="py-20 text-white">
       <div class="mx-auto max-w-7xl px-6">
         <div class="mb-12 text-center">
-          <h2 class="text-3xl font-bold tracking-tight">Why Book With Us?</h2>
-          <p class="mt-2 text-slate-400">Everything you need for a seamless trip to Siem Reap</p>
+          <h2 class="text-3xl font-bold tracking-tight text-black">Why Book With Us?</h2>
+          <p class="mt-2 text-gray-600">Everything you need for a seamless trip to Siem Reap</p>
         </div>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-xl bg-slate-800/50 p-6 text-center ring-1 ring-white/10">
+          <div class="rounded-xl bg-gray-700 p-6 text-center ring-1 ">
             <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/10 text-amber-400">
               <i class="bi bi-geo-alt-fill text-2xl"></i>
             </div>
             <h3 class="mt-4 text-lg font-semibold text-white">Best Locations</h3>
-            <p class="mt-2 text-sm text-slate-400">
+            <p class="mt-2 text-sm text-gray-300">
               Close to Angkor Wat and popular downtown attractions.
             </p>
           </div>
 
-          <div class="rounded-xl bg-slate-800/50 p-6 text-center ring-1 ring-white/10">
+          <div class="rounded-xl bg-gray-700 p-6 text-center ring-1 ">
             <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/10 text-amber-400">
               <i class="bi bi-tags-fill text-2xl"></i>
             </div>
             <h3 class="mt-4 text-lg font-semibold text-white">Best Prices</h3>
-            <p class="mt-2 text-sm text-slate-400">
+            <p class="mt-2 text-sm text-gray-300">
               Competitive rates direct from local properties with no hidden fees.
             </p>
           </div>
 
-          <div class="rounded-xl bg-slate-800/50 p-6 text-center ring-1 ring-white/10">
+          <div class="rounded-xl bg-gray-700 p-6 text-center ring-1 ">
             <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/10 text-amber-400">
-              <i class="bi bi-shield-check-fill text-2xl"></i>
+              <i class="bi bi-shield-check text-2xl"></i>
             </div>
             <h3 class="mt-4 text-lg font-semibold text-white">Secure Booking</h3>
-            <p class="mt-2 text-sm text-slate-400">
+            <p class="mt-2 text-sm text-gray-300">
               Encrypted transaction processing and guaranteed reservations.
             </p>
           </div>
 
-          <div class="rounded-xl bg-slate-800/50 p-6 text-center ring-1 ring-white/10">
+          <div class="rounded-xl bg-gray-700 p-6 text-center ring-1 ">
             <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/10 text-amber-400">
-              <i class="bi bi-headset-fill text-2xl"></i>
+              <i class="bi bi-headset text-2xl"></i>
             </div>
             <h3 class="mt-4 text-lg font-semibold text-white">24/7 Support</h3>
-            <p class="mt-2 text-sm text-slate-400">
+            <p class="mt-2 text-sm text-gray-300">
               Our support team is always available to assist your journey.
             </p>
           </div>
