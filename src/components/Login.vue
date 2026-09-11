@@ -90,8 +90,15 @@ const login = () => {
     return
   }
 
+  // Derive a display name from the email
+  const rawName = email.value.split('@')[0].replace(/[._-]+/g, ' ')
+  const name = rawName.charAt(0).toUpperCase() + rawName.slice(1)
+
   // Tell App.vue that login was successful
-  emit('login-success')
+  emit('login-success', {
+    name,
+    email: email.value
+  })
 }
 
 const emit = defineEmits(['login-success','create-account'])

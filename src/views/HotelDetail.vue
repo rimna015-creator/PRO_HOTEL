@@ -6,7 +6,7 @@
       <!-- Back Button -->
       <button
         @click="$router.back()"
-        class="fixed left-6 top-20 z-50 flex items-center gap-2 rounded-lg bg-blue-300 px-4 py-1 -mt-3 -ms-6 shadow-md transition hover:shadow-lg"
+        class="fixed left-4 top-24 z-30 flex items-center gap-2 rounded-lg bg-blue-300 px-4 py-1.5 shadow-md transition hover:shadow-lg"
       >
         <i class="bi bi-arrow-left text-lg"></i>
         <span class="font-medium">Back to Hotels</span>
@@ -172,9 +172,12 @@
                     ${{ room.price }}
                   </strong>
                   <p class="text-xs text-black">/ night</p>
-                  <button class="mt-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700">
+                  <router-link
+                    :to="{ path: '/hotel/' + hotel.id + '/book', query: { room: room.name } }"
+                    class="mt-2 inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
+                  >
                     Book Now
-                  </button>
+                  </router-link>
                 </div>
               </div>
             </div>

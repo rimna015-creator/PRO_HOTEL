@@ -168,14 +168,14 @@
     </p>
 
     <p class="text-zinc-600">
-      Please sign in to continue.
+      You are now signed in.
     </p>
 
     <button
-      @click="goToLogin"
+      @click="finishSignUp"
       class="mt-6 w-full rounded-2xl bg-blue-600 px-6 py-3 text-lg font-bold text-white hover:bg-blue-700"
     >
-      Sign In
+      Continue to My Account
     </button>
 
   </div>
@@ -216,6 +216,12 @@ const createAccount = () => {
     return
   }
   accountCreated.value=true
+}
+const finishSignUp = () => {
+  emit('create-success', {
+    name: name.value,
+    email: email.value
+  })
 }
 const goToLogin = () => {
   emit('go-to-login')

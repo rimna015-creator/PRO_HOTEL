@@ -64,7 +64,7 @@
 
         <!-- Google Maps Button -->
         <button
-          class="flex items-center gap-1 rounded-lg bg-blue-400 px-3 py-1.5 text-xs font-medium text-white transition duration-300 hover:bg-green-700"
+          class="flex items-center gap-1 rounded-lg bg-blue-400 px-3 py-1.5 text-xs font-medium text-white transition duration-300 hover:scale-105"
           @click="openGoogleMaps"
         >
           <i class="bi bi-map"></i>

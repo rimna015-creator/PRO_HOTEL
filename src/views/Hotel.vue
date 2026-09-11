@@ -10,12 +10,29 @@
       <strong>{{ formatDate(checkIn) }}</strong>
       to
       <strong>{{ formatDate(checkOut) }}</strong>
-      ({{ availableHotels.length }} found)
+      ({{ filteredHotels.length }} found)
     </p>
 
-    <div v-if="availableHotels.length" class="flex flex-wrap justify-center gap-6">
+    <!-- Filter Chips -->
+    <div class="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-1">
+      <button
+        v-for="cat in categories"
+        :key="cat"
+        class="rounded-full border px-4 py-1.5 text-sm font-medium transition duration-300"
+        :class="
+          activeCategory === cat
+            ? 'bg-blue-600 border-blue-600 text-white'
+            : 'border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600'
+        "
+        @click="activeCategory = cat"
+      >
+        {{ cat }}
+      </button>
+    </div>
+
+    <div v-if="filteredHotels.length" class="flex flex-wrap justify-center gap-6 mt-3">
       <HotelCard
-        v-for="hotel in availableHotels"
+        v-for="hotel in filteredHotels"
         :key="hotel.id + hotel.reviewer"
         :hotel="hotel"
       />
@@ -41,7 +58,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue"
+import { computed, ref } from "vue"
 import { useRoute } from "vue-router"
 import HotelCard from "../components/HotelCard.vue"
 import { hotels } from "../Data/Hotel"
@@ -57,6 +74,20 @@ const availableHotels = computed(() => {
   if (!ci || !co) return hotels
   return hotels.filter(
     (h) => !h.bookings.some((b) => ci < b.checkOut && co > b.checkIn)
+  )
+})
+
+const activeCategory = ref("All")
+
+const categories = computed(() => {
+  const cats = [...new Set(hotels.map((h) => h.type))]
+  return ["All", ...cats]
+})
+
+const filteredHotels = computed(() => {
+  if (activeCategory.value === "All") return availableHotels.value
+  return availableHotels.value.filter(
+    (h) => h.type === activeCategory.value
   )
 })
 

@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed top-0 left-0 z-40 w-full bg-blue-600 shadow-md">
+  <nav class="fixed top-0 left-0 z-40 w-full bg-blue-800 shadow-md">
     
     <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
@@ -47,7 +47,7 @@
           to="/my-account"
           class="rounded-lg bg-white px-4 py-2 font-medium text-blue-600 transition hover:bg-blue-50"
         >
-          My Account
+          {{ displayName }}
         </RouterLink>
 
       </div>
@@ -139,7 +139,7 @@
           @click="isMenuOpen = false"
           class="px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105 "
         >
-          My Account
+          {{ displayName }}
         </RouterLink>
 
       </div>
@@ -150,7 +150,14 @@
 
 
 <script setup lang="ts">
-import { ref } from "vue"
+import { ref, computed } from "vue"
+import { currentUser } from "../store/user"
 
 const isMenuOpen = ref(false)
+
+const displayName = computed(() => {
+  if (!currentUser.value) return "My Account"
+  const first = currentUser.value.name.split(" ")[0]
+  return first ? first : "My Account"
+})
 </script>

@@ -61,17 +61,31 @@ reviewer:19,
     ]
   },
   {
-    id: 3,
-    name: "Happy Family Homestay",
-    type: "Homestay",
+    id: 4,
+    name: "Sokha Angkor Resort",
+    type: "Resort",
+    stars: 5,
+    location: "Siem Reap",
+    price: 120,
+    rating: 4.7,
+    reviewer: 88,
+    image: "/images/hotel4.jpg",
+    bookings: [
+      { checkIn: "2026-09-21", checkOut: "2026-09-24" }
+    ]
+  },
+  {
+    id: 5,
+    name: "Angkor Motor Villa",
+    type: "Hotel + Motor Rental",
     stars: 3,
     location: "Siem Reap",
-    price: 25,
-    rating: 4.5,
-    reviewer:58,
-    image: "/images/hotel3.jpg",
+    price: 35,
+    rating: 4.4,
+    reviewer: 41,
+    image: "/images/hotel5.jpg",
     bookings: [
-      { checkIn: "2026-09-20", checkOut: "2026-09-22" }
+      { checkIn: "2026-09-14", checkOut: "2026-09-16" }
     ]
   }
 ]

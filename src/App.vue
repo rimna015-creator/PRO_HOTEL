@@ -1,26 +1,37 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import Login from './components/Login.vue';
 import CreateAccount from './components/CreateAccount.vue';
 import Navbar from './components/Navbar.vue';
+import { saveUser, type UserAccount } from './store/user';
+import {
+  showLoginModal,
+  showCreateAccountModal,
+  openCreateAccount,
+  openLogin,
+  closeAuthModals
+} from './store/ui';
 
 
-const showLogin=ref(true)
-const showCreateAccount=ref(false)
-const gotocreateAccount=()=>{
-  showLogin.value=false
-  showCreateAccount.value=true
+const loginSuccess = (data: { name: string; email: string }) => {
+  const user: UserAccount = {
+    id: Date.now(),
+    name: data.name,
+    email: data.email,
+    joinedAt: new Date().toISOString()
+  }
+  saveUser(user)
+  closeAuthModals()
 }
-const goToLogin=()=>{
-  showCreateAccount.value=false
-  showLogin.value=true
-}
-const loginSuccess = () => {
-  showLogin.value = false
-}
-const createSuccess = () => {
-  showCreateAccount.value = false
-  showLogin.value = true
+
+const createSuccess = (data: { name: string; email: string }) => {
+  const user: UserAccount = {
+    id: Date.now(),
+    name: data.name,
+    email: data.email,
+    joinedAt: new Date().toISOString()
+  }
+  saveUser(user)
+  closeAuthModals()
 }
 </script>
 
@@ -31,24 +42,24 @@ const createSuccess = () => {
   <router-view></router-view>
   <!-- Login Popup-->
   <div
-    v-if="showLogin"
+    v-if="showLoginModal"
     class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
   >
     <div class="w-full max-w-md">
       <Login
         @login-success="loginSuccess"
-        @create-account="gotocreateAccount"
+        @create-account="openCreateAccount"
       />
     </div>
   </div>
 <!-- Create Account -->
   <div
-    v-if="showCreateAccount"
+    v-if="showCreateAccountModal"
     class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
   >
     <div class="w-full max-w-md">
       <CreateAccount
-        @go-to-login="goToLogin"
+        @go-to-login="openLogin"
         @create-success="createSuccess"
       />
     </div>

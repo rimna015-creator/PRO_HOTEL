@@ -227,60 +227,138 @@ export const hotelDetails: HotelDetail[] = [
   },
   {
     id: 4,
-    name: "Happy Family Homestay",
-    type: "Homestay",
-    stars: 3,
+    name: "Sokha Angkor Resort",
+    type: "Resort",
+    stars: 5,
     location: "Siem Reap",
-    address: "Wat Bo Road, Siem Reap, Cambodia",
-    price: 25,
-    reviewer: 58,
-    rating: 4.5,
-    image: "/images/hotel3.jpg",
+    address: "Road No. 6, Wat Chork Village, Siem Reap, Cambodia",
+    price: 120,
+    reviewer: 88,
+    rating: 4.7,
+    image: "/images/hotel4.jpg",
     gallery: [
-      "/images/hotel3.jpg",
-      "/images/hotel3-room.jpg"
+      "/images/hotel4.jpg",
+      "/images/hotel4-pool.jpg",
+      "/images/hotel4-room.jpg"
     ],
     description:
-      "A warm and welcoming family-run homestay offering an authentic Cambodian experience. Enjoy home-cooked meals, friendly hosts, and a peaceful atmosphere in a local neighborhood.",
+      "Sokha Angkor Resort is a lavish five-star resort surrounded by lush tropical gardens. Featuring multiple outdoor pools, a private lake, world-class spa, and fine-dining restaurants, it delivers an unforgettable luxury escape just minutes from Angkor Wat.",
+    facilities: [
+      "Swimming Pool",
+      "Spa",
+      "Restaurant",
+      "Pool Bar",
+      "Fitness Center",
+      "Kids Club",
+      "Free Wi-Fi",
+      "Tennis Court"
+    ],
+    services: [
+      "Motorbike Rental",
+      "Airport Pickup",
+      "Tour Guide",
+      "Laundry",
+      "Breakfast Included"
+    ],
+    roomTypes: [
+      {
+        name: "Deluxe Garden Room",
+        price: 120,
+        capacity: 2,
+        description: "Elegant room with garden views, king bed, and private balcony.",
+        available: 6
+      },
+      {
+        name: "Lake View Villa",
+        price: 220,
+        capacity: 2,
+        description: "Spacious villa overlooking the resort lake with private terrace.",
+        available: 3
+      },
+      {
+        name: "Presidential Suite",
+        price: 450,
+        capacity: 4,
+        description: "Ultimate luxury suite with separate living area, jacuzzi, and butler service.",
+        available: 1
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Pets are not allowed",
+      "Cancellation must be made 48 hours before check-in",
+      "Valid ID required at check-in"
+    ],
+    contact: {
+      hotline: "+855 63 969 888",
+      facebook: "https://facebook.com/SokhaAngkorResort",
+      tiktok: "https://tiktok.com/@SokhaAngkorResort",
+      instagram: "https://instagram.com/SokhaAngkorResort"
+    }
+  },
+  {
+    id: 5,
+    name: "Angkor Motor Villa",
+    type: "Hotel + Motor Rental",
+    stars: 3,
+    location: "Siem Reap",
+    address: "Taphul Village, Svay Dangkum, Siem Reap, Cambodia",
+    price: 35,
+    reviewer: 41,
+    rating: 4.4,
+    image: "/images/hotel5.jpg",
+    gallery: [
+      "/images/hotel5.jpg",
+      "/images/hotel5-motor.jpg",
+      "/images/hotel5-room.jpg"
+    ],
+    description:
+      "Angkor Motor Villa is a budget-friendly hotel that combines comfortable rooms with an on-site motorbike rental service. Perfect for adventurous travelers, rent a bike at reception and ride straight to the Angkor temples at your own pace.",
     facilities: [
       "Free Wi-Fi",
       "Parking",
-      "Shared Kitchen",
+      "Motorbike Parking",
+      "Restaurant",
       "Garden"
     ],
     services: [
       "Motorbike Rental",
-      "Home-cooked Meals",
-      "Laundry"
+      "Bicycle Rental",
+      "Self-drive Tours",
+      "Laundry",
+      "Airport Shuttle"
     ],
     roomTypes: [
       {
         name: "Standard Room",
-        price: 25,
+        price: 35,
         capacity: 2,
-        description: "Simple and clean room with fan and shared bathroom.",
-        available: 4
+        description: "Compact room with air conditioning, fan, and shared terrace.",
+        available: 5
       },
       {
-        name: "Family Room",
-        price: 40,
-        capacity: 4,
-        description: "Large room with private bathroom and extra beds for families.",
+        name: "Villa Room",
+        price: 55,
+        capacity: 3,
+        description: "Spacious room with private bathroom, balcony, and river view.",
         available: 3
       }
     ],
-    checkIn: "13:00",
+    checkIn: "14:00",
     checkOut: "11:00",
     policies: [
-      "No smoking inside rooms",
-      "Shoes off at the entrance",
-      "Meals available on request"
+      "No smoking in rooms",
+      "Motorbike rental requires valid driver's license",
+      "Helmets provided with every rental",
+      "Cancellation must be made 24 hours before check-in"
     ],
     contact: {
-      hotline: "+855 12 555 789",
-      facebook: "https://facebook.com/HappyFamilyHomestay",
-      tiktok: "https://tiktok.com/@HappyFamilyHomestay",
-      instagram: "https://instagram.com/HappyFamilyHomestay"
+      hotline: "+855 12 777 333",
+      facebook: "https://facebook.com/AngkorMotorVilla",
+      tiktok: "https://tiktok.com/@AngkorMotorVilla",
+      instagram: "https://instagram.com/AngkorMotorVilla"
     }
   }
 ]
