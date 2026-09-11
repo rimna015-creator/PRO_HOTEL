@@ -1,3 +1,8 @@
+export interface Booking {
+  checkIn: string
+  checkOut: string
+}
+
 export interface Hotel {
   id: number
   name: string
@@ -8,8 +13,7 @@ export interface Hotel {
   reviewer:number
   rating: number
   image: string
-  facilities: string[]
-  services: string[]
+  bookings: Booking[]
 }
 
 export const hotels: Hotel[] = [
@@ -20,19 +24,11 @@ export const hotels: Hotel[] = [
     stars: 5,
     location: "Siem Reap",
     price: 80,
-    reviewer:19,
+reviewer:19,
     rating: 4.8,
     image: "/images/hotel1.jpg",
-    facilities: [
-      "Swimming Pool",
-      "Free Wi-Fi",
-      "Restaurant",
-      "Parking"
-    ],
-    services: [
-      "Motorbike Rental",
-      "Airport Pickup",
-      "Tour Guide"
+    bookings: [
+      { checkIn: "2026-09-14", checkOut: "2026-09-18" }
     ]
   },
 
@@ -46,12 +42,8 @@ export const hotels: Hotel[] = [
     rating: 4.6,
     reviewer:25,
     image: "/images/hotel2.jpg",
-    facilities: [
-      "Swimming Pool",
-      "Free Wi-Fi"
-    ],
-    services: [
-      "Motorbike Rental"
+    bookings: [
+      { checkIn: "2026-09-16", checkOut: "2026-09-17" }
     ]
   },
   {
@@ -64,12 +56,8 @@ export const hotels: Hotel[] = [
     rating: 4.5,
     reviewer:54,
     image: "/images/hotel3.jpg",
-    facilities: [
-      "Free Wi-Fi",
-      "Parking"
-    ],
-    services: [
-      "Motorbike Rental"
+    bookings: [
+      { checkIn: "2026-09-10", checkOut: "2026-09-15" }
     ]
   },
   {
@@ -82,12 +70,8 @@ export const hotels: Hotel[] = [
     rating: 4.5,
     reviewer:58,
     image: "/images/hotel3.jpg",
-    facilities: [
-      "Free Wi-Fi",
-      "Parking"
-    ],
-    services: [
-      "Motorbike Rental"
+    bookings: [
+      { checkIn: "2026-09-20", checkOut: "2026-09-22" }
     ]
   }
 ]

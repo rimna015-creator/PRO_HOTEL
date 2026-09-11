@@ -17,6 +17,14 @@ export interface HotelDetail {
   checkIn: string
   checkOut: string
   policies: string[]
+  contact: HotelContact
+}
+
+export interface HotelContact {
+  hotline: string
+  facebook: string
+  tiktok: string
+  instagram: string
 }
 
 export interface RoomType {
@@ -38,11 +46,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 80,
     reviewer: 19,
     rating: 4.8,
-    image: "/images/hotel1.jpg",
+    image: "https://www.cambotours.com/userfiles/hotels/angkor-paradise-hotel.jpg",
     gallery: [
-      "/images/hotel1.jpg",
-      "/images/hotel1-room.jpg",
-      "/images/hotel1-pool.jpg"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-7ffITnypl34Q8pl1GPOdM7pooU_lJH2ClkxqA6Fb75QE9OdZyTXqSVGm&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBYYSBMPrm-Z_Xc4Zsal_DHu6J4p3LAlksca2sD_0WMA&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeZao2sh8et_Gcjjrl6Q63BthR7u0rB_8ljQr1em9_NQ&s=10"
     ],
     description:
       "Angkor Paradise Hotel offers luxurious accommodation in the heart of Siem Reap. Featuring a stunning outdoor pool, on-site restaurant, and spa, it is just minutes away from the famous Angkor Wat temple complex.",
@@ -93,7 +101,13 @@ export const hotelDetails: HotelDetail[] = [
       "Pets are not allowed",
       "Cancellation must be made 24 hours before check-in",
       "Valid ID required at check-in"
-    ]
+    ],
+    contact: {
+      hotline: "+855 12 345 678",
+      facebook: "https://facebook.com/AngkorParadiseHotel",
+      tiktok: "https://tiktok.com/@AngkorParadiseHotel",
+      instagram: "https://instagram.com/AngkorParadiseHotel"
+    }
   },
   {
     id: 2,
@@ -145,7 +159,13 @@ export const hotelDetails: HotelDetail[] = [
     policies: [
       "No smoking in rooms",
       "Quiet hours after 22:00"
-    ]
+    ],
+    contact: {
+      hotline: "+855 12 987 654",
+      facebook: "https://facebook.com/SiemReapBoutiqueVilla",
+      tiktok: "https://tiktok.com/@SiemReapBoutiqueVilla",
+      instagram: "https://instagram.com/SiemReapBoutiqueVilla"
+    }
   },
   {
     id: 3,
@@ -197,7 +217,13 @@ export const hotelDetails: HotelDetail[] = [
       "No smoking inside rooms",
       "Shoes off at the entrance",
       "Meals available on request"
-    ]
+    ],
+    contact: {
+      hotline: "+855 12 555 789",
+      facebook: "https://facebook.com/HappyFamilyHomestay",
+      tiktok: "https://tiktok.com/@HappyFamilyHomestay",
+      instagram: "https://instagram.com/HappyFamilyHomestay"
+    }
   },
   {
     id: 4,
@@ -249,6 +275,12 @@ export const hotelDetails: HotelDetail[] = [
       "No smoking inside rooms",
       "Shoes off at the entrance",
       "Meals available on request"
-    ]
+    ],
+    contact: {
+      hotline: "+855 12 555 789",
+      facebook: "https://facebook.com/HappyFamilyHomestay",
+      tiktok: "https://tiktok.com/@HappyFamilyHomestay",
+      instagram: "https://instagram.com/HappyFamilyHomestay"
+    }
   }
 ]

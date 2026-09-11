@@ -26,10 +26,10 @@
 
         <!-- Name + Type + Stars -->
         <div class="flex flex-wrap items-center gap-3">
-          <h1 class="text-3xl font-bold text-gray-800">
+          <h1 class="text-3xl font-bold text-black">
             {{ hotel.name }}
           </h1>
-          <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">
+          <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-black">
             {{ hotel.type }}
           </span>
           <span class="flex items-center gap-1 text-sm text-yellow-500">
@@ -39,26 +39,37 @@
         </div>
 
         <!-- Rating + Reviews -->
-        <div class="mt-3 flex items-center gap-4 text-sm text-gray-600">
+        <div class="mt-3 flex items-center gap-4 text-sm text-black">
           <span class="flex items-center gap-1">
             <i class="bi bi-star-fill text-yellow-500"></i>
-            <span class="font-semibold text-gray-800">{{ hotel.rating }}</span>
+            <span class="font-semibold text-yellow-500">{{ hotel.rating }}</span>
           </span>
           <span>({{ hotel.reviewer }} reviews)</span>
         </div>
 
         <!-- Location -->
-        <p class="mt-3 flex items-center gap-1 text-sm text-gray-600">
-          <i class="bi bi-geo-alt-fill text-gray-500"></i>
-          {{ hotel.address }}
-        </p>
+        <div class="mt-3 flex items-center justify-between">
+          <p class="flex items-center gap-1 text-sm text-black">
+            <i class="bi bi-geo-alt-fill text-black"></i>
+            {{ hotel.address }}
+          </p>
+
+          <!-- Google Maps Button -->
+          <button
+            class="flex items-center gap-1 rounded-lg bg-blue-400 px-3 py-1.5 text-xs font-medium text-black transition duration-300 hover:bg-green-700"
+            @click="openGoogleMaps"
+          >
+            <i class="bi bi-map"></i>
+            View on Google Maps
+          </button>
+        </div>
 
         <!-- Price -->
         <div class="mt-4">
-          <strong class="text-2xl font-bold text-gray-900">
+          <strong class="text-2xl font-bold text-black">
             ${{ hotel.price }}
           </strong>
-          <span class="text-sm text-gray-500"> / night</span>
+          <span class="text-sm text-black"> / night</span>
         </div>
 
         <!-- Divider -->
@@ -66,8 +77,8 @@
 
         <!-- Description -->
         <div>
-          <h2 class="mb-2 text-xl font-semibold text-gray-800">Description</h2>
-          <p class="leading-relaxed text-gray-600">
+          <h2 class="mb-2 text-xl font-semibold text-black">Description</h2>
+          <p class="leading-relaxed text-black">
             {{ hotel.description }}
           </p>
         </div>
@@ -77,7 +88,7 @@
 
         <!-- Gallery -->
         <div v-if="hotel.gallery.length">
-          <h2 class="mb-3 text-xl font-semibold text-gray-800">Gallery</h2>
+          <h2 class="mb-3 text-xl font-semibold text-black">Gallery</h2>
           <div class="grid grid-cols-3 gap-3">
             <img
               v-for="(img, index) in hotel.gallery"
@@ -97,14 +108,14 @@
 
           <!-- Facilities -->
           <div>
-            <h2 class="mb-3 text-xl font-semibold text-gray-800">Facilities</h2>
+            <h2 class="mb-3 text-xl font-semibold text-black">Facilities</h2>
             <ul class="space-y-2">
               <li
                 v-for="item in hotel.facilities"
                 :key="item"
-                class="flex items-center gap-2 text-sm text-gray-600"
+                class="flex items-center gap-2 text-sm text-black"
               >
-                <i class="bi bi-check-circle-fill text-green-500"></i>
+                <i class="bi bi-check-circle-fill text-green-400"></i>
                 {{ item }}
               </li>
             </ul>
@@ -112,14 +123,14 @@
 
           <!-- Services -->
           <div>
-            <h2 class="mb-3 text-xl font-semibold text-gray-800">Services</h2>
+            <h2 class="mb-3 text-xl font-semibold text-black">Services</h2>
             <ul class="space-y-2">
               <li
                 v-for="item in hotel.services"
                 :key="item"
-                class="flex items-center gap-2 text-sm text-gray-600"
+                class="flex items-center gap-2 text-sm text-black"
               >
-                <i class="bi bi-check-circle-fill text-blue-500"></i>
+                <i class="bi bi-check-circle-fill text-blue-400"></i>
                 {{ item }}
               </li>
             </ul>
@@ -132,7 +143,7 @@
 
         <!-- Room Types -->
         <div>
-          <h2 class="mb-4 text-xl font-semibold text-gray-800">Room Types</h2>
+          <h2 class="mb-4 text-xl font-semibold text-black">Room Types</h2>
           <div class="space-y-4">
             <div
               v-for="room in hotel.roomTypes"
@@ -141,26 +152,26 @@
             >
               <div class="flex items-center justify-between">
                 <div>
-                  <h3 class="text-lg font-semibold text-gray-800">
+                  <h3 class="text-lg font-semibold text-black">
                     {{ room.name }}
                   </h3>
-                  <p class="mt-1 text-sm text-gray-500">
+                  <p class="mt-1 text-sm text-black">
                     {{ room.description }}
                   </p>
-                  <p class="mt-2 flex items-center gap-1 text-sm text-gray-500">
+                  <p class="mt-2 flex items-center gap-1 text-sm text-black">
                     <i class="bi bi-people-fill"></i>
                     Up to {{ room.capacity }} guests
                   </p>
-                  <p class="mt-1 flex items-center gap-1 text-sm" :class="room.available > 0 ? 'text-green-600' : 'text-red-500'">
+                  <p class="mt-1 flex items-center gap-1 text-sm" :class="room.available > 0 ? 'text-blue-900' : 'text-black'">
                     <i :class="room.available > 0 ? 'bi bi-check-circle-fill' : 'bi bi-x-circle-fill'"></i>
                     {{ room.available > 0 ? room.available + ' rooms available' : 'Sold out' }}
                   </p>
                 </div>
                 <div class="text-right">
-                  <strong class="text-xl font-bold text-blue-600">
+                  <strong class="text-xl font-bold text-black">
                     ${{ room.price }}
                   </strong>
-                  <p class="text-xs text-gray-500">/ night</p>
+                  <p class="text-xs text-black">/ night</p>
                   <button class="mt-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700">
                     Book Now
                   </button>
@@ -176,16 +187,16 @@
         <!-- Check-in / Check-out -->
         <div class="flex gap-8">
           <div>
-            <h2 class="mb-1 text-xl font-semibold text-gray-800">Check-in</h2>
-            <p class="flex items-center gap-2 text-gray-600">
-              <i class="bi bi-box-arrow-in-right text-blue-600"></i>
+            <h2 class="mb-1 text-xl font-semibold text-black">Check-in</h2>
+            <p class="flex items-center gap-2 text-black">
+              <i class="bi bi-box-arrow-in-right text-black"></i>
               {{ hotel.checkIn }}
             </p>
           </div>
           <div>
-            <h2 class="mb-1 text-xl font-semibold text-gray-800">Check-out</h2>
-            <p class="flex items-center gap-2 text-gray-600">
-              <i class="bi bi-box-arrow-right text-blue-600"></i>
+            <h2 class="mb-1 text-xl font-semibold text-black">Check-out</h2>
+            <p class="flex items-center gap-2 text-black">
+              <i class="bi bi-box-arrow-right text-black"></i>
               {{ hotel.checkOut }}
             </p>
           </div>
@@ -194,19 +205,68 @@
         <!-- Divider -->
         <hr class="my-6 border-gray-200" />
 
-        <!-- Policies -->
-        <div>
-          <h2 class="mb-3 text-xl font-semibold text-gray-800">House Rules & Policies</h2>
-          <ul class="space-y-2">
-            <li
-              v-for="policy in hotel.policies"
-              :key="policy"
-              class="flex items-center gap-2 text-sm text-gray-600"
-            >
-              <i class="bi bi-info-circle-fill text-yellow-500"></i>
-              {{ policy }}
-            </li>
-          </ul>
+        <!-- Policies + Contact -->
+        <div class="grid grid-cols-2 gap-8">
+
+          <!-- Policies -->
+          <div>
+            <h2 class="mb-3 text-xl font-semibold text-black">House Rules & Policies</h2>
+            <ul class="space-y-2">
+              <li
+                v-for="policy in hotel.policies"
+                :key="policy"
+                class="flex items-center gap-2 text-sm text-black"
+              >
+                <i class="bi bi-info-circle-fill text-black"></i>
+                {{ policy }}
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Hotel -->
+          <div>
+            <h2 class="mb-3 text-xl font-semibold text-black">Contact Hotel</h2>
+
+            <!-- Hotline -->
+            <p class="mb-4 flex items-center gap-2 text-sm text-black">
+              <i class="bi bi-telephone-fill text-black"></i>
+              <a :href="'tel:' + hotel.contact.hotline" class="transition hover:text-black">
+                {{ hotel.contact.hotline }}
+              </a>
+            </p>
+
+            <!-- Social Media -->
+            <div class="flex items-center gap-1">
+              <a
+                :href="hotel.contact.facebook"
+                target="_blank"
+                rel="noopener"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-lg text-white transition hover:bg-blue-700"
+                title="Facebook"
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a
+                :href="hotel.contact.tiktok"
+                target="_blank"
+                rel="noopener"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-black text-lg text-white transition hover:opacity-80"
+                title="TikTok"
+              >
+                <i class="bi bi-tiktok"></i>
+              </a>
+              <a
+                :href="hotel.contact.instagram"
+                target="_blank"
+                rel="noopener"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-pink-600 text-lg text-white transition hover:bg-pink-700"
+                title="Instagram"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -216,8 +276,8 @@
     <!-- Not Found -->
     <div v-else class="flex min-h-[60vh] items-center justify-center">
       <div class="text-center">
-        <h2 class="text-2xl font-bold text-gray-800">Hotel Not Found</h2>
-        <p class="mt-2 text-gray-500">The hotel you are looking for does not exist.</p>
+        <h2 class="text-2xl font-bold text-black">Hotel Not Found</h2>
+        <p class="mt-2 text-black">The hotel you are looking for does not exist.</p>
       </div>
     </div>
 
@@ -235,4 +295,9 @@ const hotel = computed(() => {
   const id = Number(route.params.id)
   return hotelDetails.find((h) => h.id === id)
 })
+
+const openGoogleMaps = () => {
+  const query = encodeURIComponent(`${hotel.value?.name} ${hotel.value?.location}`)
+  window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, "_blank")
+}
 </script>
