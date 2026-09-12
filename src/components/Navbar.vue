@@ -18,9 +18,9 @@
         <RouterLink
           to="/"
           exact-active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
-          class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
+          class="font-medium text-white transition hover:bg-blue-400  rounded-lg px-4 py-2"
         >
-          Home
+          {{ t("Home") }}
         </RouterLink>
 
         <RouterLink
@@ -28,7 +28,7 @@
           active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
-          Hotel
+          {{ t("Hotel") }}
         </RouterLink>
 
         <RouterLink
@@ -36,7 +36,7 @@
           active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
-          Explore
+          {{ t("Explore") }}
         </RouterLink>
 
         <RouterLink
@@ -44,7 +44,7 @@
           active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
-          Promotion
+          {{ t("Promotion") }}
         </RouterLink>
 
         <RouterLink
@@ -52,13 +52,23 @@
           active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
-          My Booking
+          {{ t("My Booking") }}
         </RouterLink>
 
       </div>
 
       <!-- My Account (right edge, near border) -->
       <div class="flex items-center gap-3">
+
+        <!-- Language Toggle -->
+        <button
+          @click="toggleLocale"
+          class="flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-2 text-sm font-medium text-white transition hover:bg-white/20"
+          :title="t('Khmer')"
+        >
+          <i class="bi bi-globe2"></i>
+          <span>{{ locale === "en" ? t("ខ្មែរ") : t("English") }}</span>
+        </button>
 
         <RouterLink
           to="/my-account"
@@ -123,18 +133,18 @@
           to="/"
           @click="isMenuOpen = false"
           exact-active-class="bg-blue-500 text-white"
-          class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105 "
+          class=" px-4 py-3 font-medium text-black hover:bg-blue-500 active:scale-105 hover:border-blue-900"
         >
-          Home
+          {{ t("Home") }}
         </RouterLink>
 
         <RouterLink
           to="/hotel"
           @click="isMenuOpen = false"
-          active-class="bg-blue-500 text-white"
+          active-class="bg-blue-500 text-white "
           class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
         >
-          Hotel
+          {{ t("Hotel") }}
         </RouterLink>
 
         <RouterLink
@@ -143,7 +153,7 @@
           active-class="bg-blue-500 text-white"
           class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
         >
-          Explore
+          {{ t("Explore") }}
         </RouterLink>
 
         <RouterLink
@@ -152,7 +162,7 @@
           active-class="bg-blue-500 text-white"
           class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
         >
-          Promotion
+          {{ t("Promotion") }}
         </RouterLink>
 
         <RouterLink
@@ -161,7 +171,7 @@
           active-class="bg-blue-500 text-white"
           class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
         >
-          My Booking
+          {{ t("My Booking") }}
         </RouterLink>
 
         <RouterLink
@@ -173,6 +183,14 @@
           {{ displayName }}
         </RouterLink>
 
+        <button
+          @click="isMenuOpen = false; toggleLocale()"
+          class="px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
+        >
+          <i class="bi bi-globe2 mr-2"></i>
+          {{ locale === "en" ? t("Khmer") : t("English") }}
+        </button>
+
       </div>
     </div>
 
@@ -183,12 +201,13 @@
 <script setup lang="ts">
 import { ref, computed } from "vue"
 import { currentUser } from "../store/user"
+import { locale, toggleLocale, t } from "../i18n"
 
 const isMenuOpen = ref(false)
 
 const displayName = computed(() => {
-  if (!currentUser.value) return "My Account"
+  if (!currentUser.value) return t("My Account")
   const first = currentUser.value.name.split(" ")[0]
-  return first ? first : "My Account"
+  return first ? first : t("My Account")
 })
 </script>

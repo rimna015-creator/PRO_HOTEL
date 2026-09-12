@@ -1,12 +1,12 @@
 <template>
 <!-- Form Area -->
 <div class="space-y-5 p-6 sm:p-8 bg-white rounded-2xl">
-  <div class="text-2xl text-center font-bold mb-1">Welcome back</div>
-  <div class="text-2xl text-center font-bold">Sign In</div>
+  <div class="text-2xl text-center font-bold mb-1">{{ t("Welcome back") }}</div>
+  <div class="text-2xl text-center font-bold">{{ t("Sign In") }}</div>
   <!-- Email Field -->
   <div>
     <label for="email" class="block text-base font-semibold text-zinc-900">
-      Email Address
+      {{ t("Email Address") }}
     </label>
     <div class="relative mt-2.5">
       <input
@@ -23,10 +23,10 @@
   <div>
     <div class="flex items-center justify-between">
       <label for="password" class="block text-base font-semibold text-zinc-900">
-        Password
+        {{ t("Password") }}
       </label>
       <a class="text-sm font-medium text-blue-600 hover:text-blue-700">
-        Forgot password?
+        {{ t("Forgot password?") }}
       </a>
     </div>
     <div class="relative mt-2.5">
@@ -58,18 +58,18 @@
       @click="login"
       class="flex w-full items-center justify-center rounded-2xl bg-blue-600 px-6 py-3 font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-blue-500/30 focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.98]"
     >
-      Login In to Your Account
+      {{ t("Login In to Your Account") }}
     </button>
   </div>
 
   <!-- Footer/Sign Up Link -->
   <div class="pt-4 text-center">
     <p class="text-zinc-600">
-      Don't have an account yet? 
+      {{ t("Don't have an account yet?") }}
       <button
       @click="gotocreateAccount"
       class="font-semibold text-blue-600 hover:text-blue-700"
-      >Create one for free
+      >{{ t("Create one for free") }}
       </button>
     </p>
   </div>
@@ -79,6 +79,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { t } from '../i18n'
 
 const email = ref('')
 const password = ref('')
@@ -86,7 +87,7 @@ const showPassword=ref(false)
 const login = () => {
 
   if (!email.value || !password.value) {
-    alert('Please enter your email and password')
+    alert(t('Please enter your email and password'))
     return
   }
 

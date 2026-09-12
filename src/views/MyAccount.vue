@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-50 px-6 pb-16 pt-24">
     <h1 class="text-center text-3xl font-bold text-gray-800">
-      My Account
+      {{ t("My Account") }}
     </h1>
 
     <!-- Logged In -->
@@ -37,7 +37,7 @@
 
               <p class="mt-1 text-sm text-gray-500">
                 <i class="bi bi-calendar3 mr-1 text-blue-600"></i>
-                Member since {{ formatDate(currentUser.joinedAt) }}
+                {{ t("Member since") }} {{ formatDate(currentUser.joinedAt) }}
               </p>
             </div>
           </div>
@@ -49,7 +49,7 @@
             class="flex shrink-0 items-center gap-1.5 rounded-lg bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-700 transition hover:bg-blue-100"
           >
             <i class="bi bi-pencil-square"></i>
-            Edit
+            {{ t("Edit") }}
           </button>
         </div>
 
@@ -65,12 +65,12 @@
         <!-- Edit Form -->
         <div v-if="editing" class="mt-6 rounded-xl bg-gray-50 p-5">
           <h3 class="text-base font-semibold text-gray-800">
-            Edit Your Information
+            {{ t("Edit Your Information") }}
           </h3>
 
           <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <label for="editName" class="block text-sm font-semibold text-gray-700">Full Name</label>
+              <label for="editName" class="block text-sm font-semibold text-gray-700">{{ t("Full Name") }}</label>
               <input
                 id="editName"
                 v-model="editName"
@@ -81,7 +81,7 @@
             </div>
 
             <div>
-              <label for="editEmail" class="block text-sm font-semibold text-gray-700">Email Address</label>
+              <label for="editEmail" class="block text-sm font-semibold text-gray-700">{{ t("Email Address") }}</label>
               <input
                 id="editEmail"
                 v-model="editEmail"
@@ -93,7 +93,7 @@
 
             <div>
               <label for="editPhone" class="block text-sm font-semibold text-gray-700">
-                Phone Number <span class="font-normal text-gray-400">(optional)</span>
+                {{ t("Phone Number") }} <span class="font-normal text-gray-400">{{ t("(optional)") }}</span>
               </label>
               <input
                 id="editPhone"
@@ -116,13 +116,13 @@
               class="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700"
             >
               <i class="bi bi-check-lg mr-1"></i>
-              Save Changes
+              {{ t("Save Changes") }}
             </button>
             <button
               @click="cancelEdit"
               class="rounded-lg bg-gray-200 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-300"
             >
-              Cancel
+              {{ t("Cancel") }}
             </button>
           </div>
         </div>
@@ -134,7 +134,7 @@
               {{ userBookings.length }}
             </p>
             <p class="text-xs text-gray-500">
-              Bookings
+              {{ t("Bookings") }}
             </p>
           </div>
 
@@ -143,7 +143,7 @@
               ${{ totalSpent }}
             </p>
             <p class="text-xs text-gray-500">
-              Total Spent
+              {{ t("Total Spent") }}
             </p>
           </div>
 
@@ -152,7 +152,7 @@
               {{ favoriteHotels.length }}
             </p>
             <p class="text-xs text-gray-500">
-              Favorites
+              {{ t("Favorites") }}
             </p>
           </div>
         </div>
@@ -163,14 +163,14 @@
             to="/my-booking"
             class="flex-1 rounded-lg bg-blue-600 px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-blue-700"
           >
-            View My Bookings
+            {{ t("View My Bookings") }}
           </RouterLink>
 
           <button
             @click="handleSignOut"
             class="rounded-lg bg-gray-100 px-5 py-2.5 text-sm font-semibold text-gray-600 transition hover:bg-gray-200"
           >
-            Sign Out
+            {{ t("Sign Out") }}
           </button>
         </div>
       </div>
@@ -183,11 +183,11 @@
           <i class="bi bi-heart-fill mr-2 text-red-500"></i>
 
           <h2 class="text-lg font-bold text-gray-800">
-            My Favorite Hotels
+            {{ t("My Favorite Hotels") }}
           </h2>
 
           <span class="ml-auto text-sm text-gray-400">
-            {{ favoriteHotels.length }} saved
+            {{ favoriteHotels.length }} {{ t("saved") }}
           </span>
         </div>
 
@@ -211,14 +211,14 @@
           <i class="bi bi-heart text-3xl text-gray-300"></i>
 
           <p class="mt-3 text-sm text-gray-500">
-            You haven't saved any favorite hotels yet.
+            {{ t("You haven't saved any favorite hotels yet.") }}
           </p>
 
           <RouterLink
             to="/hotel"
             class="mt-4 inline-block rounded-lg bg-blue-600 px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
           >
-            Browse Hotels
+            {{ t("Browse Hotels") }}
           </RouterLink>
         </div>
       </div>
@@ -235,25 +235,25 @@
         </div>
 
         <h2 class="mt-4 text-xl font-bold text-gray-800">
-          You are not signed in
+          {{ t("You are not signed in") }}
         </h2>
 
         <p class="mt-2 text-sm text-gray-500">
-          Sign in to view your account and booking history.
+          {{ t("Sign in to view your account and booking history.") }}
         </p>
 
         <button
           @click="openLogin"
           class="mt-5 w-full rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700"
         >
-          Sign In
+          {{ t("Sign In") }}
         </button>
 
         <button
           @click="openCreateAccount"
           class="mt-2 w-full rounded-lg bg-gray-100 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-200"
         >
-          Create an Account
+          {{ t("Create an Account") }}
         </button>
       </div>
     </div>
@@ -268,6 +268,7 @@ import { bookings, updateBookingEmail } from "../store/booking"
 import { favoriteHotels } from "../store/favorite"
 import { openLogin, openCreateAccount } from "../store/ui"
 import HotelCard from "../components/HotelCard.vue"
+import { t } from "../i18n"
 
 const router = useRouter()
 
@@ -290,13 +291,13 @@ const startEdit = () => {
 const saveChanges = () => {
   const name = editName.value.trim()
   if (!name) {
-    errorMsg.value = "Your name cannot be empty"
+    errorMsg.value = t("Your name cannot be empty")
     return
   }
 
   const email = editEmail.value.trim()
   if (!/^\S+@\S+\.\S+$/.test(email)) {
-    errorMsg.value = "Please enter a valid email address"
+    errorMsg.value = t("Please enter a valid email address")
     return
   }
 
@@ -313,7 +314,7 @@ const saveChanges = () => {
 
   editing.value = false
   errorMsg.value = ""
-  successMsg.value = "Your profile has been updated successfully!"
+  successMsg.value = t("Your profile has been updated successfully!")
 
   setTimeout(() => {
     successMsg.value = ""

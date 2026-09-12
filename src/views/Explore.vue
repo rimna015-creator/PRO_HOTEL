@@ -4,20 +4,30 @@
     <!-- Hero / Description Section -->
     <section class="mx-auto max-w-4xl text-center">
       <h1 class="text-4xl font-bold text-gray-700">
-        Explore Siem Reap
+        {{ t("Explore Siem Reap") }}
       </h1>
       <p class="mt-2 text-sm font-medium uppercase tracking-widest text-amber-600">
-        Cambodia
+        {{ t("Cambodia") }}
       </p>
       <p class="mt-4 leading-relaxed text-gray-600">
-        Siem Reap, meaning "Defeat of Siam," is the gateway to the legendary Angkor region
-        — home to some of the most spectacular ancient temples on Earth. Nestled in
-        northwestern Cambodia, this charming city blends centuries-old Khmer heritage with
-        a vibrant modern culture. From the awe-inspiring Angkor Wat at sunrise to the
-        bustling night markets and floating villages of Tonle Sap, Siem Reap offers an
-        unforgettable journey through history, nature, and Cambodian hospitality.
+        {{ t("Siem Reap, meaning \"Defeat of Siam,\" is the gateway to the legendary Angkor region — home to some of the most spectacular ancient temples on Earth.") }}
+        {{ t("Nestled in northwestern Cambodia, this charming city blends centuries-old Khmer heritage with a vibrant modern culture.") }}
+        {{ t("From the awe-inspiring Angkor Wat at sunrise to the bustling night markets and floating villages of Tonle Sap, Siem Reap offers an unforgettable journey through history, nature, and Cambodian hospitality.") }}
       </p>
     </section>
+
+    <!-- Search Bar -->
+    <div class="mx-auto mt-6 max-w-md">
+      <div class="relative">
+        <i class="bi bi-search pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        <input
+          v-model="searchQuery"
+          type="text"
+          :placeholder="t('Search places...')"
+          class="w-full rounded-full border border-gray-300 py-2.5 pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+        />
+      </div>
+    </div>
 
     <!-- Filter Chips -->
     <div class="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-3">
@@ -98,7 +108,7 @@
             @click="openGoogleMaps(place)"
           >
             <i class="bi bi-map"></i>
-            View on Map
+            {{ t("View on Map") }}
           </button>
 
         </div>
@@ -109,10 +119,10 @@
     <div v-else class="flex flex-col items-center justify-center py-20 text-center">
       <i class="bi bi-search text-5xl text-gray-400"></i>
       <h2 class="mt-4 text-xl font-semibold text-gray-800">
-        No places found
+        {{ t("No places found") }}
       </h2>
       <p class="mt-2 text-sm text-gray-500">
-        Try selecting a different category.
+        {{ t("Try selecting a different category.") }}
       </p>
     </div>
 
@@ -122,8 +132,10 @@
 <script setup lang="ts">
 import { ref, computed } from "vue"
 import { places, type Place } from "../Data/Explore"
+import { t } from "../i18n"
 
 const activeCategory = ref("All")
+const searchQuery = ref("")
 
 const categories = computed(() => {
   const cats = [...new Set(places.map((p) => p.category))]
@@ -131,8 +143,19 @@ const categories = computed(() => {
 })
 
 const filteredPlaces = computed(() => {
-  if (activeCategory.value === "All") return places
-  return places.filter((p) => p.category === activeCategory.value)
+  const query = searchQuery.value.trim().toLowerCase()
+  const byCategory =
+    activeCategory.value === "All"
+      ? places
+      : places.filter((p) => p.category === activeCategory.value)
+  if (!query) return byCategory
+  return byCategory.filter(
+    (p) =>
+      p.name.toLowerCase().includes(query) ||
+      p.description.toLowerCase().includes(query) ||
+      p.category.toLowerCase().includes(query) ||
+      p.location.toLowerCase().includes(query)
+  )
 })
 
 const openGoogleMaps = (place: Place) => {

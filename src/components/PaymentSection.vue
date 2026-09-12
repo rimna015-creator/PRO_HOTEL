@@ -2,28 +2,28 @@
   <div class="mt-6 rounded-2xl bg-white p-6 shadow-md sm:p-8">
     <h2 class="mb-5 text-xl font-semibold text-gray-800">
       <i class="bi bi-credit-card-2-front mr-2 text-blue-600"></i>
-      Payment
+      {{ t("Payment") }}
     </h2>
 
     <!-- Order Total -->
     <div class="rounded-xl bg-blue-50 p-5">
       <div class="flex items-center justify-between">
-        <span class="font-semibold text-gray-800">Total Trip Price</span>
+        <span class="font-semibold text-gray-800">{{ t("Total Trip Price") }}</span>
         <span class="text-2xl font-bold text-gray-900">${{ amount }}</span>
       </div>
       <div class="mt-2 flex items-center justify-between text-sm text-gray-600">
-        <span>Due now</span>
+        <span>{{ t("Due now") }}</span>
         <span class="font-semibold text-emerald-600">${{ dueNow }}</span>
       </div>
       <div v-if="balance > 0" class="flex items-center justify-between text-sm text-gray-600">
-        <span>Balance at check-in</span>
+        <span>{{ t("Balance at check-in") }}</span>
         <span class="font-semibold text-gray-700">${{ balance }}</span>
       </div>
     </div>
 
     <!-- Payment Plan -->
     <div class="mt-5">
-      <h3 class="mb-3 text-sm font-semibold text-gray-700">Payment Plan</h3>
+      <h3 class="mb-3 text-sm font-semibold text-gray-700">{{ t("Payment Plan") }}</h3>
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <label
           v-for="p in plans"
@@ -34,15 +34,15 @@
             : 'border-gray-200 bg-white hover:border-blue-300'"
         >
           <input type="radio" v-model="plan" :value="p.value" class="sr-only" />
-          <span class="font-semibold text-gray-900">{{ p.label }}</span>
-          <span class="mt-1 text-xs text-gray-500">{{ p.desc }}</span>
+          <span class="font-semibold text-gray-900">{{ t(p.label) }}</span>
+          <span class="mt-1 text-xs text-gray-500">{{ t(p.desc) }}</span>
         </label>
       </div>
     </div>
 
     <!-- Payment Method -->
     <div v-if="plan !== 'hotel'" class="mt-5">
-      <h3 class="mb-3 text-sm font-semibold text-gray-700">Payment Method</h3>
+      <h3 class="mb-3 text-sm font-semibold text-gray-700">{{ t("Payment Method") }}</h3>
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <label
           v-for="m in methods"
@@ -54,7 +54,7 @@
         >
           <input type="radio" v-model="method" :value="m.value" class="sr-only" />
           <i :class="[m.icon, 'text-xl text-blue-600']"></i>
-          <span class="font-medium text-gray-800">{{ m.label }}</span>
+          <span class="font-medium text-gray-800">{{ t(m.label) }}</span>
         </label>
       </div>
     </div>
@@ -62,19 +62,19 @@
     <!-- Credit / Debit Card Form -->
     <div v-if="plan !== 'hotel' && method === 'card'" class="mt-5 space-y-4">
       <div>
-        <label for="cardHolder" class="block text-sm font-semibold text-gray-700">Cardholder Name</label>
+        <label for="cardHolder" class="block text-sm font-semibold text-gray-700">{{ t("Cardholder Name") }}</label>
         <input
           id="cardHolder"
           v-model="cardHolder"
           type="text"
-          placeholder="Name on the card"
+          :placeholder="t('Name on the card')"
           class="mt-2 block w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
         />
         <p v-if="errors.cardHolder" class="mt-1 text-xs text-red-500">{{ errors.cardHolder }}</p>
       </div>
 
       <div>
-        <label for="cardNumber" class="block text-sm font-semibold text-gray-700">Card Number</label>
+        <label for="cardNumber" class="block text-sm font-semibold text-gray-700">{{ t("Card Number") }}</label>
         <div class="relative mt-2">
           <input
             id="cardNumber"
@@ -94,7 +94,7 @@
 
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label for="cardExpiry" class="block text-sm font-semibold text-gray-700">Expiry Date</label>
+          <label for="cardExpiry" class="block text-sm font-semibold text-gray-700">{{ t("Expiry Date") }}</label>
           <input
             id="cardExpiry"
             :value="cardExpiry"
@@ -129,14 +129,13 @@
         v-html="qrSvg"
       ></div>
       <div class="text-center sm:text-left">
-        <p class="text-sm font-semibold text-gray-800">Scan to Pay ${{ dueNow }}</p>
+        <p class="text-sm font-semibold text-gray-800">{{ t("Scan to Pay") }} ${{ dueNow }}</p>
         <p class="mt-1 text-xs text-gray-500">
-          Open your banking app (ACLEDA, Bakong, Pi Pay or Wing) and scan this QR code
-          to complete the payment. The money is sent directly to our payee account.
+          {{ t("Open your banking app (ACLEDA, Bakong, Pi Pay or Wing) and scan this QR code to complete the payment. The money is sent directly to our payee account.") }}
         </p>
         <p class="mt-2 text-xs font-medium text-blue-600">
           <i class="bi bi-shield-check mr-1"></i>
-          Payee: Angkor Booking Co., Ltd.
+          {{ t("Payee:") }} Angkor Booking Co., Ltd.
         </p>
       </div>
     </div>
@@ -145,25 +144,24 @@
     <div v-else-if="plan !== 'hotel' && method === 'bank'" class="mt-5 rounded-xl bg-gray-50 p-5">
       <div class="space-y-2 text-sm text-gray-700">
         <div class="flex items-center justify-between">
-          <span class="text-gray-500">Bank</span>
+          <span class="text-gray-500">{{ t("Bank") }}</span>
           <span class="font-semibold">ACLEDA Bank Plc.</span>
         </div>
         <div class="flex items-center justify-between">
-          <span class="text-gray-500">Account Name</span>
+          <span class="text-gray-500">{{ t("Account Name") }}</span>
           <span class="font-semibold">Angkor Booking Co., Ltd.</span>
         </div>
         <div class="flex items-center justify-between">
-          <span class="text-gray-500">Account Number</span>
+          <span class="text-gray-500">{{ t("Account Number") }}</span>
           <span class="font-mono font-semibold">000 23 456 789</span>
         </div>
         <div class="flex items-center justify-between">
-          <span class="text-gray-500">Amount to transfer</span>
+          <span class="text-gray-500">{{ t("Amount to transfer") }}</span>
           <span class="font-bold text-emerald-600">${{ dueNow }}</span>
         </div>
       </div>
       <p class="mt-3 text-xs text-gray-500">
-        Use <span class="font-semibold">"ANGKOR-" + your booking reference</span> as the
-        transfer note so we can match your payment to your reservation.
+        {{ t("Use") }} <span class="font-semibold">"ANGKOR-" + your booking reference</span> {{ t("as the transfer note so we can match your payment to your reservation.") }}
       </p>
     </div>
 
@@ -184,12 +182,12 @@
     </button>
 
     <p v-if="balance > 0" class="mt-3 text-center text-xs text-gray-500">
-      You'll pay <strong>${{ dueNow }}</strong> now.
-      The remaining <strong>${{ balance }}</strong> is payable at the hotel front desk on check-in.
+      {{ t("You'll pay") }} <strong>${{ dueNow }}</strong> {{ t("now.") }}
+      {{ t("The remaining") }} <strong>${{ balance }}</strong> {{ t("is payable at the hotel front desk on check-in.") }}
     </p>
     <p v-else class="mt-3 text-center text-xs text-emerald-600">
       <i class="bi bi-shield-check mr-1"></i>
-      Secure encrypted payment. Your card details are never stored.
+      {{ t("Secure encrypted payment. Your card details are never stored.") }}
     </p>
   </div>
 </template>
@@ -197,6 +195,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue"
 import type { PaymentInfo } from "../store/booking"
+import { t } from "../i18n"
 
 const props = defineProps<{
   amount: number
@@ -240,8 +239,8 @@ const balance = computed(() =>
 )
 
 const payLabel = computed(() => {
-  if (plan.value === "hotel") return "Confirm Booking"
-  return `Pay $${dueNow.value} Now`
+  if (plan.value === "hotel") return t("Confirm Booking")
+  return `${t("Pay")} $${dueNow.value} ${t("Now")}`
 })
 
 // ---- Card fields ----
@@ -317,16 +316,16 @@ const validatePayment = (): boolean => {
     return true
   }
   if (method.value === "card") {
-    if (!cardHolder.value.trim()) errs.cardHolder = "Cardholder name is required"
-    if (cardDigits.value.length < 15) errs.cardNumber = "Enter a valid card number"
+    if (!cardHolder.value.trim()) errs.cardHolder = t("Cardholder name is required")
+    if (cardDigits.value.length < 15) errs.cardNumber = t("Enter a valid card number")
     if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(cardExpiry.value)) {
-      errs.cardExpiry = "Use MM/YY"
+      errs.cardExpiry = t("Use MM/YY")
     } else {
       const [mm, yy] = cardExpiry.value.split("/").map(Number)
       const exp = new Date(2000 + yy, mm, 0, 23, 59, 59)
-      if (exp < new Date()) errs.cardExpiry = "Card has expired"
+      if (exp < new Date()) errs.cardExpiry = t("Card has expired")
     }
-    if (!/^\d{3,4}$/.test(cardCvv.value)) errs.cardCvv = "Enter a valid 3-4 digit CVV"
+    if (!/^\d{3,4}$/.test(cardCvv.value)) errs.cardCvv = t("Enter a valid 3-4 digit CVV")
   }
   errors.value = errs
   return Object.keys(errs).length === 0

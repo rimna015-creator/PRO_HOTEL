@@ -1,7 +1,7 @@
 <template>
   <!-- Create Account Form -->
 <div class="space-y-5 sm:p-2 bg-white rounded-2xl">
-  <div class="text-center font-bold text-2xl p-0">Create An Account</div>
+  <div class="text-center font-bold text-2xl p-0">{{ t("Create An Account") }}</div>
   <div v-if="!accountCreated" class="space-y-5 sm:p-3">
 
     <!-- Full Name -->
@@ -11,14 +11,14 @@
         for="name"
         class="block text-base font-semibold text-zinc-900"
       >
-        Full Name
+        {{ t("Full Name") }}
       </label>
 
       <input
         id="name"
         v-model="name"
         type="text"
-        placeholder="Enter your full name"
+        :placeholder="t('Enter your full name')"
         class="mt-2.5 block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
       />
     </div>
@@ -31,7 +31,7 @@
         for="email"
         class="block text-base font-semibold text-zinc-900"
       >
-        Email Address
+        {{ t("Email Address") }}
       </label>
 
       <input
@@ -51,7 +51,7 @@
         for="password"
         class="block text-base font-semibold text-zinc-900"
       >
-        Password
+{{ t("Password") }}
       </label>
 
       <div class="relative mt-2.5">
@@ -60,7 +60,7 @@
           id="password"
           v-model="password"
           :type="showPassword ? 'text' : 'password'"
-          placeholder="Create a password"
+          :placeholder="t('Create a password')"
           class="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 pr-12 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
         />
 
@@ -87,7 +87,7 @@
         for="confirmPassword"
         class="block text-base font-semibold text-zinc-900"
       >
-        Confirm Password
+        {{ t("Confirm Password") }}
       </label>
 
       <div class="relative mt-2.5">
@@ -96,7 +96,7 @@
           id="confirmPassword"
           v-model="confirmPassword"
           :type="showConfirmPassword ? 'text' : 'password'"
-          placeholder="Confirm your password"
+          :placeholder="t('Confirm your password')"
           class="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 pr-12 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
         />
 
@@ -124,7 +124,7 @@
         @click="createAccount"
         class="flex w-full items-center justify-center rounded-2xl bg-blue-600 px-6 py-3 text-lg font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-blue-500/30 focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.98]"
       >
-        Create Account
+        {{ t("Create Account") }}
       </button>
 
     </div>
@@ -135,13 +135,13 @@
     <div class="pt-2 text-center">
 
       <p class="text-zinc-600">
-        Already have an account?
+        {{ t("Already have an account?") }}
 
         <button
           @click="goToLogin"
           class="font-semibold text-blue-600 hover:text-blue-700"
         >
-          Sign In
+          {{ t("Sign In") }}
         </button>
       </p>
 
@@ -160,22 +160,22 @@
     </div>
 
     <h2 class="text-2xl font-bold text-zinc-900">
-      Account Created Successfully!
+      {{ t("Account Created Successfully!") }}
     </h2>
 
     <p class="mt-3 text-zinc-600">
-      Your AngkorBooking account has been created.
+      {{ t("Your AngkorBooking account has been created.") }}
     </p>
 
     <p class="text-zinc-600">
-      You are now signed in.
+      {{ t("You are now signed in.") }}
     </p>
 
     <button
       @click="finishSignUp"
       class="mt-6 w-full rounded-2xl bg-blue-600 px-6 py-3 text-lg font-bold text-white hover:bg-blue-700"
     >
-      Continue to My Account
+      {{ t("Continue to My Account") }}
     </button>
 
   </div>
@@ -185,6 +185,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { t } from '../i18n'
 
 const name = ref('')
 const email = ref('')
@@ -207,12 +208,12 @@ const createAccount = () => {
     !password.value ||
     !confirmPassword.value
   ) {
-    alert('Please fill in all fields')
+    alert(t('Please fill in all fields'))
     return
   }
 
   if (password.value !== confirmPassword.value) {
-    alert('Passwords do not match')
+    alert(t('Passwords do not match'))
     return
   }
   accountCreated.value=true

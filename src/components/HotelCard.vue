@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[340px] overflow-hidden rounded-xl bg-blue-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+    class="w-[320px] overflow-hidden rounded-xl bg-blue-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
   >
 
     <!-- Hotel Image -->
@@ -13,7 +13,7 @@
       <button
         @click="handleFavorite"
         class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow transition duration-200 hover:scale-110"
-        :aria-label="isFav ? 'Remove from favorites' : 'Add to favorites'"
+        :aria-label="isFav ? t('Remove from favorites') : t('Add to favorites')"
       >
         <i
           class="text-lg"
@@ -52,7 +52,7 @@
           {{ hotel.rating }}
         </span>
         <span class="text-gray-500">
-          ({{ hotel.reviewer }} reviews)
+          ({{ hotel.reviewer }} {{ t("reviews") }})
         </span>
       </p>
 
@@ -63,7 +63,7 @@
         </strong>
 
         <span class="text-sm text-gray-500">
-          / night
+          {{ t("/ night") }}
         </span>
       </div>
 
@@ -80,7 +80,7 @@
           @click="openGoogleMaps"
         >
           <i class="bi bi-map"></i>
-          Location
+          {{ t("Location") }}
         </button>
       </div>
 
@@ -89,7 +89,7 @@
         :to="'/hotel/' + hotel.id"
         class="block w-full rounded-lg bg-blue-600 px-4 py-2.5 text-center font-medium text-white transition duration-300 hover:bg-blue-700"
       >
-        View Details
+{{ t("View Details") }}
       </router-link>
 
     </div>
@@ -102,6 +102,7 @@ import type { Hotel } from "../Data/Hotel"
 import { isFavorite, toggleFavorite } from "../store/favorite"
 import { isLoggedIn } from "../store/user"
 import { openLogin } from "../store/ui"
+import { t } from "../i18n"
 
 const props = defineProps<{
   hotel: Hotel

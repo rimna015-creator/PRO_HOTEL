@@ -2,10 +2,10 @@
   <div class="min-h-screen bg-gray-100 px-6 pb-16 pt-24">
 
     <h1 class="text-center text-3xl font-bold text-gray-800">
-      My Bookings
+      {{ t("My Bookings") }}
     </h1>
     <p class="mt-2 text-center text-sm text-gray-600">
-      {{ bookings.length }} booking{{ bookings.length === 1 ? "" : "s" }} in total
+      {{ t("bookings in total") }} {{ bookings.length }}
     </p>
 
     <!-- Empty State -->
@@ -15,16 +15,16 @@
     >
       <i class="bi bi-calendar-x text-6xl text-gray-400"></i>
       <h2 class="mt-4 text-xl font-semibold text-gray-800">
-        No bookings yet
+        {{ t("No bookings yet") }}
       </h2>
       <p class="mt-2 text-sm text-gray-500">
-        When you book a hotel, your reservations will appear here.
+        {{ t("When you book a hotel, your reservations will appear here.") }}
       </p>
       <RouterLink
         to="/hotel"
         class="mt-6 rounded-lg bg-blue-600 px-6 py-2.5 font-medium text-white transition hover:bg-blue-700"
       >
-        Browse Hotels
+        {{ t("Browse Hotels") }}
       </RouterLink>
     </div>
 
@@ -71,7 +71,7 @@
             </p>
             <p class="flex items-center gap-2">
               <i class="bi bi-people-fill text-blue-600"></i>
-              {{ booking.guests }} guest{{ booking.guests === 1 ? "" : "s" }}
+              {{ booking.guests }} {{ t("guest") }}
             </p>
             <p class="flex items-center gap-2">
               <i class="bi bi-person-fill text-blue-600"></i>
@@ -92,17 +92,17 @@
               ></i>
               <span>
                 <strong class="text-emerald-700">${{ booking.amountPaid ?? booking.price }}</strong>
-                paid via {{ booking.paymentMethod || "Not specified" }}
+                {{ t("paid via") }} {{ booking.paymentMethod || t("Not specified") }}
               </span>
             </span>
             <span v-if="(booking.balanceDue ?? 0) > 0" class="flex items-center gap-2">
               <i class="bi bi-hotel-fill text-amber-500"></i>
               <strong class="text-amber-600">${{ booking.balanceDue }}</strong>
-              at check-in
+              {{ t("at check-in") }}
             </span>
             <span v-if="booking.cardLast4" class="flex items-center gap-2">
               <i class="bi bi-credit-card-2-front text-blue-500"></i>
-              Card •••• {{ booking.cardLast4 }}
+              {{ t("Card") }} •••• {{ booking.cardLast4 }}
             </span>
           </div>
 
@@ -116,14 +116,14 @@
               @click="handleCancel(booking.id)"
               class="rounded-lg bg-red-100 px-4 py-2 text-sm font-medium text-red-600 transition hover:bg-red-200"
             >
-              Cancel Booking
+              {{ t("Cancel Booking") }}
             </button>
             <RouterLink
               :to="'/hotel/' + booking.hotelId"
               v-else
               class="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-200"
             >
-              View Hotel
+              {{ t("View Hotel") }}
             </RouterLink>
           </div>
         </div>
@@ -135,9 +135,10 @@
 
 <script setup lang="ts">
 import { bookings, cancelBooking } from "../store/booking"
+import { t } from "../i18n"
 
 const handleCancel = (id: string) => {
-  if (confirm("Are you sure you want to cancel this booking?")) {
+  if (confirm(t("Are you sure you want to cancel this booking?"))) {
     cancelBooking(id)
   }
 }

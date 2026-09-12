@@ -9,7 +9,7 @@
         class="fixed left-4 top-24 z-30 flex items-center gap-2 rounded-lg bg-blue-300 px-4 py-1.5 shadow-md transition hover:shadow-lg"
       >
         <i class="bi bi-arrow-left text-lg"></i>
-        <span class="font-medium">Back to Hotels</span>
+        <span class="font-medium">{{ t("Back to Hotels") }}</span>
       </button>
 
       <!-- Hero Image -->
@@ -34,7 +34,7 @@
           </span>
           <span class="flex items-center gap-1 text-sm text-yellow-500">
             <i class="bi bi-star-fill"></i>
-            {{ hotel.stars }} Stars
+            {{ hotel.stars }} {{ t("Stars") }}
           </span>
         </div>
 
@@ -44,7 +44,7 @@
             <i class="bi bi-star-fill text-yellow-500"></i>
             <span class="font-semibold text-yellow-500">{{ hotel.rating }}</span>
           </span>
-          <span>({{ hotel.reviewer }} reviews)</span>
+          <span>({{ hotel.reviewer }} {{ t("reviews") }})</span>
         </div>
 
         <!-- Location -->
@@ -56,11 +56,11 @@
 
           <!-- Google Maps Button -->
           <button
-            class="flex items-center gap-1 rounded-lg bg-blue-400 px-3 py-1.5 text-xs font-medium text-black transition duration-300 hover:bg-green-700"
+            class="flex items-center gap-1 rounded-lg bg-blue-400 px-3 py-1.5 text-xs font-medium text-black transition duration-300 hover:bg-blue-700"
             @click="openGoogleMaps"
           >
             <i class="bi bi-map"></i>
-            View on Google Maps
+            {{ t("View on Google Maps") }}
           </button>
         </div>
 
@@ -69,7 +69,7 @@
           <strong class="text-2xl font-bold text-black">
             ${{ hotel.price }}
           </strong>
-          <span class="text-sm text-black"> / night</span>
+          <span class="text-sm text-black"> {{ t("/ night") }}</span>
         </div>
 
         <!-- Divider -->
@@ -77,7 +77,7 @@
 
         <!-- Description -->
         <div>
-          <h2 class="mb-2 text-xl font-semibold text-black">Description</h2>
+          <h2 class="mb-2 text-xl font-semibold text-black">{{ t("Description") }}</h2>
           <p class="leading-relaxed text-black">
             {{ hotel.description }}
           </p>
@@ -88,13 +88,13 @@
 
         <!-- Gallery -->
         <div v-if="hotel.gallery.length">
-          <h2 class="mb-3 text-xl font-semibold text-black">Gallery</h2>
+          <h2 class="mb-3 text-xl font-semibold text-black">{{ t("Gallery") }}</h2>
           <div class="grid grid-cols-3 gap-3">
             <img
               v-for="(img, index) in hotel.gallery"
               :key="index"
               :src="img"
-              :alt="hotel.name + ' photo ' + (index + 1)"
+              :alt="hotel.name + ' ' + t('photo') + ' ' + (index + 1)"
               class="h-40 w-full rounded-lg object-cover"
             />
           </div>
@@ -108,7 +108,7 @@
 
           <!-- Facilities -->
           <div>
-            <h2 class="mb-3 text-xl font-semibold text-black">Facilities</h2>
+            <h2 class="mb-3 text-xl font-semibold text-black">{{ t("Facilities") }}</h2>
             <ul class="space-y-2">
               <li
                 v-for="item in hotel.facilities"
@@ -123,7 +123,7 @@
 
           <!-- Services -->
           <div>
-            <h2 class="mb-3 text-xl font-semibold text-black">Services</h2>
+            <h2 class="mb-3 text-xl font-semibold text-black">{{ t("Services") }}</h2>
             <ul class="space-y-2">
               <li
                 v-for="item in hotel.services"
@@ -143,7 +143,7 @@
 
         <!-- Room Types -->
         <div>
-          <h2 class="mb-4 text-xl font-semibold text-black">Room Types</h2>
+          <h2 class="mb-4 text-xl font-semibold text-black">{{ t("Room Types") }}</h2>
           <div class="space-y-4">
             <div
               v-for="room in hotel.roomTypes"
@@ -160,23 +160,23 @@
                   </p>
                   <p class="mt-2 flex items-center gap-1 text-sm text-black">
                     <i class="bi bi-people-fill"></i>
-                    Up to {{ room.capacity }} guests
+                    {{ t("Up to") }} {{ room.capacity }} {{ t("persons") }}
                   </p>
                   <p class="mt-1 flex items-center gap-1 text-sm" :class="room.available > 0 ? 'text-blue-900' : 'text-black'">
                     <i :class="room.available > 0 ? 'bi bi-check-circle-fill' : 'bi bi-x-circle-fill'"></i>
-                    {{ room.available > 0 ? room.available + ' rooms available' : 'Sold out' }}
+                    {{ room.available > 0 ? room.available + ' ' + t('rooms available') : t('Sold out') }}
                   </p>
                 </div>
                 <div class="text-right">
                   <strong class="text-xl font-bold text-black">
                     ${{ room.price }}
                   </strong>
-                  <p class="text-xs text-black">/ night</p>
+                  <p class="text-xs text-black">{{ t("/ night") }}</p>
                   <router-link
                     :to="{ path: '/hotel/' + hotel.id + '/book', query: { room: room.name } }"
                     class="mt-2 inline-block rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
                   >
-                    Book Now
+                    {{ t("Book Now") }}
                   </router-link>
                 </div>
               </div>
@@ -190,14 +190,14 @@
         <!-- Check-in / Check-out -->
         <div class="flex gap-8">
           <div>
-            <h2 class="mb-1 text-xl font-semibold text-black">Check-in</h2>
+            <h2 class="mb-1 text-xl font-semibold text-black">{{ t("Check-in Time") }}</h2>
             <p class="flex items-center gap-2 text-black">
               <i class="bi bi-box-arrow-in-right text-black"></i>
               {{ hotel.checkIn }}
             </p>
           </div>
           <div>
-            <h2 class="mb-1 text-xl font-semibold text-black">Check-out</h2>
+            <h2 class="mb-1 text-xl font-semibold text-black">{{ t("Check-out Time") }}</h2>
             <p class="flex items-center gap-2 text-black">
               <i class="bi bi-box-arrow-right text-black"></i>
               {{ hotel.checkOut }}
@@ -213,7 +213,7 @@
 
           <!-- Policies -->
           <div>
-            <h2 class="mb-3 text-xl font-semibold text-black">House Rules & Policies</h2>
+            <h2 class="mb-3 text-xl font-semibold text-black">{{ t("House Rules & Policies") }}</h2>
             <ul class="space-y-2">
               <li
                 v-for="policy in hotel.policies"
@@ -228,7 +228,7 @@
 
           <!-- Contact Hotel -->
           <div>
-            <h2 class="mb-3 text-xl font-semibold text-black">Contact Hotel</h2>
+            <h2 class="mb-3 text-xl font-semibold text-black">{{ t("Contact Hotel") }}</h2>
 
             <!-- Hotline -->
             <p class="mb-4 flex items-center gap-2 text-sm text-black">
@@ -279,8 +279,8 @@
     <!-- Not Found -->
     <div v-else class="flex min-h-[60vh] items-center justify-center">
       <div class="text-center">
-        <h2 class="text-2xl font-bold text-black">Hotel Not Found</h2>
-        <p class="mt-2 text-black">The hotel you are looking for does not exist.</p>
+        <h2 class="text-2xl font-bold text-black">{{ t("Hotel Not Found") }}</h2>
+        <p class="mt-2 text-black">{{ t("The hotel you are looking for does not exist.") }}</p>
       </div>
     </div>
 
@@ -291,6 +291,7 @@
 import { computed } from "vue"
 import { useRoute } from "vue-router"
 import { hotelDetails } from "../Data/hotelDetail"
+import { t } from "../i18n"
 
 const route = useRoute()
 

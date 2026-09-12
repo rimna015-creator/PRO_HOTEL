@@ -11,7 +11,7 @@
         class="h-[200px] w-full object-cover"
       />
       <span class="absolute left-3 top-3 rounded-full bg-yellow-400 px-3 py-1 text-xs font-bold text-blue-900">
-        {{ promotion.discount }}% OFF
+        {{ t("discount") }} {{ promotion.discount }}%
       </span>
       <span class="absolute right-3 top-3 rounded-full bg-blue-800 px-3 py-1 text-xs font-medium text-white">
         <i class="bi bi-stars mr-1"></i>
@@ -56,7 +56,7 @@
           {{ formatDate(promotion.availableFrom) }} – {{ formatDate(promotion.availableTo) }}
         </span>
         <span class="ml-auto rounded-md bg-blue-600 px-2 py-0.5 text-xs font-semibold text-white">
-          {{ promotion.durationNights }} nights
+          {{ promotion.durationNights }} {{ t("nights") }}
         </span>
       </div>
 
@@ -67,13 +67,13 @@
           <span class="ml-1 text-[22px] font-bold text-gray-900">
             ${{ promotion.packagePrice }}
           </span>
-          <span class="text-sm text-gray-500">/ night</span>
+          <span class="text-sm text-gray-500">{{ t("/ night") }}</span>
         </div>
         <router-link
           :to="'/hotel/' + promotion.hotelId"
           class="rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition duration-300 hover:bg-blue-700"
         >
-          View Hotel
+          {{ t("View Hotel") }}
         </router-link>
       </div>
 
@@ -83,6 +83,7 @@
 
 <script setup lang="ts">
 import type { Promotion } from "../Data/Promotion"
+import { t } from "../i18n"
 
 const props = defineProps<{
   promotion: Promotion

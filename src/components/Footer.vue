@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { t } from "../i18n"
 const currentYear = new Date().getFullYear()
 </script>
 
@@ -15,45 +16,44 @@ const currentYear = new Date().getFullYear()
             <span class="text-sm text-gray-300 font-serif">Booking.</span>
           </div>
           <p class="text-sm leading-relaxed text-gray-300">
-            Angkor Booking is a hotel reservation platform built by a passionate
-            front-end student as a portfolio project. We aim to provide a seamless
-            and enjoyable booking experience for travelers.
+            {{ t("Angkor Booking is a hotel reservation platform built by a passionate front-end student as a portfolio project.") }}
+            {{ t("We aim to provide a seamless and enjoyable booking experience for travelers.") }}
             <span class="font-bold font-serif"> Miss.Narim & Miss.Leangchou</span>
           </p>
         </div>
 
         <!-- Quick Links -->
         <div>
-          <h3 class="mb-4 text-lg font-semibold text-yellow-400">Quick Links</h3>
+          <h3 class="mb-4 text-lg font-semibold text-yellow-400">{{ t("Quick Links") }}</h3>
           <ul class="space-y-2 text-sm text-gray-300">
             <li>
-              <RouterLink to="/" class="transition hover:text-white">Home</RouterLink>
+              <RouterLink to="/" class="transition hover:text-white">{{ t("Home") }}</RouterLink>
             </li>
             <li>
-              <RouterLink to="/hotel" class="transition hover:text-white">Hotels</RouterLink>
+              <RouterLink to="/hotel" class="transition hover:text-white">{{ t("Hotels") }}</RouterLink>
             </li>
             <li>
-              <RouterLink to="/explore" class="transition hover:text-white">Explore</RouterLink>
+              <RouterLink to="/explore" class="transition hover:text-white">{{ t("Explore") }}</RouterLink>
             </li>
             <li>
-              <RouterLink to="/promotion" class="transition hover:text-white">Promotion</RouterLink>
+              <RouterLink to="/promotion" class="transition hover:text-white">{{ t("Promotion") }}</RouterLink>
             </li>
             <li>
-              <RouterLink to="/my-booking" class="transition hover:text-white">My Booking</RouterLink>
+              <RouterLink to="/my-booking" class="transition hover:text-white">{{ t("My Booking") }}</RouterLink>
             </li>
             <li>
-              <RouterLink to="/my-account" class="transition hover:text-white">My Account</RouterLink>
+              <RouterLink to="/my-account" class="transition hover:text-white">{{ t("My Account") }}</RouterLink>
             </li>
           </ul>
         </div>
 
         <!-- Contact -->
         <div>
-          <h3 class="mb-4 text-lg font-semibold text-yellow-400">Contact Us</h3>
+          <h3 class="mb-4 text-lg font-semibold text-yellow-400">{{ t("Contact Us") }}</h3>
           <ul class="space-y-3 text-sm text-gray-300">
             <li class="flex items-center gap-2">
               <i class="bi bi-geo-alt-fill text-yellow-400"></i>
-              Phnom Penh, Cambodia
+              {{ t("Phnom Penh, Cambodia") }}
             </li>
             <li class="flex items-center gap-2">
               <i class="bi bi-telephone-fill text-yellow-400"></i>
@@ -68,7 +68,7 @@ const currentYear = new Date().getFullYear()
 
         <!-- Social Media -->
         <div>
-          <h3 class="mb-4 text-lg font-semibold text-yellow-400">Follow Us</h3>
+          <h3 class="mb-4 text-lg font-semibold text-yellow-400">{{ t("Follow Us") }}</h3>
           <div class="flex items-center gap-4">
             <a
               href="#"
@@ -99,7 +99,7 @@ const currentYear = new Date().getFullYear()
               <i class="bi bi-youtube text-lg"></i>
             </a>
           </div>
-          <p class="mt-4 text-sm text-gray-400">Stay connected for updates and travel tips!</p>
+          <p class="mt-4 text-sm text-gray-400">{{ t("Stay connected for updates and travel tips!") }}</p>
         </div>
 
       </div>
@@ -109,10 +109,10 @@ const currentYear = new Date().getFullYear()
     <div class="border-t border-blue-700">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-4 sm:flex-row sm:px-6 lg:px-8">
         <p class="text-sm text-gray-400">
-          &copy; {{ currentYear }} Angkor Booking. All rights reserved.
+          &copy; {{ currentYear }} Angkor Booking. {{ t("All rights reserved.") }}
         </p>
         <p class="text-sm text-gray-400">
-          Made with <i class="bi bi-heart-fill text-gray-400"></i> by a Front-End Student
+          {{ t("Made with") }} <i class="bi bi-heart-fill text-gray-400"></i> {{ t("by a Front-End Student") }}
         </p>
       </div>
     </div>
