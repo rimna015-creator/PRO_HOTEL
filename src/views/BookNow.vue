@@ -55,7 +55,7 @@
           </div>
           <div v-if="(lastBooking.balanceDue ?? 0) > 0" class="flex items-center justify-between">
             <span class="text-sm text-gray-500">{{ t("Balance at Check-in") }}</span>
-            <span class="text-sm font-semibold text-amber-600">${{ lastBooking.balanceDue }}</span>
+            <span class="text-sm font-semibold text-blue-600">${{ lastBooking.balanceDue }}</span>
           </div>
         </div>
 
@@ -102,7 +102,7 @@
               <i class="bi bi-geo-alt-fill text-blue-600"></i>
               {{ hotelDetail.location }}
             </p>
-            <p class="mt-1 flex items-center gap-1 text-sm text-yellow-500">
+            <p class="mt-1 flex items-center gap-1 text-sm text-blue-500">
               <i class="bi bi-star-fill"></i>
               <span class="font-semibold">{{ hotelDetail.rating }}</span>
               <span class="text-gray-500">({{ hotelDetail.reviewer }} {{ t("reviews") }})</span>
@@ -246,7 +246,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue"
+import { ref, computed, watch } from "vue"
 import { useRoute } from "vue-router"
 import { hotelDetails } from "../Data/hotelDetail"
 import { addBooking, type BookingRecord, type PaymentInfo } from "../store/booking"
@@ -263,13 +263,65 @@ const hotelDetail = computed(() =>
 const bookingConfirmed = ref(false)
 const lastBooking = ref<BookingRecord | null>(null)
 
-const fullName = ref(currentUser.value?.name || "")
-const email = ref(currentUser.value?.email || "")
-const phone = ref("")
-const checkIn = ref("")
-const checkOut = ref("")
-const roomType = ref((route.query.room as string) || hotelDetail.value?.roomTypes[0]?.name || "")
-const guests = ref(1)
+const DRAFT_KEY = "angkorbc_booking_draft"
+
+interface BookingDraft {
+  fullName: string
+  email: string
+  phone: string
+  checkIn: string
+  checkOut: string
+  roomType: string
+  guests: number
+}
+
+const readDraft = (): BookingDraft | null => {
+  try {
+    const raw = localStorage.getItem(DRAFT_KEY)
+    return raw ? (JSON.parse(raw) as BookingDraft) : null
+  } catch {
+    return null
+  }
+}
+
+const draft = readDraft()
+
+const fullName = ref(currentUser.value?.name || draft?.fullName || "")
+const email = ref(currentUser.value?.email || draft?.email || "")
+const phone = ref(draft?.phone || "")
+const checkIn = ref(draft?.checkIn || "")
+const checkOut = ref(draft?.checkOut || "")
+
+const availableRooms = hotelDetail.value?.roomTypes.map((r) => r.name) ?? []
+const draftedRoom = draft?.roomType && availableRooms.includes(draft.roomType) ? draft.roomType : null
+const requestedRoom = (route.query.room as string) && availableRooms.includes(route.query.room as string)
+  ? (route.query.room as string)
+  : null
+const roomType = ref(requestedRoom || draftedRoom || (availableRooms[0] ?? ""))
+
+const initialCapacity =
+  hotelDetail.value?.roomTypes.find((r) => r.name === roomType.value)?.capacity ?? 99
+const savedGuests = typeof draft?.guests === "number"
+  ? Math.min(Math.max(draft.guests, 1), initialCapacity)
+  : 1
+const guests = ref(savedGuests)
+
+const saveDraft = () => {
+  localStorage.setItem(
+    DRAFT_KEY,
+    JSON.stringify({
+      fullName: fullName.value,
+      email: email.value,
+      phone: phone.value,
+      checkIn: checkIn.value,
+      checkOut: checkOut.value,
+      roomType: roomType.value,
+      guests: guests.value
+    } as BookingDraft)
+  )
+}
+
+watch([fullName, email, phone, checkIn, checkOut, roomType, guests], saveDraft)
 
 const today = new Date().toISOString().split("T")[0]
 
@@ -348,6 +400,7 @@ const onPaymentSuccess = (payment: PaymentInfo) => {
   }
 
   addBooking(booking)
+  localStorage.removeItem(DRAFT_KEY)
   lastBooking.value = booking
   bookingConfirmed.value = true
   window.scrollTo(0, 0)

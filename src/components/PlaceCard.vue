@@ -19,12 +19,12 @@ defineProps<{
     <div class="p-4">
       <div class="flex items-center justify-between">
         <span
-          class="inline-block rounded-full bg-amber-100 px-3 py-0.5 text-xs font-semibold text-amber-700"
+          class="inline-block rounded-full bg-blue-100 px-3 py-0.5 text-xs font-semibold text-blue-700"
         >
           {{ place.category }}
         </span>
         <span class="text-sm font-semibold text-gray-700">
-          <i class="bi bi-star-fill text-yellow-500"></i>
+          <i class="bi bi-star-fill text-blue-500"></i>
           {{ place.rating }}
         </span>
       </div>

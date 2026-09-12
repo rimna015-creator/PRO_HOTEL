@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="bg-blue-900 text-white">
+  <footer class="bg-blue-500 text-white">
     <!-- Main Footer -->
     <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -12,8 +12,8 @@ const currentYear = new Date().getFullYear()
         <!-- About Us -->
         <div>
           <div class="mb-4">
-            <span class="text-xl font-bold text-yellow-400 font-sans">Angkor</span>
-            <span class="text-sm text-gray-300 font-serif">Booking.</span>
+            <span class="text-xl font-bold text-blue-900 font-sans">Angkor</span>
+            <span class="text-sm text-gray-300 font-semibold">Booking.</span>
           </div>
           <p class="text-sm leading-relaxed text-gray-300">
             {{ t("Angkor Booking is a hotel reservation platform built by a passionate front-end student as a portfolio project.") }}
@@ -24,7 +24,7 @@ const currentYear = new Date().getFullYear()
 
         <!-- Quick Links -->
         <div>
-          <h3 class="mb-4 text-lg font-semibold text-yellow-400">{{ t("Quick Links") }}</h3>
+          <h3 class="mb-4 text-lg font-semibold text-blue-900">{{ t("Quick Links") }}</h3>
           <ul class="space-y-2 text-sm text-gray-300">
             <li>
               <RouterLink to="/" class="transition hover:text-white">{{ t("Home") }}</RouterLink>
@@ -49,18 +49,18 @@ const currentYear = new Date().getFullYear()
 
         <!-- Contact -->
         <div>
-          <h3 class="mb-4 text-lg font-semibold text-yellow-400">{{ t("Contact Us") }}</h3>
+          <h3 class="mb-4 text-lg font-semibold text-blue-900">{{ t("Contact Us") }}</h3>
           <ul class="space-y-3 text-sm text-gray-300">
             <li class="flex items-center gap-2">
-              <i class="bi bi-geo-alt-fill text-yellow-400"></i>
+              <i class="bi bi-geo-alt-fill text-blue-400"></i>
               {{ t("Phnom Penh, Cambodia") }}
             </li>
             <li class="flex items-center gap-2">
-              <i class="bi bi-telephone-fill text-yellow-400"></i>
+              <i class="bi bi-telephone-fill text-blue-400"></i>
               +855 12 345 678
             </li>
             <li class="flex items-center gap-2">
-              <i class="bi bi-envelope-fill text-yellow-400"></i>
+              <i class="bi bi-envelope-fill text-blue-400"></i>
               info@angkorbooking.com
             </li>
           </ul>
@@ -68,38 +68,38 @@ const currentYear = new Date().getFullYear()
 
         <!-- Social Media -->
         <div>
-          <h3 class="mb-4 text-lg font-semibold text-yellow-400">{{ t("Follow Us") }}</h3>
+          <h3 class="mb-4 text-lg font-semibold text-blue-900">{{ t("Follow Us") }}</h3>
           <div class="flex items-center gap-4">
             <a
               href="#"
               aria-label="Facebook"
-              class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-gray-300 transition hover:bg-yellow-400 hover:text-blue-900"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-gray-300 transition hover:bg-blue-500 hover:text-white"
             >
               <i class="bi bi-facebook text-lg"></i>
             </a>
             <a
               href="#"
               aria-label="Instagram"
-              class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-gray-300 transition hover:bg-yellow-400 hover:text-blue-900"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-gray-300 transition hover:bg-blue-500 hover:text-white"
             >
               <i class="bi bi-instagram text-lg"></i>
             </a>
             <a
               href="#"
               aria-label="Twitter"
-              class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-gray-300 transition hover:bg-yellow-400 hover:text-blue-900"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-gray-300 transition hover:bg-blue-500 hover:text-white"
             >
               <i class="bi bi-twitter-x text-lg"></i>
             </a>
             <a
               href="#"
               aria-label="YouTube"
-              class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-gray-300 transition hover:bg-yellow-400 hover:text-blue-900"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-800 text-white transition hover:bg-blue-500 hover:text-white"
             >
               <i class="bi bi-youtube text-lg"></i>
             </a>
           </div>
-          <p class="mt-4 text-sm text-gray-400">{{ t("Stay connected for updates and travel tips!") }}</p>
+          <p class="mt-4 text-sm text-white">{{ t("Stay connected for updates and travel tips!") }}</p>
         </div>
 
       </div>
@@ -108,11 +108,11 @@ const currentYear = new Date().getFullYear()
     <!-- Bottom Bar -->
     <div class="border-t border-blue-700">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-4 sm:flex-row sm:px-6 lg:px-8">
-        <p class="text-sm text-gray-400">
+        <p class="text-sm text-white">
           &copy; {{ currentYear }} Angkor Booking. {{ t("All rights reserved.") }}
         </p>
-        <p class="text-sm text-gray-400">
-          {{ t("Made with") }} <i class="bi bi-heart-fill text-gray-400"></i> {{ t("by a Front-End Student") }}
+        <p class="text-sm text-white">
+          {{ t("Made with") }} <i class="bi bi-heart-fill text-white"></i> {{ t("by a Front-End Student") }}
         </p>
       </div>
     </div>

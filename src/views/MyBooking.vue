@@ -96,8 +96,8 @@
               </span>
             </span>
             <span v-if="(booking.balanceDue ?? 0) > 0" class="flex items-center gap-2">
-              <i class="bi bi-hotel-fill text-amber-500"></i>
-              <strong class="text-amber-600">${{ booking.balanceDue }}</strong>
+              <i class="bi bi-hotel-fill text-blue-500"></i>
+              <strong class="text-blue-600">${{ booking.balanceDue }}</strong>
               {{ t("at check-in") }}
             </span>
             <span v-if="booking.cardLast4" class="flex items-center gap-2">

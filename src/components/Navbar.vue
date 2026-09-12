@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed top-0 left-0 z-40 w-full bg-blue-800 shadow-md">
+  <nav class="fixed top-0 left-0 z-40 w-full overflow-hidden bg-blue-500 shadow-md">
     
     <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-4 lg:px-2">
 
@@ -7,8 +7,8 @@
       <RouterLink
         to="/"
       >
-      <span class="text-2xl font-bold text-yellow-400 font-sans">Angkor</span>
-      <span class="text-sm text-white font-serif">Booking.</span>
+      <span class="text-2xl font-bold text-blue-900 font-sans">Angkor</span>
+      <span class="text-sm text-white font-semibold">Booking.</span>
       </RouterLink>
 
 
@@ -17,15 +17,15 @@
 
         <RouterLink
           to="/"
-          exact-active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
-          class="font-medium text-white transition hover:bg-blue-400  rounded-lg px-4 py-2"
+          exact-active-class="bg-blue-600 text-white hover:bg-blue-600"
+          class="font-medium text-white transition  hover:bg-blue-400 rounded-lg px-4 py-2"
         >
           {{ t("Home") }}
         </RouterLink>
 
         <RouterLink
           to="/hotel"
-          active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
+          active-class="bg-blue-600 text-white hover:bg-blue-600"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
           {{ t("Hotel") }}
@@ -33,7 +33,7 @@
 
         <RouterLink
           to="/explore"
-          active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
+          active-class="bg-blue-600 text-white hover:bg-blue-600"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
           {{ t("Explore") }}
@@ -41,7 +41,7 @@
 
         <RouterLink
           to="/promotion"
-          active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
+          active-class="bg-blue-600 text-white hover:bg-blue-600"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
           {{ t("Promotion") }}
@@ -49,7 +49,7 @@
 
         <RouterLink
           to="/my-booking"
-          active-class="bg-yellow-500 text-blue-900 hover:bg-yellow-500"
+          active-class="bg-blue-600 text-white hover:bg-blue-600"
           class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
         >
           {{ t("My Booking") }}
@@ -123,17 +123,25 @@
 
 
     <!-- Mobile Menu -->
+    <transition
+      enter-active-class="transition duration-300 ease-out"
+      enter-from-class="opacity-0 -translate-y-2"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-200 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 -translate-y-2"
+    >
     <div
       v-if="isMenuOpen"
-      class="border-t border-blue-500 bg-white md:hidden"
+      class="border-t border-blue-500 bg-white md:hidden p-2 "
     >
       <div class="flex flex-col ">
 
         <RouterLink
           to="/"
-          @click="isMenuOpen = false"
+          @click="isMenuOpen = false" 
           exact-active-class="bg-blue-500 text-white"
-          class=" px-4 py-3 font-medium text-black hover:bg-blue-500 active:scale-105 hover:border-blue-900"
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105 hover:border-blue-900 "
         >
           {{ t("Home") }}
         </RouterLink>
@@ -142,7 +150,7 @@
           to="/hotel"
           @click="isMenuOpen = false"
           active-class="bg-blue-500 text-white "
-          class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105"
         >
           {{ t("Hotel") }}
         </RouterLink>
@@ -151,7 +159,7 @@
           to="/explore"
           @click="isMenuOpen = false"
           active-class="bg-blue-500 text-white"
-          class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105"
         >
           {{ t("Explore") }}
         </RouterLink>
@@ -160,7 +168,7 @@
           to="/promotion"
           @click="isMenuOpen = false"
           active-class="bg-blue-500 text-white"
-          class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105"
         >
           {{ t("Promotion") }}
         </RouterLink>
@@ -169,7 +177,7 @@
           to="/my-booking"
           @click="isMenuOpen = false"
           active-class="bg-blue-500 text-white"
-          class=" px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105"
         >
           {{ t("My Booking") }}
         </RouterLink>
@@ -178,7 +186,7 @@
           to="/my-account"
           @click="isMenuOpen = false"
           active-class="bg-blue-500 text-white"
-          class="px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105"
         >
           {{ displayName }}
         </RouterLink>
@@ -193,6 +201,7 @@
 
       </div>
     </div>
+    </transition>
 
   </nav>
 </template>

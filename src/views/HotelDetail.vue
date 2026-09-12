@@ -32,7 +32,7 @@
           <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-black">
             {{ hotel.type }}
           </span>
-          <span class="flex items-center gap-1 text-sm text-yellow-500">
+          <span class="flex items-center gap-1 text-sm text-blue-500">
             <i class="bi bi-star-fill"></i>
             {{ hotel.stars }} {{ t("Stars") }}
           </span>
@@ -41,8 +41,8 @@
         <!-- Rating + Reviews -->
         <div class="mt-3 flex items-center gap-4 text-sm text-black">
           <span class="flex items-center gap-1">
-            <i class="bi bi-star-fill text-yellow-500"></i>
-            <span class="font-semibold text-yellow-500">{{ hotel.rating }}</span>
+            <i class="bi bi-star-fill text-blue-500"></i>
+            <span class="font-semibold text-blue-500">{{ hotel.rating }}</span>
           </span>
           <span>({{ hotel.reviewer }} {{ t("reviews") }})</span>
         </div>

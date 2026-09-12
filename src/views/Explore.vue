@@ -6,7 +6,7 @@
       <h1 class="text-4xl font-bold text-gray-700">
         {{ t("Explore Siem Reap") }}
       </h1>
-      <p class="mt-2 text-sm font-medium uppercase tracking-widest text-amber-600">
+      <p class="mt-2 text-sm font-medium uppercase tracking-widest text-blue-600">
         {{ t("Cambodia") }}
       </p>
       <p class="mt-4 leading-relaxed text-gray-600">
@@ -66,7 +66,7 @@
         <div class="p-5">
 
           <!-- Category Badge -->
-          <span class="inline-block rounded-full bg-amber-100 px-3 py-0.5 text-xs font-semibold text-amber-700">
+          <span class="inline-block rounded-full bg-blue-100 px-3 py-0.5 text-xs font-semibold text-blue-700">
             {{ place.category }}
           </span>
 
@@ -77,7 +77,7 @@
 
           <!-- Rating -->
           <p class="mt-1 text-sm text-gray-700">
-            <i class="bi bi-star-fill text-yellow-500"></i>
+            <i class="bi bi-star-fill text-blue-500"></i>
             <span class="font-semibold">{{ place.rating }}</span>
           </p>
 

@@ -10,7 +10,7 @@
         :alt="promotion.title"
         class="h-[200px] w-full object-cover"
       />
-      <span class="absolute left-3 top-3 rounded-full bg-yellow-400 px-3 py-1 text-xs font-bold text-blue-900">
+      <span class="absolute left-3 top-3 rounded-full bg-blue-400 px-3 py-1 text-xs font-bold text-blue-900">
         {{ t("discount") }} {{ promotion.discount }}%
       </span>
       <span class="absolute right-3 top-3 rounded-full bg-blue-800 px-3 py-1 text-xs font-medium text-white">

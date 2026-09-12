@@ -2,29 +2,28 @@
   <div class="min-h-screen">
 
     <!-- Hero Banner -->
-    <div class="relative h-[85vh] w-full overflow-hidden ">
+    <div class="relative h-[85vh] w-full overflow-hidden pt-16">
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdLINieTWE6q9ncqTgoCq3HCejICZllGwvjwzDAaygB1c_EUTc2GpuEGA&s=10"
+        src="https://c1.wallpaperflare.com/preview/854/900/891/ankor-wat-cambodia-asia-lake.jpg"
         alt="Angkor Wat Temple, Siem Reap"
         class="h-full w-full object-cover "
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent"></div>
 
       <!-- Banner Text Content -->
       <div class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
       
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
-          {{ t("Welcome to") }} <span class="text-amber-400">BookingHotel</span>
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight text-blue-800 sm:text-6xl">
+          {{ t("Welcome to") }} <span class="text-blue-600">BookingHotel</span>
         </h1>
-        <p class="mb-8 max-w-xl text-base text-slate-200 sm:text-lg">
+        <p class="mb-5 font-semibold max-w-xl text-base text-slate-200 sm:text-lg">
           {{ t("Discover and book top-rated accommodations near ancient temples and vibrant local sights.") }}
         </p>
-        <span class="mb-3 text-sm font-sans uppercase tracking-widest text-amber-400">
+        <span class="mb-3 text-sm font-sans font-bold uppercase tracking-widest text-blue-400">
           {{ t("Find the beautiful places in Siem Reap") }}
         </span>
         <router-link
           to="/explore"
-          class="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-8 py-3.5 text-base font-semibold text-slate-950 shadow-lg shadow-amber-500/20 transition-all duration-200  active:scale-95"
+          class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-200  active:scale-95"
         >
           {{ t("Explore Siem Reap") }}
           <i class="bi bi-compass"></i>
@@ -50,7 +49,7 @@
               id="checkin"
               v-model="checkIn"
               type="date"
-              class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-slate-800 transition focus:border-amber-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/20"
+              class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-slate-800 transition focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20"
             />
           </div>
 
@@ -64,7 +63,7 @@
               v-model="checkOut"
               type="date"
               :min="checkIn || undefined"
-              class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-slate-800 transition focus:border-amber-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/20"
+              class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-slate-800 transition focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20"
             />
           </div>
 
@@ -75,7 +74,7 @@
             </label>
             <select
               v-model="guests"
-              class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-slate-800 transition focus:border-amber-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/20"
+              class="w-full rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-slate-800 transition focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20"
             >
               <option value="1">{{ t("1 Guest") }}</option>
               <option value="2">{{ t("2 Guests") }}</option>
@@ -88,7 +87,7 @@
           <!-- Submit Button -->
           <button
             type="submit"
-            class="flex items-center justify-center gap-2 rounded-lg bg-amber-300 px-6 py-2.5 font-semibold text-slate-950 shadow-md transition duration-200 hover:bg-amber-400 active:scale-95"
+            class="flex items-center justify-center gap-2 rounded-lg bg-blue-300 px-6 py-2.5 font-semibold text-slate-950 shadow-md transition duration-200 hover:bg-blue-400 active:scale-95"
           >
             <i class="bi bi-search"></i>
             {{ t("Search") }}
@@ -113,7 +112,7 @@
         <!-- Optional Navigation Hint or Buttons -->
         <RouterLink
           to="/hotel"
-          class="hidden items-center gap-1.5 text-sm font-semibold text-amber-600 hover:text-amber-700 sm:flex"
+          class="hidden items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-700 sm:flex"
         >
           {{ t("View all") }}
           <i class="bi bi-arrow-right"></i>
@@ -152,7 +151,7 @@
 
         <RouterLink
           to="/promotion"
-          class="hidden items-center gap-1.5 text-sm font-semibold text-amber-600 hover:text-amber-700 sm:flex"
+          class="hidden items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-700 sm:flex"
         >
           {{ t("View all") }}
           <i class="bi bi-arrow-right"></i>
@@ -190,7 +189,7 @@
 
         <RouterLink
           to="/explore"
-          class="hidden items-center gap-1.5 text-sm font-semibold text-amber-600 hover:text-amber-700 sm:flex"
+          class="hidden items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-700 sm:flex"
         >
           {{ t("View all") }}
           <i class="bi bi-arrow-right"></i>
@@ -227,42 +226,42 @@
         </div>
 
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-xl bg-gray-700 p-6 text-center ring-1 ">
-            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/10 text-amber-400">
+          <div class="rounded-xl bg-blue-300 p-6 text-center ring-1 ">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 ">
               <i class="bi bi-geo-alt-fill text-2xl"></i>
             </div>
             <h3 class="mt-4 text-lg font-semibold text-white">{{ t("Best Locations") }}</h3>
-            <p class="mt-2 text-sm text-gray-300">
+            <p class="mt-2 text-sm text-black">
               {{ t("Close to Angkor Wat and popular downtown attractions.") }}
             </p>
           </div>
 
-          <div class="rounded-xl bg-gray-700 p-6 text-center ring-1 ">
-            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/10 text-amber-400">
+          <div class="rounded-xl bg-blue-300 p-6 text-center ring-1 ">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-500">
               <i class="bi bi-tags-fill text-2xl"></i>
             </div>
             <h3 class="mt-4 text-lg font-semibold text-white">{{ t("Best Prices") }}</h3>
-            <p class="mt-2 text-sm text-gray-300">
+            <p class="mt-2 text-sm text-black">
               {{ t("Competitive rates direct from local properties with no hidden fees.") }}
             </p>
           </div>
 
-          <div class="rounded-xl bg-gray-700 p-6 text-center ring-1 ">
-            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/10 text-amber-400">
+          <div class="rounded-xl bg-blue-300 p-6 text-center ring-1 ">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-500">
               <i class="bi bi-shield-check text-2xl"></i>
             </div>
             <h3 class="mt-4 text-lg font-semibold text-white">{{ t("Secure Booking") }}</h3>
-            <p class="mt-2 text-sm text-gray-300">
+            <p class="mt-2 text-sm text-black">
               {{ t("Encrypted transaction processing and guaranteed reservations.") }}
             </p>
           </div>
 
-          <div class="rounded-xl bg-gray-700 p-6 text-center ring-1 ">
-            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/10 text-amber-400">
+          <div class="rounded-xl bg-blue-300 p-6 text-center ring-1 ">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-500">
               <i class="bi bi-headset text-2xl"></i>
             </div>
             <h3 class="mt-4 text-lg font-semibold text-white">{{ t("24/7 Support") }}</h3>
-            <p class="mt-2 text-sm text-gray-300">
+            <p class="mt-2 text-sm text-black">
               {{ t("Our support team is always available to assist your journey.") }}
             </p>
           </div>
@@ -286,10 +285,34 @@ import { t } from "../i18n"
 
 const router = useRouter()
 
-const checkIn = ref("")
-const checkOut = ref("")
-const guests = ref("1")
+const SEARCH_KEY = "angkorbc_search"
+
+const readSearch = () => {
+  try {
+    const raw = localStorage.getItem(SEARCH_KEY)
+    const parsed = raw ? JSON.parse(raw) : {}
+    return {
+      checkIn: typeof parsed.checkIn === "string" ? parsed.checkIn : "",
+      checkOut: typeof parsed.checkOut === "string" ? parsed.checkOut : "",
+      guests: ["1", "2", "3", "4", "5+"].includes(parsed.guests) ? parsed.guests : "1"
+    }
+  } catch {
+    return { checkIn: "", checkOut: "", guests: "1" }
+  }
+}
+
+const savedSearch = readSearch()
+const checkIn = ref(savedSearch.checkIn)
+const checkOut = ref(savedSearch.checkOut)
+const guests = ref(savedSearch.guests)
 const error = ref("")
+
+const saveSearch = () => {
+  localStorage.setItem(
+    SEARCH_KEY,
+    JSON.stringify({ checkIn: checkIn.value, checkOut: checkOut.value, guests: guests.value })
+  )
+}
 
 const featuredHotels = computed(() => hotels)
 
@@ -303,6 +326,7 @@ const searchHotels = () => {
     return
   }
   error.value = ""
+  saveSearch()
   router.push({
     path: "/hotel",
     query: { checkin: checkIn.value, checkout: checkOut.value, guests: guests.value }

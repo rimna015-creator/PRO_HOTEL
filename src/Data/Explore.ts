@@ -113,7 +113,7 @@ export const places: Place[] = [
     category: "Temple",
     description:
       "A 10th-century temple mountain built by King Rajendravarman as his state temple. Pre Rup offers one of the most rewarding sunset viewpoints in the park, with panoramic views over the surrounding forest and rice fields from the top of its steep pyramid steps.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Pre_Rup%2C_Angkor%2C_Camboya%2C_2013-08-16%2C_DD_13.JPG/800px-Pre_Rup%2C_Angkor%2C_Camboya%2C_2013-08-16%2C_DD_13.JPG",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXMdRs7SwAF59YK4GMpGNvrifUQcJKSw5pS9DVpw0uyw&s=10",
     rating: 4.6,
     openHours: "5:00 AM - 7:00 PM",
     ticketPrice: "Included in Angkor Pass",
@@ -125,7 +125,7 @@ export const places: Place[] = [
     category: "Temple",
     description:
       "Ending the 9th century as the state temple of King Yasovarman, this hilltop temple is the most popular spot in Siem Reap to watch the sunset over Angkor Wat. Climb to the top for stunning views across the jungle towards the iconic silhouette of the great temple.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Phnom_Bakheng_temple_at_Angkor%2C_Cambodia.jpg/800px-Phnom_Bakheng_temple_at_Angkor%2C_Cambodia.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL9sqP8DreJ94-qmdWfvpiBIHkvwcUD_QQF5v3eHr5Gg&s=10",
     rating: 4.5,
     openHours: "5:00 AM - 7:00 PM",
     ticketPrice: "Included in Angkor Pass",
@@ -137,7 +137,7 @@ export const places: Place[] = [
     category: "Temple",
     description:
       "One of the largest temple complexes in the Angkor region, Preah Khan was built by King Jayavarman VII to honor his father. Like Ta Prohm, it has been left largely unrestored, with towering trees and roots weaving through its walls and a maze of galleries to explore.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Preah_Khan%2C_Angkor%2C_Camboya%2C_2013-08-17%2C_DD_26.JPG/800px-Preah_Khan%2C_Angkor%2C_Camboya%2C_2013-08-17%2C_DD_26.JPG",
+    image: "https://d34vm3j4h7f97z.cloudfront.net/original/4X/4/0/5/4054bc6b677a5200922da46cd191e09442d59fb8.jpeg",
     rating: 4.7,
     openHours: "7:30 AM - 5:30 PM",
     ticketPrice: "Included in Angkor Pass",

@@ -9,7 +9,6 @@ import MyAccount from "../views/MyAccount.vue";
 import Promotion from "../views/Promotion.vue";
 
 
-
 const router=createRouter({
     history:createWebHistory(),
     routes: [
@@ -21,6 +20,17 @@ const router=createRouter({
         {path:"/promotion",component:Promotion},
         {path:"/my-booking",component:MyBooking},
         {path:"/my-account",component:MyAccount}
-    ]
+    ],
+    scrollBehavior(_to, _from, savedPosition) {
+    // When using browser Back/Forward button
+    if (savedPosition) {
+      return savedPosition;
+    }
+
+    // When navigating to a new page
+    return {
+      top: 0,
+    };
+  },
 })
 export default router

@@ -34,8 +34,8 @@
         class="rounded-full border px-4 py-1.5 text-sm font-medium transition duration-300"
         :class="
           activeStars === star.value
-            ? 'bg-amber-400 border-amber-500 text-white'
-            : 'border-gray-300 text-gray-600 hover:border-amber-400 hover:text-amber-600'
+            ? 'bg-blue-400 border-blue-500 text-white'
+            : 'border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600'
         "
         @click="activeStars = star.value"
       >

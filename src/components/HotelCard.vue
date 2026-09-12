@@ -24,30 +24,29 @@
 
     <div class="p-[18px]">
 
-      <!-- Hotel Name -->
-      <h2 class="mb-2 text-lg font-semibold text-gray-800">
-        {{ hotel.name }}
-      </h2>
-      
-      <!-- Hotel Type + Stars -->
-      <div class="mb-2 flex items-center gap-3">
-
-        <!-- Hotel Type -->
-        <span class="text-sm font-medium text-gray-600">
-          {{ hotel.type }}
-        </span>
+      <!-- Hotel Name + Stars -->
+      <div class="mb-2 flex items-center justify-between gap-2">
+        <h2 class="text-lg font-semibold text-gray-800">
+          {{ hotel.name }}
+        </h2>
 
         <!-- Stars -->
-        <span class="flex items-center gap-1 text-sm text-yellow-500">
+        <span class="flex shrink-0 items-center gap-1 text-sm text-blue-500">
           <i class="bi bi-star-fill"></i>
           {{ hotel.stars }}
         </span>
-
+      </div>
+      
+      <!-- Hotel Type -->
+      <div class="mb-2 flex items-center gap-3">
+        <span class="text-sm font-medium text-gray-600">
+          {{ hotel.type }}
+        </span>
       </div>
 
       <!-- Rating + Number of Reviews -->
       <p class="mb-3 text-sm text-gray-700">
-        <i class="bi bi-star-fill text-yellow-500"></i>
+        <i class="bi bi-star-fill text-blue-500"></i>
         <span class="font-semibold">
           {{ hotel.rating }}
         </span>
