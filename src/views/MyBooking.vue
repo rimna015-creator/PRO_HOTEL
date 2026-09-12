@@ -1,10 +1,10 @@
 <template>
-  <div class="min-h-screen bg-gray-100 px-6 pb-16 pt-24">
+  <div class="min-h-screen bg-blue-50 px-6 pb-16 pt-24">
 
-    <h1 class="text-center text-3xl font-bold text-gray-800">
+    <h1 class="text-center text-3xl font-bold text-blue-900">
       {{ t("My Bookings") }}
     </h1>
-    <p class="mt-2 text-center text-sm text-gray-600">
+    <p class="mt-2 text-center text-sm text-blue-600">
       {{ t("bookings in total") }} {{ bookings.length }}
     </p>
 
@@ -13,11 +13,11 @@
       v-if="!bookings.length"
       class="flex flex-col items-center justify-center py-20 text-center"
     >
-      <i class="bi bi-calendar-x text-6xl text-gray-400"></i>
-      <h2 class="mt-4 text-xl font-semibold text-gray-800">
+      <i class="bi bi-calendar-x text-6xl text-blue-400"></i>
+      <h2 class="mt-4 text-xl font-semibold text-blue-900">
         {{ t("No bookings yet") }}
       </h2>
-      <p class="mt-2 text-sm text-gray-500">
+      <p class="mt-2 text-sm text-blue-500">
         {{ t("When you book a hotel, your reservations will appear here.") }}
       </p>
       <RouterLink
@@ -44,10 +44,10 @@
         <div class="flex flex-1 flex-col p-5">
           <div class="flex items-start justify-between gap-3">
             <div>
-              <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">
+              <p class="text-xs font-semibold uppercase tracking-wide text-blue-700">
                 {{ booking.hotelName }}
               </p>
-              <h2 class="text-lg font-bold text-gray-800">
+              <h2 class="text-lg font-bold text-blue-900">
                 {{ booking.roomType }}
               </h2>
             </div>
@@ -64,31 +64,31 @@
           </div>
 
           <!-- Details -->
-          <div class="mt-3 grid grid-cols-2 gap-3 text-sm text-gray-600">
+          <div class="mt-3 grid grid-cols-2 gap-3 text-sm text-blue-600">
             <p class="flex items-center gap-2">
-              <i class="bi bi-calendar-check text-blue-600"></i>
+              <i class="bi bi-calendar-check text-blue-500"></i>
               {{ formatDate(booking.checkIn) }} - {{ formatDate(booking.checkOut) }}
             </p>
             <p class="flex items-center gap-2">
-              <i class="bi bi-people-fill text-blue-600"></i>
+              <i class="bi bi-people-fill text-blue-500"></i>
               {{ booking.guests }} {{ t("guest") }}
             </p>
             <p class="flex items-center gap-2">
-              <i class="bi bi-person-fill text-blue-600"></i>
+              <i class="bi bi-person-fill text-blue-500"></i>
               {{ booking.fullName }}
             </p>
             <p class="flex items-center gap-2">
-              <i class="bi bi-ticket text-blue-600"></i>
+              <i class="bi bi-ticket text-blue-500"></i>
               {{ booking.id }}
             </p>
           </div>
 
-          <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
+          <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-blue-600">
             <span class="flex items-center gap-2">
               <i
                 :class="booking.amountPaid && booking.amountPaid > 0
                   ? 'bi bi-check-circle-fill text-emerald-600'
-                  : 'bi bi-circle text-gray-400'"
+                  : 'bi bi-circle text-blue-400'"
               ></i>
               <span>
                 <strong class="text-emerald-700">${{ booking.amountPaid ?? booking.price }}</strong>
@@ -97,7 +97,7 @@
             </span>
             <span v-if="(booking.balanceDue ?? 0) > 0" class="flex items-center gap-2">
               <i class="bi bi-hotel-fill text-blue-500"></i>
-              <strong class="text-blue-600">${{ booking.balanceDue }}</strong>
+              <strong class="text-emerald-600">${{ booking.balanceDue }}</strong>
               {{ t("at check-in") }}
             </span>
             <span v-if="booking.cardLast4" class="flex items-center gap-2">
@@ -106,8 +106,8 @@
             </span>
           </div>
 
-          <div class="mt-4 flex items-center justify-between border-t border-gray-100 pt-4">
-            <strong class="text-xl font-bold text-gray-900">
+          <div class="mt-4 flex items-center justify-between border-t border-blue-200 pt-4">
+            <strong class="text-xl font-bold text-blue-900">
               ${{ booking.price }}
             </strong>
 
@@ -121,7 +121,7 @@
             <RouterLink
               :to="'/hotel/' + booking.hotelId"
               v-else
-              class="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-600 transition hover:bg-gray-200"
+              class="rounded-lg bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600 transition hover:bg-blue-200"
             >
               {{ t("View Hotel") }}
             </RouterLink>

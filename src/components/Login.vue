@@ -5,7 +5,7 @@
   <div class="text-2xl text-center font-bold">{{ t("Sign In") }}</div>
   <!-- Email Field -->
   <div>
-    <label for="email" class="block text-base font-semibold text-zinc-900">
+    <label for="email" class="block text-base font-semibold text-blue-900">
       {{ t("Email Address") }}
     </label>
     <div class="relative mt-2.5">
@@ -14,7 +14,7 @@
         v-model="email"
         type="email"
         placeholder="you@email.com"
-        class="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100 "
+        class="block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200 "
       />
     </div>
   </div>
@@ -22,10 +22,10 @@
   <!-- Password Field -->
   <div>
     <div class="flex items-center justify-between">
-      <label for="password" class="block text-base font-semibold text-zinc-900">
+      <label for="password" class="block text-base font-semibold text-blue-900">
         {{ t("Password") }}
       </label>
-      <a class="text-sm font-medium text-blue-600 hover:text-blue-700">
+      <a class="text-sm font-medium text-blue-700 hover:text-blue-900">
         {{ t("Forgot password?") }}
       </a>
     </div>
@@ -36,13 +36,13 @@
     v-model="password"
     :type="showPassword ? 'text' : 'password'"
     placeholder="••••••••••••"
-    class="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 pr-12 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+    class="block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 pr-12 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200"
   />
 
   <button
     type="button"
     @click="showPassword = !showPassword"
-    class="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-blue-600"
+    class="absolute right-4 top-1/2 -translate-y-1/2 text-blue-500 hover:text-blue-700"
   >
    <i
     :class="showPassword ? 'bi bi-eye-slash' : 'bi bi-eye'"
@@ -56,7 +56,7 @@
   <div class="pt-2">
     <button
       @click="login"
-      class="flex w-full items-center justify-center rounded-2xl bg-blue-600 px-6 py-3 font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-blue-500/30 focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.98]"
+      class="flex w-full items-center justify-center rounded-2xl bg-blue-600 px-6 py-3 font-bold text-white shadow-lg shadow-blue-900/20 transition-all hover:bg-blue-700 hover:shadow-blue-900/30 focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.98]"
     >
       {{ t("Login In to Your Account") }}
     </button>
@@ -64,11 +64,11 @@
 
   <!-- Footer/Sign Up Link -->
   <div class="pt-4 text-center">
-    <p class="text-zinc-600">
+    <p class="text-blue-600">
       {{ t("Don't have an account yet?") }}
       <button
       @click="gotocreateAccount"
-      class="font-semibold text-blue-600 hover:text-blue-700"
+      class="font-semibold text-blue-700 hover:text-blue-900"
       >{{ t("Create one for free") }}
       </button>
     </p>

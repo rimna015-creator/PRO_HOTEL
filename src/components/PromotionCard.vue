@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[320px] overflow-hidden rounded-xl bg-blue-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+    class="w-[320px] overflow-hidden rounded-xl bg-white shadow-md ring-1 ring-blue-200 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
   >
 
     <!-- Promotion Image -->
@@ -10,10 +10,10 @@
         :alt="promotion.title"
         class="h-[200px] w-full object-cover"
       />
-      <span class="absolute left-3 top-3 rounded-full bg-blue-400 px-3 py-1 text-xs font-bold text-blue-900">
+      <span class="absolute left-3 top-3 rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-black">
         {{ t("discount") }} {{ promotion.discount }}%
       </span>
-      <span class="absolute right-3 top-3 rounded-full bg-blue-800 px-3 py-1 text-xs font-medium text-white">
+      <span class="absolute right-3 top-3 rounded-full bg-blue-700 px-3 py-1 text-xs font-medium text-white">
         <i class="bi bi-stars mr-1"></i>
         {{ promotion.festival }}
       </span>
@@ -22,18 +22,18 @@
     <div class="p-[18px]">
 
       <!-- Title + Hotel -->
-      <h2 class="mb-1 text-xl font-semibold text-gray-800">
+      <h2 class="mb-1 text-xl font-semibold text-black">
         {{ promotion.title }}
       </h2>
-      <p class="flex items-center gap-1 text-sm text-blue-600">
+      <p class="flex items-center gap-1 text-sm text-black">
         <i class="bi bi-building"></i>
         {{ promotion.hotelName }}
-        <span class="text-gray-400">•</span>
-        <span class="text-gray-500">{{ promotion.location }}</span>
+        <span class="text-black">•</span>
+        <span class="text-black">{{ promotion.location }}</span>
       </p>
 
       <!-- Description -->
-      <p class="mt-2 text-sm leading-relaxed text-gray-600">
+      <p class="mt-2 text-sm leading-relaxed text-black">
         {{ promotion.description }}
       </p>
 
@@ -42,7 +42,7 @@
         <li
           v-for="item in promotion.includes"
           :key="item"
-          class="flex items-center gap-1 rounded-full bg-blue-600/10 px-2.5 py-1 text-xs font-medium text-blue-700"
+          class="flex items-center gap-1 rounded-full bg-blue-100 px-2.5 py-1 text-xs font-medium text-black"
         >
           <i class="bi bi-check-circle-fill"></i>
           {{ item }}
@@ -50,8 +50,8 @@
       </ul>
 
       <!-- Available Days -->
-      <div class="mt-4 flex flex-wrap items-center gap-2 rounded-lg bg-white/70 px-3 py-2 text-sm text-gray-700">
-        <i class="bi bi-calendar-check-fill text-blue-600"></i>
+      <div class="mt-4 flex flex-wrap items-center gap-2 rounded-lg bg-blue-50 px-3 py-2 text-sm text-black ring-1 ring-blue-200">
+        <i class="bi bi-calendar-check-fill text-blue-500"></i>
         <span>
           {{ formatDate(promotion.availableFrom) }} – {{ formatDate(promotion.availableTo) }}
         </span>
@@ -63,11 +63,11 @@
       <!-- Price + Action -->
       <div class="mt-4 flex items-end justify-between">
         <div>
-          <span class="text-sm text-gray-400 line-through">${{ promotion.normalPrice }}</span>
-          <span class="ml-1 text-[22px] font-bold text-gray-900">
+          <span class="text-sm text-black line-through">${{ promotion.normalPrice }}</span>
+          <span class="ml-1 text-[22px] font-bold text-black">
             ${{ promotion.packagePrice }}
           </span>
-          <span class="text-sm text-gray-500">{{ t("/ night") }}</span>
+          <span class="text-sm text-black">{{ t("/ night") }}</span>
         </div>
         <router-link
           :to="'/hotel/' + promotion.hotelId"

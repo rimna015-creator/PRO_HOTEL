@@ -9,7 +9,7 @@
     <div>
       <label
         for="name"
-        class="block text-base font-semibold text-zinc-900"
+        class="block text-base font-semibold text-blue-900"
       >
         {{ t("Full Name") }}
       </label>
@@ -19,7 +19,7 @@
         v-model="name"
         type="text"
         :placeholder="t('Enter your full name')"
-        class="mt-2.5 block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+        class="mt-2.5 block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200"
       />
     </div>
 
@@ -29,7 +29,7 @@
     <div>
       <label
         for="email"
-        class="block text-base font-semibold text-zinc-900"
+        class="block text-base font-semibold text-blue-900"
       >
         {{ t("Email Address") }}
       </label>
@@ -39,7 +39,7 @@
         v-model="email"
         type="email"
         placeholder="you@email.com"
-        class="mt-2.5 block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+        class="mt-2.5 block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200"
       />
     </div>
 
@@ -49,7 +49,7 @@
     <div>
       <label
         for="password"
-        class="block text-base font-semibold text-zinc-900"
+        class="block text-base font-semibold text-blue-900"
       >
 {{ t("Password") }}
       </label>
@@ -61,7 +61,7 @@
           v-model="password"
           :type="showPassword ? 'text' : 'password'"
           :placeholder="t('Create a password')"
-          class="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 pr-12 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+          class="block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 pr-12 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200"
         />
 
         <!-- Eye Button -->
@@ -69,7 +69,7 @@
         <button
           type="button"
           @click="showPassword = !showPassword"
-          class="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-blue-600"
+          class="absolute right-4 top-1/2 -translate-y-1/2 text-blue-500 hover:text-blue-700"
         >
           <i
             :class="showPassword ? 'bi bi-eye-slash' : 'bi bi-eye'"
@@ -85,7 +85,7 @@
     <div>
       <label
         for="confirmPassword"
-        class="block text-base font-semibold text-zinc-900"
+        class="block text-base font-semibold text-blue-900"
       >
         {{ t("Confirm Password") }}
       </label>
@@ -97,7 +97,7 @@
           v-model="confirmPassword"
           :type="showConfirmPassword ? 'text' : 'password'"
           :placeholder="t('Confirm your password')"
-          class="block w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 pr-12 text-zinc-900 placeholder:text-zinc-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+          class="block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 pr-12 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200"
         />
 
         <!-- Eye Button -->
@@ -105,7 +105,7 @@
         <button
           type="button"
           @click="showConfirmPassword = !showConfirmPassword"
-          class="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-blue-600"
+          class="absolute right-4 top-1/2 -translate-y-1/2 text-blue-500 hover:text-blue-700"
         >
           <i
             :class="showConfirmPassword ? 'bi bi-eye-slash' : 'bi bi-eye'"
@@ -122,7 +122,7 @@
 
       <button
         @click="createAccount"
-        class="flex w-full items-center justify-center rounded-2xl bg-blue-600 px-6 py-3 text-lg font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-blue-500/30 focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.98]"
+        class="flex w-full items-center justify-center rounded-2xl bg-blue-600 px-6 py-3 text-lg font-bold text-white shadow-lg shadow-blue-900/20 transition-all hover:bg-blue-700 hover:shadow-blue-900/30 focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.98]"
       >
         {{ t("Create Account") }}
       </button>
@@ -134,12 +134,12 @@
 
     <div class="pt-2 text-center">
 
-      <p class="text-zinc-600">
+      <p class="text-blue-600">
         {{ t("Already have an account?") }}
 
         <button
           @click="goToLogin"
-          class="font-semibold text-blue-600 hover:text-blue-700"
+          class="font-semibold text-blue-700 hover:text-blue-900"
         >
           {{ t("Sign In") }}
         </button>
@@ -159,15 +159,15 @@
       <i class="bi bi-check-lg text-3xl text-green-600"></i>
     </div>
 
-    <h2 class="text-2xl font-bold text-zinc-900">
+    <h2 class="text-2xl font-bold text-blue-900">
       {{ t("Account Created Successfully!") }}
     </h2>
 
-    <p class="mt-3 text-zinc-600">
+    <p class="mt-3 text-blue-600">
       {{ t("Your AngkorBooking account has been created.") }}
     </p>
 
-    <p class="text-zinc-600">
+    <p class="text-blue-600">
       {{ t("You are now signed in.") }}
     </p>
 

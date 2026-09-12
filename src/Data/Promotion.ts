@@ -83,7 +83,7 @@ export const promotions: Promotion[] = [
       "Cooking class",
       "Free bicycle rental"
     ],
-    image: "/images/hotel3.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjC_6mmixCKNDKdjuVDG5Og0Gehfm6cVfKO_PkArtMQXry7Da99NjwNYo&s=10",
     location: "Siem Reap"
   },
   {
@@ -106,7 +106,8 @@ export const promotions: Promotion[] = [
       "Motor rental",
       "Late checkout"
     ],
-    image: "/images/hotel5.jpg",
+    image: "https://media.privateupgrades.com/_data/default-hotel_image/11/58709/park-hyatt-siem-reap-20_1400x1400_auto.jpg",
+    
     location: "Siem Reap"
   },
   {

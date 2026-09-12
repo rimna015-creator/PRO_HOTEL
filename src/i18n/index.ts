@@ -298,6 +298,86 @@ const km: Record<string, string> = {
   "Khmer": "ភាសាខ្មែរ",
   "English": "English",
 
+  // ---- About Us / Contact Us ----
+  "About Us": "អំពីពួកយើង",
+  "Who we are and why we built Angkor Booking":
+    "យើងជានរណា និងមូលហេតុដែលយើងបង្កើត Angkor Booking",
+  "Our Story": "ដំណើររឿងរបស់យើង",
+  "Angkor Booking was born out of a passion for Cambodia's rich heritage and the desire to make booking a stay near the legendary Angkor temples as seamless as possible.":
+    "Angkor Booking កើតចេញពីក្តីស្រឡាញ់ចំពោះបេតិកភណ្ឌដ៏សំបូរបែបរបស់កម្ពុជា និងបំណងចង់ធ្វើឱ្យការកក់ស្នាក់នៅក្បែរប្រាសាទអង្គរដ៏ល្បីល្បាញមានភាពងាយស្រួលបំផុត។",
+  "Built by two front-end students, this platform is a portfolio project that brings together a carefully curated collection of hotels, festival promotions, and travel inspiration — all in one place.":
+    "បង្កើតឡើងដោយនិស្សិត Front-End ពីរនាក់ វេទិកានេះជាគម្រោង portfolio ដែលប្រមូលផ្តុំសណ្ឋាគារដែលបានជ្រើសរើសយ៉ាងយកចិត្តទុកដាក់ ការផ្សព្វផ្សាយពិធីបុណ្យ និងការបំផុសគំនិតធ្វើដំណើរទាំងអស់នៅកន្លែងតែមួយ។",
+  "We believe travel should be effortless, transparent, and memorable. That's why every property is hand-picked, every price is clear, and support is always a message away.":
+    "យើងជឿថាការធ្វើដំណើរគួរតែងាយស្រួល មានតម្លាភាព និងគួរឱ្យចងចាំ។ នោះហើយជាមូលហេតុដែលសណ្ឋាគារនីមួយៗត្រូវបានជ្រើសរើសដោយដៃ តម្លៃច្បាស់លាស់ ហើយការគាំទ្រតែងតែនៅជិតអ្នក។",
+  "Places to Explore": "កន្លែងសម្រាប់រុករក",
+  "Festival Packages": "កញ្ចប់ពិធីបុណ្យ",
+  "Support": "ជំនួយ",
+  "Meet the Team": "ជួបក្រុមការងារ",
+  "The students behind this project": "និស្សិតដែលនៅពីក្រោយគម្រោងនេះ",
+  "Front-End Developer": "អ្នកអភិវឌ្ឍន៍ Front-End",
+  "What We Value": "អ្វីដែលយើងឲ្យតម្លៃ",
+  "What You Can Do": "អ្វីដែលអ្នកអាចធ្វើបាន",
+  "Everything you need to plan your trip to Siem Reap":
+    "អ្វីគ្រប់យ៉ាងដែលអ្នកត្រូវការដើម្បីរៀបចំដំណើរកម្សាន្តទៅកាន់សៀមរាប",
+  "Search Hotels": "ស្វែងរកសណ្ឋាគារ",
+  "Search by name or location and filter by star rating and hotel type.":
+    "ស្វែងរកតាមឈ្មោះ ឬទីតាំង និងតម្រងតាមចំនួនផ្កាយ និងប្រភេទសណ្ឋាគារ។",
+  "Book in Minutes": "កក់ក្នុងរយៈពេលប៉ុន្មាននាទី",
+  "Choose your room, dates and a flexible payment plan.":
+    "ជ្រើសរើសបន្ទប់ កាលបរិច្ឆេទ និងផែនការទូទាត់ប្រាក់ដែលអាចបត់បែនបាន។",
+  "Festival Promotions": "ការផ្សព្វផ្សាយពិធីបុណ្យ",
+  "Discover seasonal packages with exclusive discounts.":
+    "ស្វែងយល់ពីកញ្ចប់តាមរដូវកាលជាមួយការបញ្ចុះតម្លៃពិសេស។",
+  "Discover 20+ temples, museums and attractions nearby.":
+    "ស្វែងយល់ពីប្រាសាទ សារមន្ទីរ និងកន្លែងទាក់ទាញចំនួន 20+ នៅក្បែរ។",
+  "Save Favorites": "រក្សាទុកកន្លែងដែលចូលចិត្ត",
+  "Save hotels you love and come back to them anytime.":
+    "រក្សាទុកសណ្ឋាគារដែលអ្នកចូលចិត្ត ហើយត្រលប់មករកវាវិញនៅពេលណាក៏បាន។",
+  "Track Bookings": "តាមដានការកក់",
+  "View your booking history, payments and balances.":
+    "មើលប្រវត្តិនៃការកក់ ការទូទាត់ និងសមតុល្យរបស់អ្នក។",
+  "Design & Colors": "ការរចនា និងពណ៌",
+  "We carefully chose a clean, calming blue palette inspired by the temples at dawn and the Tonle Sap sky.":
+    "យើងបានជ្រើសរើសពណ៌ខៀវដ៏ស្អាត និងស្ងប់ស្ងាត់ ដែលទទួលការបំផុសគំនិតពីប្រាសាទនៅពេលព្រឹកព្រលឹម និងមេឃទន្លេសាប។",
+  "Navbar & selected filters": "របារខាងលើ និងការតម្រងដែលបានជ្រើសរើស",
+  "Buttons & accents": "ប៊ូតុង និងគំនួសពណ៌",
+  "Page background": "ផ្ទៃខាងក្រោយទំព័រ",
+  "Cards & surfaces": "កាត និងផ្ទៃ",
+  "Borders & dividers": "ស៊ុម និងបន្ទាត់បែងចែក",
+  "Text & headings": "អត្ថបទ និងចំណងជើង",
+  "Stars & ratings": "ផ្កាយ និងការវាយតម្លៃ",
+  "Book Now & availability": "កក់ឥឡូវនេះ និងភាពអាចកក់បាន",
+  "Built With": "បង្កើតឡើងដោយបច្ចេកវិទ្យា",
+  "The technology that powers the platform":
+    "បច្ចេកវិទ្យាដែលដំណើរការវេទិកានេះ",
+  "Trust": "ការជឿទុកចិត្ត",
+  "Honest listings, clear prices and secure checkouts.":
+    "ការផ្សព្វផ្សាយស្មោះត្រង់ តម្លៃច្បាស់លាស់ និងការបង់ប្រាក់មានសុវត្ថិភាព។",
+  "Local Love": "សេចក្តីស្រឡាញ់ចំពោះតំបន់",
+  "Supporting local properties across Cambodia.":
+    "ជួយគាំទ្រអាជីវកម្មក្នុងតំបន់ទូទាំងកម្ពុជា។",
+  "Care": "ការយកចិត្តទុកដាក់",
+  "Real people ready to help you any time.":
+    "មនុស្សពិតប្រាកដរួសរាន់ជួយអ្នកគ្រប់ពេល។",
+  "We'd love to hear from you": "យើងរីករាយណាស់ដែលបានឮពីអ្នក",
+  "Get in Touch": "ទំនាក់ទំនងជាមួយយើង",
+  "Address": "អាសយដ្ឋាន",
+  "Phone": "ទូរស័ព្ទ",
+  "Email": "អ៊ីមែល",
+  "Working Hours": "ម៉ោងធ្វើការ",
+  "Monday – Sunday: 8:00 AM – 10:00 PM":
+    "ច័ន្ទ – អាទិត្យ៖ ព្រឹក 8:00 – យប់ 10:00",
+  "Send Us a Message": "ផ្ញើសារមកយើង",
+  "Fill in the form and we'll get back to you as soon as possible.":
+    "សូមបំពេញទម្រង់ហើយយើងនឹងឆ្លើយតបវិញឱ្យបានឆាប់បំផុត។",
+  "Your Name": "ឈ្មោះរបស់អ្នក",
+  "you@example.com": "you@example.com",
+  "Message": "សារ",
+  "How can we help you?": "តើយើងអាចជួយអ្នកយ៉ាងដូចម្តេច?",
+  "Send Message": "ផ្ញើសារ",
+  "Thank you! Your message has been sent successfully.":
+    "សូមអរគុណ! សាររបស់អ្នកត្រូវបានផ្ញើដោយជោគជ័យ។",
+
   // ---- Footer ----
   "Angkor Booking is a hotel reservation platform built by a passionate front-end student as a portfolio project.":
     "Angkor Booking គឺជាវេទិកាកក់សណ្ឋាគារដែលបង្កើតឡើងដោយនិស្សិត Front-End ដែលមានចំណង់ចំណូលចិត្ត ក្នុងនាមជាគម្រោង portfolio។",

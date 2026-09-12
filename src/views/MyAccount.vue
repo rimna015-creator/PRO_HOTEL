@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen bg-gray-50 px-6 pb-16 pt-24">
-    <h1 class="text-center text-3xl font-bold text-gray-800">
+  <div class="min-h-screen bg-blue-50 px-6 pb-16 pt-24">
+    <h1 class="text-center text-3xl font-bold text-blue-900">
       {{ t("My Account") }}
     </h1>
 
@@ -14,29 +14,29 @@
 
             <!-- Avatar -->
             <div
-              class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xl font-bold text-white"
+              class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-700 text-xl font-bold text-white"
             >
               {{ initials }}
             </div>
 
             <!-- User Info -->
             <div class="min-w-0">
-              <h2 class="text-xl font-bold text-gray-800">
+              <h2 class="text-xl font-bold text-blue-900">
                 {{ currentUser.name }}
               </h2>
 
-              <p class="mt-1 text-sm text-gray-500">
-                <i class="bi bi-envelope mr-1 text-blue-600"></i>
+              <p class="mt-1 text-sm text-blue-500">
+                <i class="bi bi-envelope mr-1 text-blue-500"></i>
                 {{ currentUser.email }}
               </p>
 
-              <p v-if="currentUser.phone" class="mt-1 text-sm text-gray-500">
-                <i class="bi bi-telephone mr-1 text-blue-600"></i>
+              <p v-if="currentUser.phone" class="mt-1 text-sm text-blue-500">
+                <i class="bi bi-telephone mr-1 text-blue-500"></i>
                 {{ currentUser.phone }}
               </p>
 
-              <p class="mt-1 text-sm text-gray-500">
-                <i class="bi bi-calendar3 mr-1 text-blue-600"></i>
+              <p class="mt-1 text-sm text-blue-500">
+                <i class="bi bi-calendar3 mr-1 text-blue-500"></i>
                 {{ t("Member since") }} {{ formatDate(currentUser.joinedAt) }}
               </p>
             </div>
@@ -46,7 +46,7 @@
           <button
             v-if="!editing"
             @click="startEdit"
-            class="flex shrink-0 items-center gap-1.5 rounded-lg bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-700 transition hover:bg-blue-100"
+            class="flex shrink-0 items-center gap-1.5 rounded-lg bg-blue-100 px-3 py-1.5 text-sm font-semibold text-blue-700 transition hover:bg-blue-200"
           >
             <i class="bi bi-pencil-square"></i>
             {{ t("Edit") }}
@@ -56,51 +56,51 @@
         <!-- Success Message -->
         <p
           v-if="successMsg && !editing"
-          class="mt-4 rounded-lg bg-emerald-50 px-4 py-2.5 text-sm font-medium text-emerald-700"
+          class="mt-4 rounded-lg bg-blue-100 px-4 py-2.5 text-sm font-medium text-blue-700"
         >
           <i class="bi bi-check-circle-fill mr-1"></i>
           {{ successMsg }}
         </p>
 
         <!-- Edit Form -->
-        <div v-if="editing" class="mt-6 rounded-xl bg-gray-50 p-5">
-          <h3 class="text-base font-semibold text-gray-800">
+        <div v-if="editing" class="mt-6 rounded-xl bg-blue-50 p-5">
+          <h3 class="text-base font-semibold text-blue-900">
             {{ t("Edit Your Information") }}
           </h3>
 
           <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <label for="editName" class="block text-sm font-semibold text-gray-700">{{ t("Full Name") }}</label>
+              <label for="editName" class="block text-sm font-semibold text-blue-700">{{ t("Full Name") }}</label>
               <input
                 id="editName"
                 v-model="editName"
                 type="text"
                 placeholder="Enter your full name"
-                class="mt-2 block w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                class="mt-2 block w-full rounded-xl border border-blue-200 bg-white px-4 py-2.5 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-200"
               />
             </div>
 
             <div>
-              <label for="editEmail" class="block text-sm font-semibold text-gray-700">{{ t("Email Address") }}</label>
+              <label for="editEmail" class="block text-sm font-semibold text-blue-700">{{ t("Email Address") }}</label>
               <input
                 id="editEmail"
                 v-model="editEmail"
                 type="email"
                 placeholder="you@email.com"
-                class="mt-2 block w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                class="mt-2 block w-full rounded-xl border border-blue-200 bg-white px-4 py-2.5 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-200"
               />
             </div>
 
             <div>
-              <label for="editPhone" class="block text-sm font-semibold text-gray-700">
-                {{ t("Phone Number") }} <span class="font-normal text-gray-400">{{ t("(optional)") }}</span>
+              <label for="editPhone" class="block text-sm font-semibold text-blue-700">
+                {{ t("Phone Number") }} <span class="font-normal text-blue-400">{{ t("(optional)") }}</span>
               </label>
               <input
                 id="editPhone"
                 v-model="editPhone"
                 type="tel"
                 placeholder="+855 12 345 678"
-                class="mt-2 block w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                class="mt-2 block w-full rounded-xl border border-blue-200 bg-white px-4 py-2.5 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:ring-2 focus:ring-blue-200"
               />
             </div>
           </div>
@@ -120,7 +120,7 @@
             </button>
             <button
               @click="cancelEdit"
-              class="rounded-lg bg-gray-200 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-300"
+              class="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-blue-700 ring-1 ring-blue-200 transition hover:bg-blue-50"
             >
               {{ t("Cancel") }}
             </button>
@@ -128,21 +128,21 @@
         </div>
 
         <!-- Simple Stats -->
-        <div class="mt-6 grid grid-cols-3 border-t border-gray-100 pt-5">
+        <div class="mt-6 grid grid-cols-3 border-t border-blue-200 pt-5">
           <div class="text-center">
-            <p class="text-xl font-bold text-blue-600">
+            <p class="text-xl font-bold text-blue-800">
               {{ userBookings.length }}
             </p>
-            <p class="text-xs text-gray-500">
+            <p class="text-xs text-blue-500">
               {{ t("Bookings") }}
             </p>
           </div>
 
-          <div class="border-x border-gray-100 text-center">
-            <p class="text-xl font-bold text-blue-600">
+          <div class="border-x border-blue-200 text-center">
+            <p class="text-xl font-bold text-blue-800">
               ${{ totalSpent }}
             </p>
-            <p class="text-xs text-gray-500">
+            <p class="text-xs text-blue-500">
               {{ t("Total Spent") }}
             </p>
           </div>
@@ -151,7 +151,7 @@
             <p class="text-xl font-bold text-red-500">
               {{ favoriteHotels.length }}
             </p>
-            <p class="text-xs text-gray-500">
+            <p class="text-xs text-blue-500">
               {{ t("Favorites") }}
             </p>
           </div>
@@ -168,7 +168,7 @@
 
           <button
             @click="handleSignOut"
-            class="rounded-lg bg-gray-100 px-5 py-2.5 text-sm font-semibold text-gray-600 transition hover:bg-gray-200"
+            class="rounded-lg bg-blue-100 px-5 py-2.5 text-sm font-semibold text-blue-600 transition hover:bg-blue-200"
           >
             {{ t("Sign Out") }}
           </button>
@@ -182,11 +182,11 @@
         <div class="flex items-center">
           <i class="bi bi-heart-fill mr-2 text-red-500"></i>
 
-          <h2 class="text-lg font-bold text-gray-800">
+          <h2 class="text-lg font-bold text-blue-900">
             {{ t("My Favorite Hotels") }}
           </h2>
 
-          <span class="ml-auto text-sm text-gray-400">
+          <span class="ml-auto text-sm text-blue-400">
             {{ favoriteHotels.length }} {{ t("saved") }}
           </span>
         </div>
@@ -206,11 +206,11 @@
         <!-- No Favorites -->
         <div
           v-else
-          class="mt-5 border-t border-gray-100 pt-8 text-center"
+          class="mt-5 border-t border-blue-200 pt-8 text-center"
         >
-          <i class="bi bi-heart text-3xl text-gray-300"></i>
+          <i class="bi bi-heart text-3xl text-blue-300"></i>
 
-          <p class="mt-3 text-sm text-gray-500">
+          <p class="mt-3 text-sm text-blue-500">
             {{ t("You haven't saved any favorite hotels yet.") }}
           </p>
 
@@ -229,16 +229,16 @@
       <div class="rounded-xl bg-white p-8 text-center shadow-sm">
 
         <div
-          class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-50"
+          class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100"
         >
           <i class="bi bi-person text-3xl text-blue-600"></i>
         </div>
 
-        <h2 class="mt-4 text-xl font-bold text-gray-800">
+        <h2 class="mt-4 text-xl font-bold text-blue-900">
           {{ t("You are not signed in") }}
         </h2>
 
-        <p class="mt-2 text-sm text-gray-500">
+        <p class="mt-2 text-sm text-blue-500">
           {{ t("Sign in to view your account and booking history.") }}
         </p>
 
@@ -251,7 +251,7 @@
 
         <button
           @click="openCreateAccount"
-          class="mt-2 w-full rounded-lg bg-gray-100 px-5 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-200"
+          class="mt-2 w-full rounded-lg bg-blue-100 px-5 py-2.5 text-sm font-semibold text-blue-700 transition hover:bg-blue-200"
         >
           {{ t("Create an Account") }}
         </button>

@@ -149,7 +149,7 @@ export const places: Place[] = [
     category: "Temple",
     description:
       "Built on a small island in the now-dry East Baray reservoir, East Mebon is a 10th-century temple mountain surrounded by water on all sides in its heyday. Its corner towers are guarded by giant sandstone elephants, and the views across the reservoir are superb.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Mebon_Oriental%2C_Angkor%2C_Camboya%2C_2013-08-17%2C_DD_05.JPG/800px-Mebon_Oriental%2C_Angkor%2C_Camboya%2C_2013-08-17%2C_DD_05.JPG",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtD0nobcCVtBWVhR8ruBWPj5_dboLe2ALrZvtr_ul4Pw&s=10",
     rating: 4.4,
     openHours: "7:30 AM - 5:30 PM",
     ticketPrice: "Included in Angkor Pass",
@@ -161,7 +161,7 @@ export const places: Place[] = [
     category: "Temple",
     description:
       "A beautifully preserved 12th-century temple built in the style of Angkor Wat, Banteay Samré is one of the most complete and least crowded temples in the park. Its graceful central sanctuary and intricate carvings make it a favorite for photographers and history lovers.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Banteay_Samre%2C_Cambodia_%282212223080%29.jpg/800px-Banteay_Samre%2C_Cambodia_%282212223080%29.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeIimZla1rgz_HQBp9Pu-Lwec8_aQTwImKTUPRLwQRrw&s=10",
     rating: 4.6,
     openHours: "7:30 AM - 5:30 PM",
     ticketPrice: "Included in Angkor Pass",
@@ -173,7 +173,7 @@ export const places: Place[] = [
     category: "Temple",
     description:
       "Neak Pean is a fascinating water temple built on a circular island in the middle of the Jayatataka baray, with four connected pools said to have healing powers. Surrounded by water on wooden walkways, it is one of the most unusual and serene temples in the complex.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Neakpeancentralpond2014.jpg/800px-Neakpeancentralpond2014.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60IiDKSXLlZV33VLBvrsTGVPoTJBnDhFmafYc7vB6bw&s=10",
     rating: 4.5,
     openHours: "7:30 AM - 5:30 PM",
     ticketPrice: "Included in Angkor Pass",
@@ -185,7 +185,7 @@ export const places: Place[] = [
     category: "Temple",
     description:
       "The earliest sandstone temple mountain of the Khmer Empire, Bakong was built in the late 9th century as the state temple of the Roluos capital. Its five-tiered pyramid and guardian elephants set the architectural blueprint for the great temples of Angkor that followed.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Roulos_Group_-_005_Bakong_%288587796725%29.jpg/800px-Roulos_Group_-_005_Bakong_%288587796725%29.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-TF4-t1mv6LvgT6CD0uD_nOnWVIedeKcJSwwpsHikOA&s=10",
     rating: 4.5,
     openHours: "7:30 AM - 5:30 PM",
     ticketPrice: "Included in Angkor Pass",
@@ -197,7 +197,7 @@ export const places: Place[] = [
     category: "Temple",
     description:
       "A 350-meter-long viewing platform inside Angkor Thom, this grand terrace was used by King Jayavarman VII to review his victorious army. Named for its carved life-size elephant decorations, it is a striking example of Khmer bas-relief artistry and a favorite photo spot.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Terraza_de_los_Elefantes%2C_Angkor_Thom%2C_Camboya%2C_2013-08-16%2C_DD_03.jpg/800px-Terraza_de_los_Elefantes%2C_Angkor_Thom%2C_Camboya%2C_2013-08-16%2C_DD_03.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF2QMMTbgmivtffYQdPTuz4-UAJKYzi_dCerlWVx6-xw&s=10",
     rating: 4.4,
     openHours: "7:30 AM - 5:30 PM",
     ticketPrice: "Included in Angkor Pass",
@@ -209,7 +209,7 @@ export const places: Place[] = [
     category: "Nature",
     description:
       "Meaning 'Harbor of the Tusks,' Kampong Phluk is a traditional fishing village built on tall stilts, rising 8 meters in the wet season. A boat tour weaves through flooded forests and stilted houses, offering an intimate glimpse into life on Tonle Sap.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Houses_on_the_water_in_Kampong_Phlouk.jpg/800px-Houses_on_the_water_in_Kampong_Phlouk.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjBqOjoqieqs3hwRjjPN8S1BNHW9Slv4h-X9KHl8bRoQ&s=10",
     rating: 4.7,
     openHours: "6:00 AM - 5:30 PM",
     ticketPrice: "$20 - $25 (boat tour)",
@@ -221,10 +221,34 @@ export const places: Place[] = [
     category: "Nature",
     description:
       "The sacred mountain of Phnom Kulen is considered the birthplace of the ancient Khmer Empire. Hike up to the 1,000-linga riverbed carvings, marvel at the giant reclining Buddha, and cool off beneath the refreshing 1000 Waterfalls cascading down the forested hillside.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Phnom_Kulen8.JPG/800px-Phnom_Kulen8.JPG",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNTuSe63WqyaMgKguWxrFPAS5AZnjmNzS5RpXTXGFoXA&s=10",
     rating: 4.6,
     openHours: "7:00 AM - 5:00 PM",
     ticketPrice: "$20 (entry) + $15 (transport)",
     location: "Phnom Kulen National Park, 48 km from Siem Reap"
+  },
+  {
+    id: 19,
+    name: "Cambodia Landmine Museum",
+    category: "Museum",
+    description:
+      "Founded by Aki Ra, a former Khmer Rouge child soldier who has spent decades clearing landmines, this poignant museum displays deactivated mines, unexploded ordnance, and demining tools. It also runs a school and shelter for children affected by landmines, funding their education through visitor donations.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE4Up3WGjtphrJZOT_SxusdvhdKIXF3_n2MYhrBgSM2Q&s=10",
+    rating: 4.7,
+    openHours: "8:00 AM - 5:00 PM",
+    ticketPrice: "$5",
+    location: "Banteay Srei Road, ~25 km from Siem Reap"
+  },
+  {
+    id: 20,
+    name: "APOPO Center",
+    category: "Museum",
+    description:
+      "Meet the HeroRATs — African giant pouched rats trained by APOPO to sniff out landmines and tuberculosis with incredible speed. At this visitor center just outside Siem Reap you can watch live demonstration sessions, learn how the rats are trained, and support their life-saving work.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjMxhPB4_S6AdvCYptAHGIwiW_GkX9etwAgpR7NxnBA&s=10",
+    rating: 4.6,
+    openHours: "8:00 AM - 5:00 PM",
+    ticketPrice: "$7",
+    location: "APOPO Visitor Center, Siem Reap"
   }
 ]

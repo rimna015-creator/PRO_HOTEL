@@ -1,14 +1,14 @@
 <template>
-  <nav class="fixed top-0 left-0 z-40 w-full overflow-hidden bg-blue-500 shadow-md">
+  <nav class="fixed top-0 left-0 z-40 w-full overflow-hidden bg-blue-600 shadow-md">
     
     <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-4 lg:px-2">
 
-      <!-- Website Name -->
+      <!-- Logo -->
       <RouterLink
         to="/"
+        class="flex items-center"
       >
-      <span class="text-2xl font-bold text-blue-900 font-sans">Angkor</span>
-      <span class="text-sm text-white font-semibold">Booking.</span>
+        <Logo dark />
       </RouterLink>
 
 
@@ -17,42 +17,59 @@
 
         <RouterLink
           to="/"
-          exact-active-class="bg-blue-600 text-white hover:bg-blue-600"
-          class="font-medium text-white transition  hover:bg-blue-400 rounded-lg px-4 py-2"
+
+          class="font-medium text-white transition hover:scale-110   rounded-lg px-4 py-2 focus:text-black"
         >
           {{ t("Home") }}
         </RouterLink>
 
         <RouterLink
           to="/hotel"
-          active-class="bg-blue-600 text-white hover:bg-blue-600"
-          class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
+          active-class=""
+          exact-active-class="text-black"
+          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
         >
           {{ t("Hotel") }}
         </RouterLink>
 
         <RouterLink
           to="/explore"
-          active-class="bg-blue-600 text-white hover:bg-blue-600"
-          class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
+          active-class="text-black"
+          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
         >
           {{ t("Explore") }}
         </RouterLink>
 
         <RouterLink
           to="/promotion"
-          active-class="bg-blue-600 text-white hover:bg-blue-600"
-          class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
+          active-class="text-black"
+          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
         >
           {{ t("Promotion") }}
         </RouterLink>
 
         <RouterLink
           to="/my-booking"
-          active-class="bg-blue-600 text-white hover:bg-blue-600"
-          class="font-medium text-white transition hover:bg-blue-400 rounded-lg px-4 py-2"
+          active-class="text-black"
+          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
         >
           {{ t("My Booking") }}
+        </RouterLink>
+
+        <RouterLink
+          to="/about"
+          active-class="text-black"
+          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
+        >
+          {{ t("About Us") }}
+        </RouterLink>
+
+        <RouterLink
+          to="/contact"
+          active-class="text-black"
+          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
+        >
+          {{ t("Contact Us") }}
         </RouterLink>
 
       </div>
@@ -72,8 +89,8 @@
 
         <RouterLink
           to="/my-account"
-          active-class="bg-blue-50 ring-2 ring-blue-300"
-          class="hidden items-center rounded-full bg-white px-4 py-2 font-medium text-blue-700 shadow-sm transition hover:scale-105 md:flex"
+          active-class="bg-blue-100 ring-2 ring-blue-300"
+          class="hidden items-center rounded-full bg-white px-4 py-2 font-medium text-blue-800 shadow-sm transition hover:scale-105 md:flex"
         >
           {{ displayName }}
         </RouterLink>
@@ -133,15 +150,15 @@
     >
     <div
       v-if="isMenuOpen"
-      class="border-t border-blue-500 bg-white md:hidden p-2 "
+      class="border-t border-blue-200 bg-white md:hidden p-2 "
     >
       <div class="flex flex-col ">
 
         <RouterLink
           to="/"
           @click="isMenuOpen = false" 
-          exact-active-class="bg-blue-500 text-white"
-          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105 hover:border-blue-900 "
+          exact-active-class="bg-blue-200"
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105 hover:border-blue-300 "
         >
           {{ t("Home") }}
         </RouterLink>
@@ -149,8 +166,9 @@
         <RouterLink
           to="/hotel"
           @click="isMenuOpen = false"
-          active-class="bg-blue-500 text-white "
-          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105"
+          active-class=""
+          exact-active-class="bg-blue-200"
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ t("Hotel") }}
         </RouterLink>
@@ -158,8 +176,8 @@
         <RouterLink
           to="/explore"
           @click="isMenuOpen = false"
-          active-class="bg-blue-500 text-white"
-          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105"
+          active-class="bg-blue-200"
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ t("Explore") }}
         </RouterLink>
@@ -167,8 +185,8 @@
         <RouterLink
           to="/promotion"
           @click="isMenuOpen = false"
-          active-class="bg-blue-500 text-white"
-          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105"
+          active-class="bg-blue-200 "
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ t("Promotion") }}
         </RouterLink>
@@ -176,24 +194,42 @@
         <RouterLink
           to="/my-booking"
           @click="isMenuOpen = false"
-          active-class="bg-blue-500 text-white"
-          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105"
+          active-class="bg-blue-200 "
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ t("My Booking") }}
         </RouterLink>
 
         <RouterLink
+          to="/about"
+          @click="isMenuOpen = false"
+          active-class="bg-blue-200 "
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
+        >
+          {{ t("About Us") }}
+        </RouterLink>
+
+        <RouterLink
+          to="/contact"
+          @click="isMenuOpen = false"
+          active-class="bg-blue-200 "
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
+        >
+          {{ t("Contact Us") }}
+        </RouterLink>
+
+        <RouterLink
           to="/my-account"
           @click="isMenuOpen = false"
-          active-class="bg-blue-500 text-white"
-          class="m-1 px-4 py-3 rounded-2xl font-medium text-black hover:bg-blue-500 active:scale-105"
+          active-class="bg-blue-200 "
+          class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ displayName }}
         </RouterLink>
 
         <button
           @click="isMenuOpen = false; toggleLocale()"
-          class="px-4 py-3 font-medium text-black hover:bg-blue-500 hover:scale-105"
+          class="px-4 py-3 font-medium text-blue-800 hover:bg-blue-100 hover:scale-105"
         >
           <i class="bi bi-globe2 mr-2"></i>
           {{ locale === "en" ? t("Khmer") : t("English") }}
@@ -209,6 +245,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue"
+import Logo from "./Logo.vue"
 import { currentUser } from "../store/user"
 import { locale, toggleLocale, t } from "../i18n"
 

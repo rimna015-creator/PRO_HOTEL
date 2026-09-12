@@ -7,6 +7,8 @@ import BookNow from "../views/BookNow.vue";
 import MyBooking from "../views/MyBooking.vue";
 import MyAccount from "../views/MyAccount.vue";
 import Promotion from "../views/Promotion.vue";
+import AboutUs from "../views/AboutUs.vue";
+import ContactUs from "../views/ContactUs.vue";
 
 
 const router=createRouter({
@@ -19,7 +21,9 @@ const router=createRouter({
         {path:"/explore",component:Explore},
         {path:"/promotion",component:Promotion},
         {path:"/my-booking",component:MyBooking},
-        {path:"/my-account",component:MyAccount}
+        {path:"/my-account",component:MyAccount},
+        {path:"/about",component:AboutUs},
+        {path:"/contact",component:ContactUs}
     ],
     scrollBehavior(_to, _from, savedPosition) {
     // When using browser Back/Forward button

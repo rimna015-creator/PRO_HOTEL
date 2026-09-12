@@ -1,15 +1,15 @@
 <template>
-  <div class="px-6 pb-10 pt-24">
+  <div class="min-h-screen bg-blue-50 px-6 pb-10 pt-24">
 
     <!-- Hero / Description Section -->
     <section class="mx-auto max-w-4xl text-center">
-      <h1 class="text-4xl font-bold text-gray-700">
+      <h1 class="text-4xl font-bold text-blue-900">
         {{ t("Explore Siem Reap") }}
       </h1>
-      <p class="mt-2 text-sm font-medium uppercase tracking-widest text-blue-600">
+      <p class="mt-2 text-sm font-medium uppercase tracking-widest text-blue-500">
         {{ t("Cambodia") }}
       </p>
-      <p class="mt-4 leading-relaxed text-gray-600">
+      <p class="mt-4 leading-relaxed text-blue-600">
         {{ t("Siem Reap, meaning \"Defeat of Siam,\" is the gateway to the legendary Angkor region — home to some of the most spectacular ancient temples on Earth.") }}
         {{ t("Nestled in northwestern Cambodia, this charming city blends centuries-old Khmer heritage with a vibrant modern culture.") }}
         {{ t("From the awe-inspiring Angkor Wat at sunrise to the bustling night markets and floating villages of Tonle Sap, Siem Reap offers an unforgettable journey through history, nature, and Cambodian hospitality.") }}
@@ -19,12 +19,12 @@
     <!-- Search Bar -->
     <div class="mx-auto mt-6 max-w-md">
       <div class="relative">
-        <i class="bi bi-search pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        <i class="bi bi-search pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-blue-400"></i>
         <input
           v-model="searchQuery"
           type="text"
           :placeholder="t('Search places...')"
-          class="w-full rounded-full border border-gray-300 py-2.5 pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+          class="w-full rounded-full border border-blue-200 py-2.5 pl-10 pr-4 text-sm text-blue-700 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-200"
         />
       </div>
     </div>
@@ -37,8 +37,8 @@
         class="rounded-full border px-4 py-1.5 text-sm font-medium transition duration-300"
         :class="
           activeCategory === cat
-            ? 'bg-blue-600 border-blue-600 text-white'
-            : 'border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600'
+            ? 'bg-blue-700 border-blue-700 text-white'
+            : 'border-blue-200 text-blue-600 hover:border-blue-400 hover:text-blue-700'
         "
         @click="activeCategory = cat"
       >
@@ -54,7 +54,7 @@
       <div
         v-for="place in filteredPlaces"
         :key="place.id"
-        class="w-full max-w-[360px] overflow-hidden rounded-xl  shadow-xl bg-gray-200 transition duration-300 hover:-translate-y-1 "
+        class="w-full max-w-[360px] overflow-hidden rounded-xl shadow-xl bg-white ring-1 ring-blue-200 transition duration-300 hover:-translate-y-1 "
       >
         <!-- Place Image -->
         <img
@@ -66,38 +66,38 @@
         <div class="p-5">
 
           <!-- Category Badge -->
-          <span class="inline-block rounded-full bg-blue-100 px-3 py-0.5 text-xs font-semibold text-blue-700">
+          <span class="inline-block rounded-full bg-blue-100 px-3 py-0.5 text-xs font-semibold text-black">
             {{ place.category }}
           </span>
 
           <!-- Place Name -->
-          <h2 class="mt-2 text-xl font-semibold text-gray-800">
+          <h2 class="mt-2 text-xl font-semibold text-black">
             {{ place.name }}
           </h2>
 
           <!-- Rating -->
-          <p class="mt-1 text-sm text-gray-700">
-            <i class="bi bi-star-fill text-blue-500"></i>
+          <p class="mt-1 text-sm text-black">
+            <i class="bi bi-star-fill text-amber-500"></i>
             <span class="font-semibold">{{ place.rating }}</span>
           </p>
 
           <!-- Description -->
-          <p class="mt-3 text-sm leading-relaxed text-gray-600 line-clamp-3">
+          <p class="mt-3 text-sm leading-relaxed text-black line-clamp-3">
             {{ place.description }}
           </p>
 
           <!-- Info Row -->
-          <div class="mt-4 space-y-2 text-sm text-gray-600">
+          <div class="mt-4 space-y-2 text-sm text-black">
             <p>
-              <i class="bi bi-clock mr-1 text-blue-600"></i>
+              <i class="bi bi-clock mr-1 text-blue-500"></i>
               {{ place.openHours }}
             </p>
             <p>
-              <i class="bi bi-ticket mr-1 text-blue-600"></i>
+              <i class="bi bi-ticket mr-1 text-blue-500"></i>
               {{ place.ticketPrice }}
             </p>
             <p>
-              <i class="bi bi-geo-alt-fill mr-1 text-blue-600"></i>
+              <i class="bi bi-geo-alt-fill mr-1 text-blue-500"></i>
               {{ place.location }}
             </p>
           </div>
@@ -117,11 +117,11 @@
 
     <!-- Empty State -->
     <div v-else class="flex flex-col items-center justify-center py-20 text-center">
-      <i class="bi bi-search text-5xl text-gray-400"></i>
-      <h2 class="mt-4 text-xl font-semibold text-gray-800">
+      <i class="bi bi-search text-5xl text-blue-400"></i>
+      <h2 class="mt-4 text-xl font-semibold text-blue-800">
         {{ t("No places found") }}
       </h2>
-      <p class="mt-2 text-sm text-gray-500">
+      <p class="mt-2 text-sm text-blue-500">
         {{ t("Try selecting a different category.") }}
       </p>
     </div>

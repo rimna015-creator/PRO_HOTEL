@@ -1,11 +1,11 @@
 <template>
-  <div class="px-6 pb-10 pt-24">
+  <div class="min-h-screen bg-blue-50 px-6 pb-10 pt-24">
 
-    <h1 class="text-center text-3xl font-bold text-gray-800">
+    <h1 class="text-center text-3xl font-bold text-blue-900">
       {{ t("Hotels in Siem Reap") }}
     </h1>
 
-    <p v-if="checkIn && checkOut" class="mt-2 text-center text-sm text-gray-600">
+    <p v-if="checkIn && checkOut" class="mt-2 text-center text-sm text-blue-600">
       {{ t("Showing hotels available from") }}
       <strong>{{ formatDate(checkIn) }}</strong>
       {{ t("to") }}
@@ -16,12 +16,12 @@
     <!-- Search Bar -->
     <div class="mx-auto mt-6 max-w-md">
       <div class="relative">
-        <i class="bi bi-search pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        <i class="bi bi-search pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-blue-400"></i>
         <input
           v-model="searchQuery"
           type="text"
           :placeholder="t('Search hotels...')"
-          class="w-full rounded-full border border-gray-300 py-2.5 pl-10 pr-4 text-sm text-gray-700 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+          class="w-full rounded-full border border-blue-200 py-2.5 pl-10 pr-4 text-sm text-blue-700 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-200"
         />
       </div>
     </div>
@@ -34,10 +34,10 @@
         class="rounded-full border px-4 py-1.5 text-sm font-medium transition duration-300"
         :class="
           activeStars === star.value
-            ? 'bg-blue-400 border-blue-500 text-white'
-            : 'border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600'
+            ? 'bg-blue-700 border-blue-700 text-white'
+            : 'border-blue-200 text-blue-600 hover:border-blue-400 hover:text-blue-700'
         "
-        @click="activeStars = star.value"
+        @click="selectStars(star.value)"
       >
         <template v-if="star.value === 0">
           {{ t(star.label) }}
@@ -56,8 +56,8 @@
         class="rounded-full border px-4 py-1.5 text-sm font-medium transition duration-300"
         :class="
           activeCategory === cat
-            ? 'bg-blue-600 border-blue-600 text-white'
-            : 'border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600'
+            ? 'bg-blue-700 border-blue-700 text-white'
+            : 'border-blue-200 text-blue-600 hover:border-blue-400 hover:text-blue-700'
         "
         @click="activeCategory = cat"
       >
@@ -65,7 +65,7 @@
       </button>
     </div>
 
-    <div v-if="filteredHotels.length" class="flex flex-wrap justify-center gap-6 mt-3">
+    <div v-if="filteredHotels.length" class="mt-3 flex flex-wrap justify-start gap-6">
       <HotelCard
         v-for="hotel in filteredHotels"
         :key="hotel.id + hotel.reviewer"
@@ -74,11 +74,11 @@
     </div>
 
     <div v-else class="flex flex-col items-center justify-center py-20 text-center">
-      <i class="bi bi-calendar-x text-5xl text-gray-400"></i>
-      <h2 class="mt-4 text-xl font-semibold text-gray-800">
+      <i class="bi bi-calendar-x text-5xl text-blue-400"></i>
+      <h2 class="mt-4 text-xl font-semibold text-blue-800">
         {{ t("No hotels available for these dates") }}
       </h2>
-      <p class="mt-2 text-sm text-gray-500">
+      <p class="mt-2 text-sm text-blue-500">
         {{ t("Try changing your check-in and check-out dates.") }}
       </p>
       <RouterLink
@@ -116,6 +116,13 @@ const availableHotels = computed(() => {
 const activeCategory = ref("All")
 const activeStars = ref(0)
 const searchQuery = ref("")
+
+const selectStars = (value: number) => {
+  if (activeStars.value !== value) {
+    activeCategory.value = "All"
+  }
+  activeStars.value = value
+}
 
 const starLevels = [
   { value: 0, label: "All Stars" },

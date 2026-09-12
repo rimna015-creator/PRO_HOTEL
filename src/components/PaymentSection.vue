@@ -1,60 +1,60 @@
 <template>
   <div class="mt-6 rounded-2xl bg-white p-6 shadow-md sm:p-8">
-    <h2 class="mb-5 text-xl font-semibold text-gray-800">
-      <i class="bi bi-credit-card-2-front mr-2 text-blue-600"></i>
+    <h2 class="mb-5 text-xl font-semibold text-blue-900">
+      <i class="bi bi-credit-card-2-front mr-2 text-blue-500"></i>
       {{ t("Payment") }}
     </h2>
 
     <!-- Order Total -->
     <div class="rounded-xl bg-blue-50 p-5">
       <div class="flex items-center justify-between">
-        <span class="font-semibold text-gray-800">{{ t("Total Trip Price") }}</span>
-        <span class="text-2xl font-bold text-gray-900">${{ amount }}</span>
+        <span class="font-semibold text-blue-900">{{ t("Total Trip Price") }}</span>
+        <span class="text-2xl font-bold text-blue-900">${{ amount }}</span>
       </div>
-      <div class="mt-2 flex items-center justify-between text-sm text-gray-600">
+      <div class="mt-2 flex items-center justify-between text-sm text-blue-600">
         <span>{{ t("Due now") }}</span>
-        <span class="font-semibold text-emerald-600">${{ dueNow }}</span>
+        <span class="font-semibold text-blue-900">${{ dueNow }}</span>
       </div>
-      <div v-if="balance > 0" class="flex items-center justify-between text-sm text-gray-600">
+      <div v-if="balance > 0" class="flex items-center justify-between text-sm text-blue-600">
         <span>{{ t("Balance at check-in") }}</span>
-        <span class="font-semibold text-gray-700">${{ balance }}</span>
+        <span class="font-semibold text-blue-700">${{ balance }}</span>
       </div>
     </div>
 
     <!-- Payment Plan -->
     <div class="mt-5">
-      <h3 class="mb-3 text-sm font-semibold text-gray-700">{{ t("Payment Plan") }}</h3>
+      <h3 class="mb-3 text-sm font-semibold text-blue-700">{{ t("Payment Plan") }}</h3>
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <label
           v-for="p in plans"
           :key="p.value"
           class="flex cursor-pointer flex-col rounded-xl border-2 p-4 transition"
           :class="plan === p.value
-            ? 'border-blue-600 bg-blue-50'
-            : 'border-gray-200 bg-white hover:border-blue-300'"
+            ? 'border-blue-700 bg-blue-50'
+            : 'border-blue-200 bg-white hover:border-blue-300'"
         >
           <input type="radio" v-model="plan" :value="p.value" class="sr-only" />
-          <span class="font-semibold text-gray-900">{{ t(p.label) }}</span>
-          <span class="mt-1 text-xs text-gray-500">{{ t(p.desc) }}</span>
+          <span class="font-semibold text-blue-900">{{ t(p.label) }}</span>
+          <span class="mt-1 text-xs text-blue-500">{{ t(p.desc) }}</span>
         </label>
       </div>
     </div>
 
     <!-- Payment Method -->
     <div v-if="plan !== 'hotel'" class="mt-5">
-      <h3 class="mb-3 text-sm font-semibold text-gray-700">{{ t("Payment Method") }}</h3>
+      <h3 class="mb-3 text-sm font-semibold text-blue-700">{{ t("Payment Method") }}</h3>
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <label
           v-for="m in methods"
           :key="m.value"
           class="flex cursor-pointer items-center gap-3 rounded-xl border-2 p-4 transition"
           :class="method === m.value
-            ? 'border-blue-600 bg-blue-50'
-            : 'border-gray-200 bg-white hover:border-blue-300'"
+            ? 'border-blue-700 bg-blue-50'
+            : 'border-blue-200 bg-white hover:border-blue-300'"
         >
           <input type="radio" v-model="method" :value="m.value" class="sr-only" />
-          <i :class="[m.icon, 'text-xl text-blue-600']"></i>
-          <span class="font-medium text-gray-800">{{ t(m.label) }}</span>
+          <i :class="[m.icon, 'text-xl text-blue-500']"></i>
+          <span class="font-medium text-blue-900">{{ t(m.label) }}</span>
         </label>
       </div>
     </div>
@@ -62,19 +62,19 @@
     <!-- Credit / Debit Card Form -->
     <div v-if="plan !== 'hotel' && method === 'card'" class="mt-5 space-y-4">
       <div>
-        <label for="cardHolder" class="block text-sm font-semibold text-gray-700">{{ t("Cardholder Name") }}</label>
+        <label for="cardHolder" class="block text-sm font-semibold text-blue-700">{{ t("Cardholder Name") }}</label>
         <input
           id="cardHolder"
           v-model="cardHolder"
           type="text"
           :placeholder="t('Name on the card')"
-          class="mt-2 block w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+          class="mt-2 block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200"
         />
         <p v-if="errors.cardHolder" class="mt-1 text-xs text-red-500">{{ errors.cardHolder }}</p>
       </div>
 
       <div>
-        <label for="cardNumber" class="block text-sm font-semibold text-gray-700">{{ t("Card Number") }}</label>
+        <label for="cardNumber" class="block text-sm font-semibold text-blue-700">{{ t("Card Number") }}</label>
         <div class="relative mt-2">
           <input
             id="cardNumber"
@@ -83,9 +83,9 @@
             type="text"
             inputmode="numeric"
             placeholder="1234 5678 9012 3456"
-            class="block w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 pr-24 font-mono text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+            class="block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 pr-24 font-mono text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200"
           />
-          <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-blue-600">
+          <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-blue-500">
             {{ cardBrand }}
           </span>
         </div>
@@ -94,7 +94,7 @@
 
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <label for="cardExpiry" class="block text-sm font-semibold text-gray-700">{{ t("Expiry Date") }}</label>
+          <label for="cardExpiry" class="block text-sm font-semibold text-blue-700">{{ t("Expiry Date") }}</label>
           <input
             id="cardExpiry"
             :value="cardExpiry"
@@ -102,12 +102,12 @@
             type="text"
             inputmode="numeric"
             placeholder="MM/YY"
-            class="mt-2 block w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 font-mono text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+            class="mt-2 block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 font-mono text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200"
           />
           <p v-if="errors.cardExpiry" class="mt-1 text-xs text-red-500">{{ errors.cardExpiry }}</p>
         </div>
         <div>
-          <label for="cardCvv" class="block text-sm font-semibold text-gray-700">CVV</label>
+          <label for="cardCvv" class="block text-sm font-semibold text-blue-700">CVV</label>
           <input
             id="cardCvv"
             :value="cardCvv"
@@ -115,7 +115,7 @@
             type="password"
             inputmode="numeric"
             placeholder="123"
-            class="mt-2 block w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 font-mono text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+            class="mt-2 block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 font-mono text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200"
           />
           <p v-if="errors.cardCvv" class="mt-1 text-xs text-red-500">{{ errors.cardCvv }}</p>
         </div>
@@ -123,17 +123,17 @@
     </div>
 
     <!-- QR Code -->
-    <div v-else-if="plan !== 'hotel' && method === 'qr'" class="mt-5 flex flex-col items-center gap-5 rounded-xl bg-gray-50 p-5 sm:flex-row">
+    <div v-else-if="plan !== 'hotel' && method === 'qr'" class="mt-5 flex flex-col items-center gap-5 rounded-xl bg-white p-5 sm:flex-row">
       <div
-        class="rounded-xl border-2 border-gray-200 bg-white p-3"
+        class="rounded-xl border-2 border-blue-200 bg-white p-3"
         v-html="qrSvg"
       ></div>
       <div class="text-center sm:text-left">
-        <p class="text-sm font-semibold text-gray-800">{{ t("Scan to Pay") }} ${{ dueNow }}</p>
-        <p class="mt-1 text-xs text-gray-500">
+        <p class="text-sm font-semibold text-blue-900">{{ t("Scan to Pay") }} ${{ dueNow }}</p>
+        <p class="mt-1 text-xs text-blue-500">
           {{ t("Open your banking app (ACLEDA, Bakong, Pi Pay or Wing) and scan this QR code to complete the payment. The money is sent directly to our payee account.") }}
         </p>
-        <p class="mt-2 text-xs font-medium text-blue-600">
+        <p class="mt-2 text-xs font-medium text-blue-700">
           <i class="bi bi-shield-check mr-1"></i>
           {{ t("Payee:") }} Angkor Booking Co., Ltd.
         </p>
@@ -141,26 +141,26 @@
     </div>
 
     <!-- Bank Transfer -->
-    <div v-else-if="plan !== 'hotel' && method === 'bank'" class="mt-5 rounded-xl bg-gray-50 p-5">
-      <div class="space-y-2 text-sm text-gray-700">
+    <div v-else-if="plan !== 'hotel' && method === 'bank'" class="mt-5 rounded-xl bg-white p-5">
+      <div class="space-y-2 text-sm text-blue-700">
         <div class="flex items-center justify-between">
-          <span class="text-gray-500">{{ t("Bank") }}</span>
+          <span class="text-blue-500">{{ t("Bank") }}</span>
           <span class="font-semibold">ACLEDA Bank Plc.</span>
         </div>
         <div class="flex items-center justify-between">
-          <span class="text-gray-500">{{ t("Account Name") }}</span>
+          <span class="text-blue-500">{{ t("Account Name") }}</span>
           <span class="font-semibold">Angkor Booking Co., Ltd.</span>
         </div>
         <div class="flex items-center justify-between">
-          <span class="text-gray-500">{{ t("Account Number") }}</span>
+          <span class="text-blue-500">{{ t("Account Number") }}</span>
           <span class="font-mono font-semibold">000 23 456 789</span>
         </div>
         <div class="flex items-center justify-between">
-          <span class="text-gray-500">{{ t("Amount to transfer") }}</span>
-          <span class="font-bold text-emerald-600">${{ dueNow }}</span>
+          <span class="text-blue-500">{{ t("Amount to transfer") }}</span>
+          <span class="font-bold text-blue-900">${{ dueNow }}</span>
         </div>
       </div>
-      <p class="mt-3 text-xs text-gray-500">
+      <p class="mt-3 text-xs text-blue-500">
         {{ t("Use") }} <span class="font-semibold">"ANGKOR-" + your booking reference</span> {{ t("as the transfer note so we can match your payment to your reservation.") }}
       </p>
     </div>
@@ -169,7 +169,7 @@
     <button
       @click="attemptPay"
       :disabled="processing"
-      class="mt-6 flex w-full items-center justify-center rounded-2xl bg-blue-600 px-6 py-3 text-lg font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
+      class="mt-6 flex w-full items-center justify-center rounded-2xl bg-emerald-600 px-6 py-3 text-lg font-bold text-white shadow-lg shadow-emerald-500/20 transition-all hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
     >
       <span
         v-if="processing"
@@ -181,7 +181,7 @@
       </template>
     </button>
 
-    <p v-if="balance > 0" class="mt-3 text-center text-xs text-gray-500">
+    <p v-if="balance > 0" class="mt-3 text-center text-xs text-blue-500">
       {{ t("You'll pay") }} <strong>${{ dueNow }}</strong> {{ t("now.") }}
       {{ t("The remaining") }} <strong>${{ balance }}</strong> {{ t("is payable at the hotel front desk on check-in.") }}
     </p>
