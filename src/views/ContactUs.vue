@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-blue-50 px-6 pb-16 pt-24">
+  <div class="min-h-screen  bg-blue-50 px-6 pb-16 pt-24">
 
     <!-- Hero -->
     <section class="mx-5 text-center">
@@ -7,7 +7,7 @@
       <p class="mt-3 text-blue-500">{{ t("We'd love to hear from you") }}</p>
     </section>
 
-    <div class="mx-5 mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
+    <div class="mx-40 mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2 ">
 
       <!-- Contact Info -->
       <div class="space-y-6">
@@ -89,13 +89,13 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-blue-200">
+      <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-blue-200">
         <h2 class="text-xl font-semibold text-blue-900">{{ t("Send Us a Message") }}</h2>
         <p class="mt-2 text-sm text-blue-600">
           {{ t("Fill in the form and we'll get back to you as soon as possible.") }}
         </p>
 
-        <form @submit.prevent="handleSubmit" class="mt-6 space-y-5">
+        <form @submit.prevent="handleSubmit" class="mt-2 space-y-5">
           <div>
             <label for="contactName" class="block text-sm font-semibold text-blue-700">{{ t("Your Name") }}</label>
             <input
@@ -126,7 +126,7 @@
               id="contactMessage"
               v-model="form.message"
               required
-              rows="5"
+              rows="1"
               :placeholder="t('How can we help you?')"
               class="mt-2 block w-full rounded-xl border border-blue-200 bg-white px-4 py-3 text-blue-900 placeholder:text-blue-400 focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-200 focus:outline-none"
             ></textarea>

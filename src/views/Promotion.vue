@@ -9,7 +9,7 @@
       {{ t("Celebrate Cambodian festivals with special hotel packages! Each promotion includes exclusive discounts, available on set dates only. Book early to secure your spot.") }}
     </p>
 
-    <div v-if="promotions.length" class="mt-10 flex flex-wrap justify-start gap-6">
+    <div v-if="promotions.length" class="mx-auto mt-8 grid max-w-6xl grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <PromotionCard
         v-for="promo in promotions"
         :key="promo.id"

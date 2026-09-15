@@ -13,6 +13,7 @@ export interface HotelDetail {
   description: string
   facilities: string[]
   services: string[]
+  furniture: string[]
   roomTypes: RoomType[]
   checkIn: string
   checkOut: string
@@ -70,6 +71,16 @@ export const hotelDetails: HotelDetail[] = [
       "Tour Guide",
       "Laundry",
       "Airport Shuttle"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Work Desk",
+      "Wardrobe",
+      "Balcony"
     ],
     roomTypes: [
       {
@@ -138,6 +149,14 @@ export const hotelDetails: HotelDetail[] = [
       "Bicycle Rental",
       "Breakfast Included"
     ],
+    furniture: [
+      "Queen Bed",
+      "Air Conditioning",
+      "Ceiling Fan",
+      "Wardrobe",
+      "Work Desk",
+      "Tea & Coffee Set"
+    ],
     roomTypes: [
       {
         name: "Garden Room",
@@ -165,64 +184,6 @@ export const hotelDetails: HotelDetail[] = [
       facebook: "https://facebook.com/SiemReapBoutiqueVilla",
       tiktok: "https://tiktok.com/@SiemReapBoutiqueVilla",
       instagram: "https://instagram.com/SiemReapBoutiqueVilla"
-    }
-  },
-  {
-    id: 3,
-    name: "Happy Family Homestay",
-    type: "Hotel + Motor Rental",
-    stars: 3,
-    location: "Siem Reap",
-    address: "Wat Bo Road, Siem Reap, Cambodia",
-    price: 25,
-    reviewer: 54,
-    rating: 4.5,
-    image: "/images/hotel3.jpg",
-    gallery: [
-      "/images/hotel3.jpg",
-      "/images/hotel3-room.jpg"
-    ],
-    description:
-      "A warm and welcoming family-run homestay offering an authentic Cambodian experience. Enjoy home-cooked meals, friendly hosts, and a peaceful atmosphere in a local neighborhood.",
-    facilities: [
-      "Free Wi-Fi",
-      "Parking",
-      "Shared Kitchen",
-      "Garden"
-    ],
-    services: [
-      "Motorbike Rental",
-      "Home-cooked Meals",
-      "Laundry"
-    ],
-    roomTypes: [
-      {
-        name: "Standard Room",
-        price: 25,
-        capacity: 2,
-        description: "Simple and clean room with fan and shared bathroom.",
-        available: 6
-      },
-      {
-        name: "Family Room",
-        price: 40,
-        capacity: 4,
-        description: "Large room with private bathroom and extra beds for families.",
-        available: 2
-      }
-    ],
-    checkIn: "13:00",
-    checkOut: "11:00",
-    policies: [
-      "No smoking inside rooms",
-      "Shoes off at the entrance",
-      "Meals available on request"
-    ],
-    contact: {
-      hotline: "+855 12 555 789",
-      facebook: "https://facebook.com/HappyFamilyHomestay",
-      tiktok: "https://tiktok.com/@HappyFamilyHomestay",
-      instagram: "https://instagram.com/HappyFamilyHomestay"
     }
   },
   {
@@ -259,6 +220,16 @@ export const hotelDetails: HotelDetail[] = [
       "Tour Guide",
       "Laundry",
       "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Work Desk",
+      "Balcony",
+      "Bathtub"
     ],
     roomTypes: [
       {
@@ -300,11 +271,11 @@ export const hotelDetails: HotelDetail[] = [
   },
   {
     id: 5,
-    name: "Angkor Motor Villa",
+    name: "Park Hyatt Siem Reap",
     type: "Hotel",
-    stars: 5,
+    stars: 3,
     location: "Siem Reap",
-    address: "Taphul Village, Svay Dangkum, Siem Reap, Cambodia",
+    address: "Sivatha Boulevard, Svay Dangkum, Siem Reap, Cambodia",
     price: 35,
     reviewer: 41,
     rating: 4.4,
@@ -315,110 +286,63 @@ export const hotelDetails: HotelDetail[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwO5ckG1_A5PEZCuUw0NrjbJ3wHFE2eRY_Dbj0rGnGMg&s"
     ],
     description:
-      "Discover Angkor’s wonders in a three-temple adventure with Park Hyatt Siem Reap. Explore Angkor Wat’s grandeur, Bayon’s iconic stone faces and Ta Prohm’s jungle embrace in a journey through history, culture and timeless beauty.",
+      "Park Hyatt Siem Reap reimagines Angkor-inspired elegance with contemporary comfort. Set amid tropical gardens in the heart of Siem Reap, it offers refined rooms, a serene pool, and warm Khmer hospitality just minutes from the temple complex.",
     facilities: [
-      "Free Wi-Fi",
-      "Parking",
-      "Motorbike Parking",
+      "Swimming Pool",
       "Restaurant",
-      "Garden"
+      "Bar",
+      "Spa",
+      "Fitness Center",
+      "Free Wi-Fi",
+      "Garden",
+      "Parking"
     ],
     services: [
-      "Motorbike Rental",
-      "Bicycle Rental",
-      "Self-drive Tours",
+      "Airport Pickup",
+      "Concierge",
+      "Tour Desk",
       "Laundry",
-      "Airport Shuttle"
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Work Desk",
+      "Safety Deposit Box"
     ],
     roomTypes: [
       {
-        name: "Standard Room",
+        name: "Park Room",
         price: 35,
         capacity: 2,
-        description: "Compact room with air conditioning, fan, and shared terrace.",
-        available: 5
+        description: "Elegant room with modern amenities and garden views.",
+        available: 8
       },
       {
-        name: "Villa Room",
+        name: "Deluxe Pool View Room",
         price: 55,
-        capacity: 3,
-        description: "Spacious room with private bathroom, balcony, and river view.",
-        available: 3
+        capacity: 2,
+        description: "Spacious room overlooking the tropical garden and pool.",
+        available: 5
       }
     ],
     checkIn: "14:00",
-    checkOut: "11:00",
+    checkOut: "12:00",
     policies: [
       "No smoking in rooms",
-      "Motorbike rental requires valid driver's license",
-      "Helmets provided with every rental",
+      "Valid ID required at check-in",
       "Cancellation must be made 24 hours before check-in"
     ],
     contact: {
-      hotline: "+855 12 777 333",
-      facebook: "https://facebook.com/AngkorMotorVilla",
-      tiktok: "https://tiktok.com/@AngkorMotorVilla",
-      instagram: "https://instagram.com/AngkorMotorVilla"
+      hotline: "+855 63 211 234",
+      facebook: "https://facebook.com/ParkHyattSiemReap",
+      tiktok: "https://tiktok.com/@ParkHyattSiemReap",
+      instagram: "https://instagram.com/ParkHyattSiemReap"
     }
   },
-    {
-    id: 6,
-    name: "Siem Reap Boutique Villa",
-    type: "Boutique",
-    stars: 4,
-    location: "Siem Reap",
-    address: "Charles de Gaulle Boulevard, Siem Reap, Cambodia",
-    price: 45,
-    reviewer: 25,
-    rating: 4.6,
-    image: "https://static1.squarespace.com/static/6507f8aa7fb46b61d600fac9/t/6a4cc8fbf82e7b141144414b/1783417083437/2rb--50.jpg?format=1500w",
-    gallery: [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTus_8WPcfSJiy1_FHJ6p8TL6Ja1wnYW2K7wUdY_WokQg&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGjWX1VHDulE44uKxAH8MWPzsoyYrbt06DI2BSgyj87Q&s=10",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4SQ37bG2aKqovY_GwAXBW3_AP8dLXBDCGlLCotjaLA&s"
-    ],
-    description:
-      "A charming boutique villa nestled in a quiet area of Siem Reap. Enjoy a peaceful retreat with beautiful garden views, personalized service, and easy access to local attractions.",
-    facilities: [
-      "Swimming Pool",
-      "Free Wi-Fi",
-      "Garden",
-      "Terrace"
-    ],
-    services: [
-      "Motorbike Rental",
-      "Bicycle Rental",
-      "Breakfast Included"
-    ],
-    roomTypes: [
-      {
-        name: "Garden Room",
-        price: 45,
-        capacity: 2,
-        description: "Cozy room overlooking the garden with modern amenities.",
-        available: 4
-      },
-      {
-        name: "Pool View Room",
-        price: 65,
-        capacity: 2,
-        description: "Elegant room with direct pool access and private balcony.",
-        available: 2
-      }
-    ],
-    checkIn: "14:00",
-    checkOut: "11:00",
-    policies: [
-      "No smoking in rooms",
-      "Quiet hours after 22:00"
-    ],
-    contact: {
-      hotline: "+855 12 987 654",
-      facebook: "https://facebook.com/SiemReapBoutiqueVilla",
-      tiktok: "https://tiktok.com/@SiemReapBoutiqueVilla",
-      instagram: "https://instagram.com/SiemReapBoutiqueVilla"
-    }
-  },
+
   {
     id: 7,
     name: "Tara Angkor Hotel",
@@ -429,11 +353,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 85,
     reviewer: 120,
     rating: 4.6,
-    image: "https://picsum.photos/seed/angkorbc-hotel7/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxQQXbSFjv38ezaARdMujP1S1Vmr6dUaE-2EO9G0BXjg&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel7-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel7-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel7-c/900/600"
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/5b/d0/7c/pool.jpg?w=900&h=-1&s=1",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMUa-VkmJuAnPM3gUB-RKE249t8hEFWLLkiGmWiIYkg&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnnoqilhTLTEWIpbX2oLHRQUj7Kv5EmGjveR1BCMS9nQ&s=10"
     ],
     description:
       "Tara Angkor Hotel blends traditional Khmer elegance with modern comfort. Set in lush gardens near the city center, it offers a serene pool, refined dining, and warm hospitality close to the Angkor temples.",
@@ -452,6 +376,14 @@ export const hotelDetails: HotelDetail[] = [
       "Tour Guide",
       "Laundry",
       "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Balcony"
     ],
     roomTypes: [
       {
@@ -501,11 +433,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 48,
     reviewer: 76,
     rating: 4.3,
-    image: "https://picsum.photos/seed/angkorbc-hotel8/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2DpGVFC5EXfLofHkUWnJsA9r-NVcRQKccaxkUtoYd5Q&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel8-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel8-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel8-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFBc8VxnFXicd0SsH7cWeAPIdYz-GxxQiJameML67nPQ&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKcxL02DaHnmrmi-adOfM5_kT14mh5T6cT1kG8qUvNFQ&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZFY07hxWbgbi1HK00dWix6tAT5oCBiJw73FRvD_z78Q&s=10"
     ],
     description:
       "Angkor Pearl Hotel offers affordable, comfortable stays in a prime location near Pub Street and the Old Market. Friendly staff, clean rooms, and a rooftop restaurant make it a traveler favorite.",
@@ -521,6 +453,13 @@ export const hotelDetails: HotelDetail[] = [
       "Laundry",
       "Airport Shuttle",
       "Breakfast Included"
+    ],
+    furniture: [
+      "Queen Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Wardrobe",
+      "Work Desk"
     ],
     roomTypes: [
       {
@@ -562,11 +501,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 70,
     reviewer: 210,
     rating: 4.7,
-    image: "https://picsum.photos/seed/angkorbc-hotel9/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk44agieLI-Te-aHxIIRtHQw_zUZkUPCoHSSW_evHZgg&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel9-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel9-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel9-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRiIGCZDpaPEUJz-FBkHJ2G_HbNvOuaum0dOX85Pi00A&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSopHJL4J49Wxge3DTawDzkc8xcQSW2bsWvuNlZi3A9w&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6zZhNotczy4Tad-vDRI0TcQ2Se1mYX7KXdQMX_8AuFQ&s=10"
     ],
     description:
       "A beautifully restored wooden villa combining traditional architecture with boutique luxury. Set among tropical gardens, it features a stunning pool, open-air restaurant, and an award-winning spa.",
@@ -585,6 +524,14 @@ export const hotelDetails: HotelDetail[] = [
       "Tuk-tuk Service",
       "Breakfast Included",
       "Spa Treatment"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Wooden Furniture",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Terrace"
     ],
     roomTypes: [
       {
@@ -624,141 +571,6 @@ export const hotelDetails: HotelDetail[] = [
     }
   },
   {
-    id: 10,
-    name: "Ivy Garden Guesthouse",
-    type: "Guesthouse",
-    stars: 3,
-    location: "Siem Reap",
-    address: "Wat Bo Road, Salakamreuk, Siem Reap, Cambodia",
-    price: 18,
-    reviewer: 95,
-    rating: 4.4,
-    image: "https://picsum.photos/seed/angkorbc-hotel10/900/600",
-    gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel10-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel10-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel10-c/900/600"
-    ],
-    description:
-      "A cozy backstreet guesthouse drenched in greenery, where budget travelers find a friendly vibe, hearty Khmer breakfasts, and comfortable rooms just minutes from the Old Market.",
-    facilities: [
-      "Free Wi-Fi",
-      "Garden",
-      "Shared Kitchen",
-      "Rooftop Terrace",
-      "Book Exchange"
-    ],
-    services: [
-      "Bicycle Rental",
-      "Laundry",
-      "Tour Booking",
-      "Breakfast Included"
-    ],
-    roomTypes: [
-      {
-        name: "Dormitory Bed",
-        price: 18,
-        capacity: 1,
-        description: "Shared dorm bed with personal locker and reading light.",
-        available: 8
-      },
-      {
-        name: "Private Double",
-        price: 30,
-        capacity: 2,
-        description: "Private room with fan, en-suite bathroom, and garden view.",
-        available: 4
-      }
-    ],
-    checkIn: "13:00",
-    checkOut: "11:00",
-    policies: [
-      "No smoking inside rooms",
-      "Shoes off in common areas",
-      "Reception closed after 23:00"
-    ],
-    contact: {
-      hotline: "+855 12 348 222",
-      facebook: "https://facebook.com/IvyGardenGuesthouse",
-      tiktok: "https://tiktok.com/@IvyGardenGuesthouse",
-      instagram: "https://instagram.com/IvyGardenGuesthouse"
-    }
-  },
-  {
-    id: 11,
-    name: "The Blue Mango Resort",
-    type: "Resort",
-    stars: 5,
-    location: "Siem Reap",
-    address: "Pokambor Avenue, Krong Siem Reap, Cambodia",
-    price: 130,
-    reviewer: 300,
-    rating: 4.6,
-    image: "https://picsum.photos/seed/angkorbc-hotel11/900/600",
-    gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel11-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel11-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel11-c/900/600"
-    ],
-    description:
-      "An expansive five-star resort featuring multiple lagoons, lush landscaped grounds, and a golf course at its doorstep. The Blue Mango offers families and couples a complete luxury retreat.",
-    facilities: [
-      "Swimming Pool",
-      "Lagoon",
-      "Golf Course Access",
-      "Spa",
-      "Restaurant",
-      "Pool Bar",
-      "Fitness Center",
-      "Kids Club",
-      "Free Wi-Fi"
-    ],
-    services: [
-      "Airport Pickup",
-      "Golf Car Rental",
-      "Tour Guide",
-      "Laundry",
-      "Breakfast Included"
-    ],
-    roomTypes: [
-      {
-        name: "Deluxe Room",
-        price: 130,
-        capacity: 2,
-        description: "Modern room with pool views, king bed, and smart TV.",
-        available: 10
-      },
-      {
-        name: "Lagoon View Villa",
-        price: 220,
-        capacity: 2,
-        description: "Private villa overlooking a lagoon with outdoor shower.",
-        available: 5
-      },
-      {
-        name: "Royal Suite",
-        price: 380,
-        capacity: 4,
-        description: "Grand suite with dining area, private pool, and butler service.",
-        available: 2
-      }
-    ],
-    checkIn: "14:00",
-    checkOut: "12:00",
-    policies: [
-      "No smoking in rooms",
-      "Cancellation must be made 48 hours before check-in",
-      "Golf attire required on course",
-      "Valid ID required at check-in"
-    ],
-    contact: {
-      hotline: "+855 63 766 888",
-      facebook: "https://facebook.com/TheBlueMangoResort",
-      tiktok: "https://tiktok.com/@TheBlueMangoResort",
-      instagram: "https://instagram.com/TheBlueMangoResort"
-    }
-  },
-  {
     id: 12,
     name: "Somadevi Angkor Resort & Spa",
     type: "Resort",
@@ -768,11 +580,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 95,
     reviewer: 180,
     rating: 4.5,
-    image: "https://picsum.photos/seed/angkorbc-hotel12/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs2Sns9knawdF_Y4Bxf_s_hia6mqCFhmaWXnrziHE3b5E_rl-MkKoIqwhb&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel12-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel12-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel12-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2M6-T_vng4BuGQhvlk75EWvKROsLqds--tcbQu0fI7w&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsAlArvIQ5wO72gdbiMrLbMhuFC0jd3YHLmxrYSlee6A&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWXHZ8COKZpZjTLY6mO6F2lieJDcqFdB7Ny0QcxWGfpQ&s=10"
     ],
     description:
       "Situated along the Siem Reap river, Somadevi Angkor Resort & Spa combines colonial charm with modern resort amenities, a riverside pool, and an acclaimed Khmer fine-dining restaurant.",
@@ -791,6 +603,14 @@ export const hotelDetails: HotelDetail[] = [
       "Laundry",
       "Room Service",
       "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Daybed",
+      "Balcony"
     ],
     roomTypes: [
       {
@@ -839,11 +659,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 140,
     reviewer: 260,
     rating: 4.8,
-    image: "https://picsum.photos/seed/angkorbc-hotel13/900/600",
+    image: "vhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE0oh6E1y_dKZ49OQY0Tvnvym8yFColawP8R81vGTbfA&s",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel13-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel13-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel13-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRunIZoVlfOwygrxIbJ4OGufbL16dtfN4M0qAxKSkNJeg&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmNDUuxP1tEg6qrQ6QpJIQMpFfcJIjyn8idj-XGhrjw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpxjXE5GBWvCXD3FpA5kPkyELXu32g0LoFSxA19n1Hg&s"
     ],
     description:
       "Inspired by traditional Khmer village architecture, this intimate five-star resort features saltwater pools, lush tropical gardens, and world-class service only a few minutes from Angkor Wat.",
@@ -862,6 +682,13 @@ export const hotelDetails: HotelDetail[] = [
       "Cultural Dance Evening",
       "Laundry",
       "Breakfast Included"
+    ],
+    furniture: [
+      "Four-poster Bed",
+      "Air Conditioning",
+      "Handcrafted Khmer Furniture",
+      "Safety Deposit Box",
+      "Private Patio"
     ],
     roomTypes: [
       {
@@ -894,67 +721,6 @@ export const hotelDetails: HotelDetail[] = [
     }
   },
   {
-    id: 14,
-    name: "Nhok Thom Thom Homestay",
-    type: "Homestay",
-    stars: 2,
-    location: "Siem Reap",
-    address: "Village 4, Monourom, Siem Reap, Cambodia",
-    price: 12,
-    reviewer: 58,
-    rating: 4.2,
-    image: "https://picsum.photos/seed/angkorbc-hotel14/900/600",
-    gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel14-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel14-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel14-c/900/600"
-    ],
-    description:
-      "A true Khmer village homestay where guests share meals and daily life with a local family. Rice-field views, warm hospitality, and incredible home cooking create an unforgettable cultural experience.",
-    facilities: [
-      "Free Wi-Fi",
-      "Shared Bathroom",
-      "Garden",
-      "Hammocks",
-      "Home Dining"
-    ],
-    services: [
-      "Home-cooked Meals",
-      "Village Walking Tour",
-      "Bicycle Rental",
-      "Laundry"
-    ],
-    roomTypes: [
-      {
-        name: "Traditional Room",
-        price: 12,
-        capacity: 2,
-        description: "Simple wooden room with mattress, mosquito net, and fan.",
-        available: 4
-      },
-      {
-        name: "Family Room",
-        price: 22,
-        capacity: 4,
-        description: "Large room with private bathroom and veranda.",
-        available: 2
-      }
-    ],
-    checkIn: "12:00",
-    checkOut: "11:00",
-    policies: [
-      "No smoking inside rooms",
-      "Meals shared with host family",
-      "Respect village quiet hours"
-    ],
-    contact: {
-      hotline: "+855 12 656 900",
-      facebook: "https://facebook.com/NhokThomThomHomestay",
-      tiktok: "https://tiktok.com/@NhokThomThomHomestay",
-      instagram: "https://instagram.com/NhokThomThomHomestay"
-    }
-  },
-  {
     id: 15,
     name: "The Privilege Floor",
     type: "Boutique",
@@ -964,11 +730,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 150,
     reviewer: 140,
     rating: 4.9,
-    image: "https://picsum.photos/seed/angkorbc-hotel15/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnS2LUHSkWl1ZElgzPNc2v_BtcZf-vKGg3ZQAiGtHTYQ&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel15-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel15-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel15-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8nkR6PE9XazPkLYX6UWhIaZdmomUXVShERxIQ_5y64A&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ-nv8IQCzi_1AZiFrJJnis1zweOxueMlXGuy0AJjzSw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-dSGhaF5tB-h8FvEJE3cHDd3RCUKamswzqU4XILLaSg&s=10"
     ],
     description:
       "An intimate all-suite boutique hotel with only nine residences, each offering butler service, private balconies, and award-winning rooftop dining. Expect uncompromising privacy and five-star pampering.",
@@ -987,6 +753,15 @@ export const hotelDetails: HotelDetail[] = [
       "Private Tuk-tuk",
       "In-room Dining",
       "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Smart TV",
+      "Mini Bar",
+      "Walk-in Wardrobe",
+      "Butler Call Button",
+      "Balcony"
     ],
     roomTypes: [
       {
@@ -1036,11 +811,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 50,
     reviewer: 88,
     rating: 4.4,
-    image: "https://picsum.photos/seed/angkorbc-hotel16/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbp8SRPv90UO4l4D3ZDVT6cabLJAmsUzl2l0_4QMimYg&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel16-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel16-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel16-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4-ZyV6qCluhzgeDz-Nfk6LpzvsOHdeba-V1p-6jjASw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTQaVw-yKm-n4Vd6v-K52q20VAkfnZ95ba-sZAFHcQYw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEBJ7EdUKlN_7VdLH1bIKxL3YL_7TY-eUkl1rrMZDLSA&s=10"
     ],
     description:
       "A stylish boutique hotel in the beating heart of Siem Reap, steps from Pub Street and the Night Market. Modern design, a vibrant pool bar, and energetic atmosphere make it a hotspot for young travelers.",
@@ -1057,6 +832,13 @@ export const hotelDetails: HotelDetail[] = [
       "Tuk-tuk Service",
       "Laundry",
       "Breakfast Included"
+    ],
+    furniture: [
+      "Queen Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Shared Balcony"
     ],
     roomTypes: [
       {
@@ -1092,20 +874,20 @@ export const hotelDetails: HotelDetail[] = [
     id: 17,
     name: "Regency Angkor Hotel",
     type: "Hotel",
-    stars: 5,
+    stars: 4,
     location: "Siem Reap",
     address: "National Road No. 6, Krowob Village, Siem Reap, Cambodia",
-    price: 78,
-    reviewer: 150,
+    price: 75,
+    reviewer: 148,
     rating: 4.5,
-    image: "https://picsum.photos/seed/angkorbc-hotel17/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJyR9FEN3GqMRTzSA0zlcC_kOwqPFP6UU4IqODKYGyow&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel17-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel17-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel17-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKcF0ztvELsbk_GosXNWDeL3aeOqRqtx9GEMNvDClsjg&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2IX1qRUBQmgS-TCZqKKmyeKfgBvomT-_9nyjX2ukVZw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZPCr-RFOVz1jFxfPZM1Si5HgFUTXnqVi4URBCJP-kWg&s=10"
     ],
     description:
-      "Regency Angkor Hotel offers a refined stay with a grand lobby, shimmering pool, and attentive five-star service. Conveniently located on the main road, it's a perfect base for exploring Angkor Wat.",
+      "Regency Angkor Hotel offers a refined stay with a grand lobby, shimmering pool, and attentive service. Conveniently located on the main road, it's a perfect base for exploring Angkor Wat.",
     facilities: [
       "Swimming Pool",
       "Restaurant",
@@ -1123,17 +905,25 @@ export const hotelDetails: HotelDetail[] = [
       "Breakfast Included",
       "Laundry"
     ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Work Desk",
+      "Safety Deposit Box",
+      "Seating Area"
+    ],
     roomTypes: [
       {
         name: "Superior Room",
-        price: 78,
+        price: 75,
         capacity: 2,
         description: "Elegant room with city views and premium amenities.",
         available: 8
       },
       {
         name: "Deluxe Room",
-        price: 98,
+        price: 95,
         capacity: 2,
         description: "Spacious room with pool views and seating area.",
         available: 5
@@ -1165,20 +955,20 @@ export const hotelDetails: HotelDetail[] = [
     id: 18,
     name: "Steung Siemreap Thmey Hotel",
     type: "Hotel",
-    stars: 3,
+    stars: 4,
     location: "Siem Reap",
     address: "Prah Sihanouk Avenue, Krong Siem Reap, Cambodia",
-    price: 28,
-    reviewer: 110,
+    price: 85,
+    reviewer: 142,
     rating: 4.1,
-    image: "https://picsum.photos/seed/angkorbc-hotel18/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZuASbcs09l2r24IMG-x3TTS8xHmFOtjxmtfIv4i7wAA&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel18-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel18-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel18-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLmv_zRI5ELGXzqvIy9AzZYDc9BFGVDAcFy2ye66Tyfw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_NWd2ZzDNhDZrsSJpNGpILSmpyX-mzoISO-jgaPwDWw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO5DeEvVbSSQFlC27EOj3pISSanyh6yGCqGPZgAL8HNw&s"
     ],
     description:
-      "A practical, pockets-friendly hotel facing the Siem Reap river. Roof for sunset views, comfy beds, and a helpful staff that goes the extra mile — ideal for budget-conscious adventurers.",
+      "A welcoming hotel facing the Siem Reap river with comfortable rooms, a rooftop terrace for sunset views, and a helpful staff that goes the extra mile — an ideal base for exploring Angkor Wat.",
     facilities: [
       "Free Wi-Fi",
       "Rooftop Terrace",
@@ -1192,17 +982,24 @@ export const hotelDetails: HotelDetail[] = [
       "Airport Drop-off",
       "Breakfast Included"
     ],
+    furniture: [
+      "Double Bed",
+      "Air Conditioning",
+      "Wardrobe",
+      "Writing Desk",
+      "Coffee Table"
+    ],
     roomTypes: [
       {
         name: "Standard Room",
-        price: 28,
+        price: 85,
         capacity: 2,
         description: "Simple room with A/C, hot shower, and river view.",
         available: 6
       },
       {
         name: "Family Room",
-        price: 45,
+        price: 110,
         capacity: 4,
         description: "Room with two double beds and extra space for kids.",
         available: 3
@@ -1232,11 +1029,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 110,
     reviewer: 175,
     rating: 4.7,
-    image: "https://picsum.photos/seed/angkorbc-hotel19/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGQPHc3pYB5eupYMbJ-qVsd0AC2pchqQCmhpXZfbPBYw&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel19-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel19-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel19-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkQfGOkcnVDbke843PPh9GQ9XAneAuHwqEkLf_yFV_hQ&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTawfLRYiUKXYkrBWrYbtdJSLnjwoSRkstrZ7bH3iJpeQ&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS90agZMb6lKc545RMPzetBsIG2-lLFsr6qq6TdFyzenw&s=10"
     ],
     description:
       "Memoire d'Angkor is a sophisticated boutique retreat where French Indochine elegance meets Khmer craftsmanship. Expect art-filled interiors, a serene courtyard pool, and chef-driven dining.",
@@ -1255,6 +1052,14 @@ export const hotelDetails: HotelDetail[] = [
       "Temple Shuttle",
       "Breakfast Included",
       "Laundry"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Smart TV",
+      "Mini Bar",
+      "Antique Furniture",
+      "Balcony"
     ],
     roomTypes: [
       {
@@ -1294,76 +1099,6 @@ export const hotelDetails: HotelDetail[] = [
     }
   },
   {
-    id: 20,
-    name: "Nature Tree Villas",
-    type: "Villa",
-    stars: 4,
-    location: "Siem Reap",
-    address: "Wat Damnak Village, Sala Kamroeuk, Siem Reap, Cambodia",
-    price: 75,
-    reviewer: 62,
-    rating: 4.6,
-    image: "https://picsum.photos/seed/angkorbc-hotel20/900/600",
-    gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel20-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel20-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel20-c/900/600"
-    ],
-    description:
-      "Nestled among towering trees and fish ponds, Nature Tree Villas offers wooden bungalows that blend perfectly with the jungle setting. Experience eco-luxury with outdoor showers and breakfast among the birds.",
-    facilities: [
-      "Tree-enclosed Garden",
-      "Outdoor Pool",
-      "Open-air Restaurant",
-      "Free Wi-Fi",
-      "Hammock Lounge",
-      "Bicycle Parking"
-    ],
-    services: [
-      "Breakfast in Villa",
-      "Bicycle Rental",
-      "Temple Shuttle",
-      "Laundry"
-    ],
-    roomTypes: [
-      {
-        name: "Treehouse Villa",
-        price: 75,
-        capacity: 2,
-        description: "Wooden villa raised among the trees with outdoor shower.",
-        available: 4
-      },
-      {
-        name: "Pond View Villa",
-        price: 98,
-        capacity: 2,
-        description: "Villa overlooking the koi pond with private deck.",
-        available: 3
-      },
-      {
-        name: "Family Villa",
-        price: 145,
-        capacity: 4,
-        description: "Spacious two-bedroom villa with jungle views.",
-        available: 2
-      }
-    ],
-    checkIn: "14:00",
-    checkOut: "12:00",
-    policies: [
-      "No smoking in villas",
-      "Respect the surrounding wildlife",
-      "Mosquito repellent provided",
-      "Cancellation must be made 24 hours before check-in"
-    ],
-    contact: {
-      hotline: "+855 12 334 505",
-      facebook: "https://facebook.com/NatureTreeVillas",
-      tiktok: "https://tiktok.com/@NatureTreeVillas",
-      instagram: "https://instagram.com/NatureTreeVillas"
-    }
-  },
-  {
     id: 21,
     name: "Palm Village Residence & Spa",
     type: "Villa",
@@ -1373,11 +1108,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 90,
     reviewer: 130,
     rating: 4.5,
-    image: "https://picsum.photos/seed/angkorbc-hotel21/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZrohtbuVEuaoKR7tStGn5eVhn2DO_H2DITMh9jEYCw&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel21-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel21-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel21-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1jQquTstUWlAEWuuLBEJoZlBDnKmJ-AjXV_b7Bp97RQ&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLx3cVHlmq5zSDmGFqVKJAASGGj51ozKfKK0N2KU4QJg&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS92rCco5LrafBWaiAZ30685XpnQwGjggCegUNi1tYWKA&s"
     ],
     description:
       "A peaceful residential-style spa village lined with palm trees. Enjoy spacious garden villas, an award-winning spa using local organic ingredients, and relaxing pool-side sun loungers.",
@@ -1395,6 +1130,13 @@ export const hotelDetails: HotelDetail[] = [
       "Airport Pickup",
       "Breakfast Included",
       "Laundry"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Daybed",
+      "Safety Deposit Box",
+      "Terrace"
     ],
     roomTypes: [
       {
@@ -1435,7 +1177,7 @@ export const hotelDetails: HotelDetail[] = [
   },
   {
     id: 22,
-    name: "Sunset Grove Angkor Hotel",
+    name: "Angkor Hotel",
     type: "Hotel",
     stars: 4,
     location: "Siem Reap",
@@ -1443,14 +1185,14 @@ export const hotelDetails: HotelDetail[] = [
     price: 65,
     reviewer: 145,
     rating: 4.4,
-    image: "https://picsum.photos/seed/angkorbc-hotel22/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnxMfUGJTEyxmPiNf3zmuYXhP_dzQwVL92tSa2rhklKw&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel22-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel22-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel22-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPWSxht11EzXJ7FwbD0qhgc0Gw_-QV6OOzNSur74cVdg&s=10",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/40612450.jpg?k=969859e1d54f331fca354c2efd99c5c81982d032b02ba2ac82405b42df9cea62&o=",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS40BxLi08sZlpHIPnF_4RJjgKIeWltM9lVKtyFeH4ZJg&s"
     ],
     description:
-      "Famous for its riverside sunset views, Sunset Grove Angkor invites guests to watch the sky turn golden over the Siem Reap river. Comfortable rooms and a laid-back riverside bar round out the charm.",
+      "Famous for its riverside sunset views, Angkor Hotel invites guests to watch the sky turn golden over the Siem Reap river. Comfortable rooms and a laid-back riverside bar round out the charm.",
     facilities: [
       "Riverside Pool",
       "Sunset Bar",
@@ -1464,6 +1206,13 @@ export const hotelDetails: HotelDetail[] = [
       "Bicycle Rental",
       "Laundry",
       "Breakfast Included"
+    ],
+    furniture: [
+      "Queen Bed",
+      "Air Conditioning",
+      "Ceiling Fan",
+      "Wardrobe",
+      "Balcony"
     ],
     roomTypes: [
       {
@@ -1502,14 +1251,14 @@ export const hotelDetails: HotelDetail[] = [
     stars: 5,
     location: "Siem Reap",
     address: "National Road No. 6, Phum Brey, Siem Reap, Cambodia",
-    price: 105,
-    reviewer: 220,
+    price: 120,
+    reviewer: 195,
     rating: 4.6,
-    image: "https://picsum.photos/seed/angkorbc-hotel23/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4f_UOoM5-BGLXg2ybKkNEV960Lf334BoIsqSFlEv0PQ&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel23-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel23-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel23-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxruhx8I0_F3HRIzzYQh8gUm0CRS_g9OPy-P2CFZEWHg&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVUnnwWU2759fzknqjSysHiOTmE9BNqzaHGmLjmhcUgQ&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTljy-Q-zEAP_y6B7DrIvktsMgx1qqJwdyOmVp32oICxg&s=10"
     ],
     description:
       "A grand five-star resort surrounded by tropical gardens, lakes, and fountains. Angkor Century features an enormous freeform pool, family-friendly facilities, and easy access to the Angkor temples.",
@@ -1530,17 +1279,25 @@ export const hotelDetails: HotelDetail[] = [
       "Laundry",
       "Breakfast Included"
     ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Bathtub"
+    ],
     roomTypes: [
       {
         name: "Superior Room",
-        price: 105,
+        price: 120,
         capacity: 2,
         description: "Comfortable room with garden views and premium bedding.",
         available: 10
       },
       {
         name: "Deluxe Garden Room",
-        price: 125,
+        price: 140,
         capacity: 2,
         description: "Larger room with courtyard and lake views.",
         available: 6
@@ -1571,18 +1328,18 @@ export const hotelDetails: HotelDetail[] = [
   {
     id: 24,
     name: "Pavillon d'Orient Villa",
-    type: "Villa",
-    stars: 5,
+    type: "Boutique",
+    stars: 4,
     location: "Siem Reap",
     address: "Taphul Village, Svay Dangkum, Siem Reap, Cambodia",
-    price: 130,
-    reviewer: 190,
+    price: 55,
+    reviewer: 82,
     rating: 4.8,
-    image: "https://picsum.photos/seed/angkorbc-hotel24/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSms4bJQr3Fm8bsNlVDmhe-tOjfzF6iHz5n1YeUD1WpgA&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel24-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel24-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel24-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtZxooWGHJufbUJiKUZZscPO7jQ9egmczfEnBdOqa_g&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ6tiBe6Dp5D4kL3nZoryupCjZ_rLrt-sxqp_Fn49gmA&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5XNrOkLj5F7JREXl1ka1cZfHX-Ti6q2dXJgzAL0t1A&s=10"
     ],
     description:
       "A refined colonial villa turned boutique sanctuary, with ornate Indochine decor, a lap pool among frangipani trees, and personalized concierge that remembers your favorite drink.",
@@ -1602,24 +1359,32 @@ export const hotelDetails: HotelDetail[] = [
       "In-room Dining",
       "Breakfast Included"
     ],
+    furniture: [
+      "Four-poster Bed",
+      "Air Conditioning",
+      "Antique Furniture",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Veranda"
+    ],
     roomTypes: [
       {
         name: "Colonial Room",
-        price: 130,
+        price: 55,
         capacity: 2,
         description: "Heritage-style room with four-poster bed and antiques.",
         available: 5
       },
       {
         name: "Executive Villa",
-        price: 190,
+        price: 85,
         capacity: 2,
         description: "Villa wing with private lounge and garden courtyard.",
         available: 3
       },
       {
         name: "The Orient Suite",
-        price: 280,
+        price: 120,
         capacity: 4,
         description: "Signature suite with terrace, plunge pool, and pantry.",
         available: 2
@@ -1640,67 +1405,6 @@ export const hotelDetails: HotelDetail[] = [
     }
   },
   {
-    id: 25,
-    name: "Boutique Cambodia Villa",
-    type: "Boutique",
-    stars: 3,
-    location: "Siem Reap",
-    address: "Street 26, Wat Bo, Krong Siem Reap, Cambodia",
-    price: 40,
-    reviewer: 70,
-    rating: 4.3,
-    image: "https://picsum.photos/seed/angkorbc-hotel25/900/600",
-    gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel25-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel25-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel25-c/900/600"
-    ],
-    description:
-      "Colorful, artsy, and welcoming — Boutique Cambodia Villa celebrates local culture with hand-painted murals, a tiny plunge pool, and nightly Khmer cooking nights. Great value for creative travelers.",
-    facilities: [
-      "Plunge Pool",
-      "Free Wi-Fi",
-      "Art Gallery Wall",
-      "Rooftop Terrace",
-      "Communal Lounge"
-    ],
-    services: [
-      "Cooking Classes",
-      "Bicycle Rental",
-      "Laundry",
-      "Breakfast Included"
-    ],
-    roomTypes: [
-      {
-        name: "Mural Room",
-        price: 40,
-        capacity: 2,
-        description: "Funky room with hand-painted murals and private bathroom.",
-        available: 5
-      },
-      {
-        name: "Terrace Room",
-        price: 56,
-        capacity: 2,
-        description: "Room with access to a shared rooftop terrace.",
-        available: 3
-      }
-    ],
-    checkIn: "14:00",
-    checkOut: "11:00",
-    policies: [
-      "No smoking inside rooms",
-      "Cooking nights every Saturday",
-      "Cancellation must be made 24 hours before check-in"
-    ],
-    contact: {
-      hotline: "+855 12 761 333",
-      facebook: "https://facebook.com/BoutiqueCambodiaVilla",
-      tiktok: "https://tiktok.com/@BoutiqueCambodiaVilla",
-      instagram: "https://instagram.com/BoutiqueCambodiaVilla"
-    }
-  },
-  {
     id: 26,
     name: "Banteay Srey Boutique Villa & Spa",
     type: "Boutique",
@@ -1710,11 +1414,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 60,
     reviewer: 160,
     rating: 4.5,
-    image: "https://picsum.photos/seed/angkorbc-hotel26/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPwTeULMvRjAsb0tTHGHbd62QkZwJNoH7JLuYxwjE40w&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel26-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel26-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel26-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROEI29pTTH3h3zepf5WpTjpas3Igm9AN0ez35ijoNsyw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdQtalBXfwE2kiACzefozduvrEZS8Mc_dwYFbVkApprA&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ScTaBQbBjKZy9wN1k0quBPKX9fULxjHTkw4gWUo66Q&s=10"
     ],
     description:
       "Named after the famous 'Citadel of Women', this boutique villa & spa offers intimate luxury with a tranquil spa, elegant Khmer interiors, and a spa garden shaded by frangipani trees.",
@@ -1732,6 +1436,13 @@ export const hotelDetails: HotelDetail[] = [
       "Temple Shuttle",
       "Breakfast Included",
       "Laundry"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Khmer Handcrafted Furniture",
+      "Private Patio"
     ],
     roomTypes: [
       {
@@ -1770,5 +1481,1078 @@ export const hotelDetails: HotelDetail[] = [
       instagram: "https://instagram.com/BanteaySreyBoutique"
     }
   },
+  {
+    id: 27,
+    name: "TUI BLUE Angkor Grace",
+    type: "Resort",
+    stars: 5,
+    location: "Siem Reap",
+    address: "Road No. 6, Krous Village, Svay Dangkum, Siem Reap, Cambodia",
+    price: 95,
+    reviewer: 210,
+    rating: 4.7,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFicJy2sOWyRzV1tIt6XxM4cB5dae7jLP5PcV3ReP-Qw&s=10",
+    gallery: [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx2foqdYSgg-cuH7eNMR8X6B8vbgmM9lj_rE-q2TWiBQ&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBcmfOovrbrm2SWCxOXUrtdZxvCZGNlLfM8kHeTvhoRQ&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQACZ2uLR8yb3NQ9IUdPP87SgJfb3WCpfoXBq2Ar8SCPQ&s=10"
+    ],
+    description:
+      "TUI BLUE Angkor Grace is a contemporary wellness resort where modern design meets traditional Khmer hospitality. With a lagoon-style pool, vibrant dining venues, and dedicated fitness programming, it offers an energetic yet relaxing escape minutes from Angkor Wat.",
+    facilities: [
+      "Lagoon Pool",
+      "Fitness Center",
+      "Restaurant",
+      "Pool Bar",
+      "Spa",
+      "Kids Club",
+      "Free Wi-Fi",
+      "Parking"
+    ],
+    services: [
+      "Airport Pickup",
+      "Tour Desk",
+      "Yoga Classes",
+      "Laundry",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Balcony"
+    ],
+    roomTypes: [
+      {
+        name: "Grace Room",
+        price: 95,
+        capacity: 2,
+        description: "Bright contemporary room with pool or garden views.",
+        available: 8
+      },
+      {
+        name: "Deluxe Pool View",
+        price: 125,
+        capacity: 2,
+        description: "Spacious room overlooking the lagoon pool with private balcony.",
+        available: 6
+      },
+      {
+        name: "Family Room",
+        price: 165,
+        capacity: 4,
+        description: "Two-bedroom room with shared living space and garden terrace.",
+        available: 3
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Pets are not allowed",
+      "Cancellation must be made 48 hours before check-in",
+      "Valid ID required at check-in"
+    ],
+    contact: {
+      hotline: "+855 63 969 777",
+      facebook: "https://facebook.com/TUIBlueAngkorGrace",
+      tiktok: "https://tiktok.com/@TUIBlueAngkorGrace",
+      instagram: "https://instagram.com/TUIBlueAngkorGrace"
+    }
+  },
+  {
+    id: 28,
+    name: "Aborest Tropical Hostel",
+    type: "Homestay",
+    stars: 2,
+    location: "Siem Reap",
+    address: "Phsa Krom Road, Krong Siem Reap, Cambodia",
+    price: 15,
+    reviewer: 95,
+    rating: 4.3,
+    image: "https://picsum.photos/seed/angkorbc-hotel28/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel28-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel28-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel28-c/900/600"
+    ],
+    description:
+      "Aborest Tropical Hostel puts you in the heart of Siem Reap's backpacker scene. Set in a garden of tropical plants, it offers comfy dorms, a lively common lounge, bicycle hire, and easy walks to Pub Street and the Old Market.",
+    facilities: [
+      "Free Wi-Fi",
+      "Dormitory Beds",
+      "Garden",
+      "Communal Kitchen",
+      "Lounge",
+      "Bicycle Parking"
+    ],
+    services: [
+      "Bicycle Rental",
+      "Tour Booking",
+      "Laundry",
+      "Airport Shuttle"
+    ],
+    furniture: [
+      "Bunk Bed",
+      "Lockers",
+      "Ceiling Fan",
+      "Reading Lamp"
+    ],
+    roomTypes: [
+      {
+        name: "Shared Dorm",
+        price: 15,
+        capacity: 1,
+        description: "Comfortable bunk in a clean, air-conditioned shared dorm.",
+        available: 12
+      },
+      {
+        name: "Private Twin Room",
+        price: 35,
+        capacity: 2,
+        description: "Ensuite twin room with garden view and private bathroom.",
+        available: 4
+      }
+    ],
+    checkIn: "13:00",
+    checkOut: "11:00",
+    policies: [
+      "No smoking inside the hostel",
+      "Quiet hours after 23:00",
+      "Lockers available for deposit"
+    ],
+    contact: {
+      hotline: "+855 12 800 222",
+      facebook: "https://facebook.com/AborestTropicalHostel",
+      tiktok: "https://tiktok.com/@AborestTropicalHostel",
+      instagram: "https://instagram.com/AborestTropicalHostel"
+    }
+  },
+  {
+    id: 29,
+    name: "Indochine Hotel Group SiemReap",
+    type: "Hotel",
+    stars: 4,
+    location: "Siem Reap",
+    address: "National Road No. 6, Sala Kamreuk, Siem Reap, Cambodia",
+    price: 55,
+    reviewer: 130,
+    rating: 4.5,
+    image: "https://picsum.photos/seed/angkorbc-hotel29/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel29-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel29-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel29-c/900/600"
+    ],
+    description:
+      "Indochine Hotel Group SiemReap blends classic Indochine architecture with modern comforts. Guests enjoy a grand central pool, an acclaimed Khmer restaurant, and warm, professional service within easy reach of the Angkor temples.",
+    facilities: [
+      "Swimming Pool",
+      "Restaurant",
+      "Bar",
+      "Spa",
+      "Garden",
+      "Free Wi-Fi",
+      "Parking"
+    ],
+    services: [
+      "Airport Pickup",
+      "Tour Desk",
+      "Room Service",
+      "Laundry",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Work Desk"
+    ],
+    roomTypes: [
+      {
+        name: "Superior Room",
+        price: 55,
+        capacity: 2,
+        description: "Comfortable room with garden views and modern amenities.",
+        available: 7
+      },
+      {
+        name: "Deluxe Room",
+        price: 75,
+        capacity: 2,
+        description: "Spacious room with pool views and seating area.",
+        available: 5
+      },
+      {
+        name: "Executive Suite",
+        price: 135,
+        capacity: 3,
+        description: "Suite with separate lounge, work desk, and balcony.",
+        available: 2
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Cancellation must be made 24 hours before check-in",
+      "Valid ID required at check-in"
+    ],
+    contact: {
+      hotline: "+855 63 760 123",
+      facebook: "https://facebook.com/IndochineHotelGroupSiemReap",
+      tiktok: "https://tiktok.com/@IndochineHotelGroup",
+      instagram: "https://instagram.com/IndochineHotelGroup"
+    }
+  },
+  {
+    id: 30,
+    name: "Lotus Blanc Hotel & Resort",
+    type: "Resort",
+    stars: 5,
+    location: "Siem Reap",
+    address: "National Road No. 6, Kasekam Village, Siem Reap, Cambodia",
+    price: 110,
+    reviewer: 240,
+    rating: 4.8,
+    image: "https://picsum.photos/seed/angkorbc-hotel30/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel30-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel30-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel30-c/900/600"
+    ],
+    description:
+      "Lotus Blanc Hotel & Resort is an elegant five-star hideaway surrounded by lotus ponds and lush tropical gardens. The resort features a magnificent infinity pool, world-class spa, and fine dining inspired by Khmer and French cuisine.",
+    facilities: [
+      "Infinity Pool",
+      "Spa",
+      "Fine Dining Restaurant",
+      "Pool Bar",
+      "Fitness Center",
+      "Lotus Garden",
+      "Free Wi-Fi",
+      "Business Center"
+    ],
+    services: [
+      "Airport Pickup",
+      "Temple Shuttle",
+      "Butler Service",
+      "Laundry",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Smart TV",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Bathtub",
+      "Balcony"
+    ],
+    roomTypes: [
+      {
+        name: "Superior Room",
+        price: 110,
+        capacity: 2,
+        description: "Elegant room with lotus garden views and luxury bedding.",
+        available: 10
+      },
+      {
+        name: "Deluxe Pool Access",
+        price: 150,
+        capacity: 2,
+        description: "Ground-floor room with direct access to the infinity pool.",
+        available: 6
+      },
+      {
+        name: "Lotus Suite",
+        price: 240,
+        capacity: 4,
+        description: "Signature suite with private terrace overlooking the lotus ponds.",
+        available: 3
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Pets are not allowed",
+      "Cancellation must be made 48 hours before check-in",
+      "Valid ID required at check-in"
+    ],
+    contact: {
+      hotline: "+855 63 900 888",
+      facebook: "https://facebook.com/LotusBlancHotel",
+      tiktok: "https://tiktok.com/@LotusBlancHotel",
+      instagram: "https://instagram.com/LotusBlancHotel"
+    }
+  },
+  {
+    id: 31,
+    name: "Angkor Mansion & Residence",
+    type: "Villa",
+    stars: 4,
+    location: "Siem Reap",
+    address: "River Road, Krong Siem Reap, Cambodia",
+    price: 85,
+    reviewer: 115,
+    rating: 4.6,
+    image: "https://picsum.photos/seed/angkorbc-hotel31/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel31-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel31-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel31-c/900/600"
+    ],
+    description:
+      "Angkor Mansion & Residence offers serviced villa-style accommodation along the Siem Reap river. With spacious residences, a serene pool, and a home-away-from-home atmosphere, it is ideal for families and longer stays.",
+    facilities: [
+      "Swimming Pool",
+      "Garden",
+      "Restaurant",
+      "Living Room",
+      "Free Wi-Fi",
+      "Parking"
+    ],
+    services: [
+      "Airport Pickup",
+      "Housekeeping",
+      "Bicycle Rental",
+      "Laundry",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Kitchenette",
+      "Dining Table",
+      "Sofa"
+    ],
+    roomTypes: [
+      {
+        name: "Studio Residence",
+        price: 85,
+        capacity: 2,
+        description: "Compact residence with kitchenette and garden view.",
+        available: 6
+      },
+      {
+        name: "One-Bedroom Suite",
+        price: 110,
+        capacity: 3,
+        description: "Suite with separate bedroom, living area, and balcony.",
+        available: 4
+      },
+      {
+        name: "Family Residence",
+        price: 160,
+        capacity: 5,
+        description: "Two-bedroom residence with full kitchen and dining space.",
+        available: 2
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Quiet hours after 22:00",
+      "Cancellation must be made 24 hours before check-in"
+    ],
+    contact: {
+      hotline: "+855 63 761 111",
+      facebook: "https://facebook.com/AngkorMansionResidence",
+      tiktok: "https://tiktok.com/@AngkorMansion",
+      instagram: "https://instagram.com/AngkorMansion"
+    }
+  },
+  {
+    id: 32,
+    name: "RITHY RINE Angkor Residence",
+    type: "Boutique",
+    stars: 4,
+    location: "Siem Reap",
+    address: "Wat Bo Village, Salakamreuk, Siem Reap, Cambodia",
+    price: 65,
+    reviewer: 100,
+    rating: 4.5,
+    image: "https://picsum.photos/seed/angkorbc-hotel32/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel32-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel32-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel32-c/900/600"
+    ],
+    description:
+      "RITHY RINE Angkor Residence is a boutique sanctuary blending Khmer artistry with boutique comfort. Set among frangipani trees, it features an intimate pool, a spa, and personalized hospitality a short tuk-tuk ride from the temples.",
+    facilities: [
+      "Courtyard Pool",
+      "Spa",
+      "Restaurant",
+      "Garden",
+      "Free Wi-Fi",
+      "Terrace"
+    ],
+    services: [
+      "Airport Pickup",
+      "Tuk-tuk Service",
+      "Temple Shuttle",
+      "Laundry",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Khmer Handcrafted Furniture",
+      "Private Patio"
+    ],
+    roomTypes: [
+      {
+        name: "Deluxe Room",
+        price: 65,
+        capacity: 2,
+        description: "Elegant room with garden views and handcrafted decor.",
+        available: 6
+      },
+      {
+        name: "Suite",
+        price: 95,
+        capacity: 3,
+        description: "Spacious suite with separate lounge and pool views.",
+        available: 3
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Quiet hours after 22:00",
+      "Cancellation must be made 24 hours before check-in"
+    ],
+    contact: {
+      hotline: "+855 63 765 666",
+      facebook: "https://facebook.com/RITHYRINEAngkorResidence",
+      tiktok: "https://tiktok.com/@RithyRineAngkor",
+      instagram: "https://instagram.com/RithyRineAngkor"
+    }
+  },
+  {
+    id: 33,
+    name: "Lub d Experience",
+    type: "Boutique",
+    stars: 4,
+    location: "Siem Reap",
+    address: "Wat Bo Road, Krong Siem Reap, Cambodia",
+    price: 50,
+    reviewer: 185,
+    rating: 4.4,
+    image: "https://picsum.photos/seed/angkorbc-hotel33/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel33-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel33-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel33-c/900/600"
+    ],
+    description:
+      "Lub d Experience blends the energy of a hostel with the comfort of a boutique hotel. Steps from the night markets, it features a vibrant pool, social bar, and design-forward rooms beloved by young travelers.",
+    facilities: [
+      "Swimming Pool",
+      "Pool Bar",
+      "Restaurant",
+      "Common Lounge",
+      "Social Events",
+      "Free Wi-Fi"
+    ],
+    services: [
+      "Tour Booking",
+      "Bicycle Rental",
+      "Tuk-tuk Service",
+      "Laundry",
+      "Airport Shuttle"
+    ],
+    furniture: [
+      "Queen Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Lockers",
+      "Reading Lamp"
+    ],
+    roomTypes: [
+      {
+        name: "Standard Room",
+        price: 50,
+        capacity: 2,
+        description: "Stylish compact room with modern amenities.",
+        available: 8
+      },
+      {
+        name: "Deluxe Pool View",
+        price: 70,
+        capacity: 2,
+        description: "Room overlooking the pool with a private balcony.",
+        available: 5
+      },
+      {
+        name: "Family Room",
+        price: 110,
+        capacity: 5,
+        description: "Large room with bunk beds and a queen bed for groups.",
+        available: 3
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Quiet hours after 23:00",
+      "Cancellation must be made 24 hours before check-in"
+    ],
+    contact: {
+      hotline: "+855 63 762 345",
+      facebook: "https://facebook.com/LubdExperience",
+      tiktok: "https://tiktok.com/@LubdExperience",
+      instagram: "https://instagram.com/LubdExperience"
+    }
+  },
+  {
+    id: 34,
+    name: "Hotel Atelier Siem Reap",
+    type: "Boutique",
+    stars: 4,
+    location: "Siem Reap",
+    address: "Sok San Road, Svay Dangkum, Siem Reap, Cambodia",
+    price: 70,
+    reviewer: 120,
+    rating: 4.6,
+    image: "https://picsum.photos/seed/angkorbc-hotel34/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel34-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel34-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel34-c/900/600"
+    ],
+    description:
+      "Hotel Atelier Siem Reap is a design-led boutique hotel celebrating the art and craft of Cambodia. Curated artworks, a serene pool courtyard, and creative Khmer dining make it a gallery-like escape in the city center.",
+    facilities: [
+      "Swimming Pool",
+      "Art Gallery",
+      "Restaurant",
+      "Rooftop Bar",
+      "Free Wi-Fi",
+      "Garden"
+    ],
+    services: [
+      "Airport Pickup",
+      "Art Workshops",
+      "Temple Shuttle",
+      "Laundry",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Designer Lighting",
+      "Balcony"
+    ],
+    roomTypes: [
+      {
+        name: "Studio Room",
+        price: 70,
+        capacity: 2,
+        description: "Design-forward room with courtyard views.",
+        available: 7
+      },
+      {
+        name: "Artwork Suite",
+        price: 105,
+        capacity: 2,
+        description: "Suite featuring curated artwork and private terrace.",
+        available: 4
+      },
+      {
+        name: "Rooftop Villa",
+        price: 145,
+        capacity: 3,
+        description: "Private rooftop residence with panoramic city views.",
+        available: 2
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Quiet hours after 22:00",
+      "Cancellation must be made 24 hours before check-in"
+    ],
+    contact: {
+      hotline: "+855 63 765 789",
+      facebook: "https://facebook.com/HotelAtelierSiemReap",
+      tiktok: "https://tiktok.com/@HotelAtelierSiemReap",
+      instagram: "https://instagram.com/HotelAtelierSiemReap"
+    }
+  },
+  {
+    id: 35,
+    name: "Bronam Residence & Spa",
+    type: "Boutique",
+    stars: 5,
+    location: "Siem Reap",
+    address: "Near Angkor Night Market, Krong Siem Reap, Cambodia",
+    price: 120,
+    reviewer: 155,
+    rating: 4.8,
+    image: "https://picsum.photos/seed/angkorbc-hotel35/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel35-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel35-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel35-c/900/600"
+    ],
+    description:
+      "Bronam Residence & Spa is an intimate five-star hideaway defined by Khmer-inspired architecture and rejuvenating spa rituals. Every residence is a serene retreat, steps from the Angkor Night Market and steps away from total calm.",
+    facilities: [
+      "Spa & Sauna",
+      "Swimming Pool",
+      "Fine Dining Restaurant",
+      "Rooftop Bar",
+      "Wellness Center",
+      "Free Wi-Fi",
+      "Concierge"
+    ],
+    services: [
+      "Spa Packages",
+      "Butler Service",
+      "Airport Pickup",
+      "Temple Shuttle",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Smart TV",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Jacuzzi Tub",
+      "Private Terrace"
+    ],
+    roomTypes: [
+      {
+        name: "Deluxe Residence",
+        price: 120,
+        capacity: 2,
+        description: "Elegant residence with spa bath and garden views.",
+        available: 6
+      },
+      {
+        name: "Spa Suite",
+        price: 165,
+        capacity: 2,
+        description: "Suite with in-room treatment area and relaxing tub.",
+        available: 4
+      },
+      {
+        name: "Royal Villa",
+        price: 260,
+        capacity: 4,
+        description: "Detached villa with private plunge pool and butler.",
+        available: 2
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "Adults only (16+)",
+      "No smoking in rooms",
+      "Spa appointments recommended in advance",
+      "Cancellation must be made 48 hours before check-in"
+    ],
+    contact: {
+      hotline: "+855 63 968 222",
+      facebook: "https://facebook.com/BronamResidenceSpa",
+      tiktok: "https://tiktok.com/@BronamResidenceSpa",
+      instagram: "https://instagram.com/BronamResidenceSpa"
+    }
+  },
+  {
+    id: 36,
+    name: "Twizt.hotel",
+    type: "Boutique",
+    stars: 3,
+    location: "Siem Reap",
+    address: "Taphul Road, Svay Dangkum, Siem Reap, Cambodia",
+    price: 40,
+    reviewer: 90,
+    rating: 4.3,
+    image: "https://picsum.photos/seed/angkorbc-hotel36/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel36-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel36-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel36-c/900/600"
+    ],
+    description:
+      "Twizt.hotel brings playful, quirky design to budget-friendly stays in Siem Reap. Colorful rooms, a lively rooftop bar, and a friendly social atmosphere make it a favorite for budget-conscious travelers who love style.",
+    facilities: [
+      "Rooftop Bar",
+      "Restaurant",
+      "Free Wi-Fi",
+      "Common Lounge",
+      "Rooftop Pool",
+      "Air Conditioning"
+    ],
+    services: [
+      "Tour Desk",
+      "Bicycle Rental",
+      "Laundry",
+      "Airport Shuttle"
+    ],
+    furniture: [
+      "Queen Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Colorful Decor",
+      "Lockers"
+    ],
+    roomTypes: [
+      {
+        name: "Standard Room",
+        price: 40,
+        capacity: 2,
+        description: "Quirky compact room with colorful art and city views.",
+        available: 8
+      },
+      {
+        name: "Superior Room",
+        price: 58,
+        capacity: 2,
+        description: "Larger room with seating area and rooftop view.",
+        available: 5
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Quiet hours after 23:00",
+      "Cancellation must be made 24 hours before check-in"
+    ],
+    contact: {
+      hotline: "+855 12 770 050",
+      facebook: "https://facebook.com/TwiztHotel",
+      tiktok: "https://tiktok.com/@TwiztHotel",
+      instagram: "https://instagram.com/TwiztHotel"
+    }
+  },
+  {
+    id: 37,
+    name: "The Palace Indochine Hotel",
+    type: "Hotel",
+    stars: 5,
+    location: "Siem Reap",
+    address: "National Road No. 6, Phum Krouk, Siem Reap, Cambodia",
+    price: 135,
+    reviewer: 175,
+    rating: 4.9,
+    image: "https://picsum.photos/seed/angkorbc-hotel37/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel37-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel37-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel37-c/900/600"
+    ],
+    description:
+      "The Palace Indochine Hotel is a majestic colonial-era palace reimagined as a luxurious five-star hotel. Gilded interiors, sweeping gardens, an ornate pool, and regal service capture the grandeur of classic Indochine.",
+    facilities: [
+      "Ornate Pool",
+      "Grand Restaurant",
+      "Bar",
+      "Spa",
+      "Ballroom",
+      "Fitness Center",
+      "Free Wi-Fi",
+      "24-hour Concierge"
+    ],
+    services: [
+      "Butler Service",
+      "Airport Pickup",
+      "Limousine Service",
+      "Temple Tours",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Antique Furniture",
+      "Bathtub"
+    ],
+    roomTypes: [
+      {
+        name: "Colonial Room",
+        price: 135,
+        capacity: 2,
+        description: "Heritage room with colonial decor and garden views.",
+        available: 10
+      },
+      {
+        name: "Regal Suite",
+        price: 210,
+        capacity: 2,
+        description: "Suite with separate living area and ornate furnishings.",
+        available: 5
+      },
+      {
+        name: "Presidential Palace Suite",
+        price: 380,
+        capacity: 4,
+        description: "Grand suite with dining room, private terrace, and butler.",
+        available: 1
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Elegant attire recommended in dining areas",
+      "Cancellation must be made 48 hours before check-in",
+      "Valid ID required at check-in"
+    ],
+    contact: {
+      hotline: "+855 63 969 999",
+      facebook: "https://facebook.com/ThePalaceIndochineHotel",
+      tiktok: "https://tiktok.com/@PalaceIndochine",
+      instagram: "https://instagram.com/PalaceIndochine"
+    }
+  },
+  {
+    id: 38,
+    name: "Mohasal Angkor Boutique",
+    type: "Boutique",
+    stars: 4,
+    location: "Siem Reap",
+    address: "Pokambor Avenue, Krong Siem Reap, Cambodia",
+    price: 75,
+    reviewer: 105,
+    rating: 4.6,
+    image: "https://picsum.photos/seed/angkorbc-hotel38/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel38-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel38-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel38-c/900/600"
+    ],
+    description:
+      "Mohasal Angkor Boutique is a serene boutique retreat with a distinctive canopy pool, lush gardens, and a spa. Its intimate scale and personal service create a peaceful base on the edge of Siem Reap's vibrant center.",
+    facilities: [
+      "Canopy Pool",
+      "Spa",
+      "Restaurant",
+      "Garden",
+      "Bar",
+      "Free Wi-Fi"
+    ],
+    services: [
+      "Airport Pickup",
+      "Tuk-tuk Service",
+      "Temple Shuttle",
+      "Laundry",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Mini Bar",
+      "Safety Deposit Box",
+      "Private Terrace"
+    ],
+    roomTypes: [
+      {
+        name: "Deluxe Room",
+        price: 75,
+        capacity: 2,
+        description: "Comfortable room with pool or garden views.",
+        available: 7
+      },
+      {
+        name: "Villa",
+        price: 115,
+        capacity: 2,
+        description: "Standalone villa with private terrace and outdoor tub.",
+        available: 4
+      },
+      {
+        name: "Family Suite",
+        price: 150,
+        capacity: 4,
+        description: "Spacious suite with two bedrooms and a shared lounge.",
+        available: 2
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Quiet hours after 22:00",
+      "Cancellation must be made 24 hours before check-in"
+    ],
+    contact: {
+      hotline: "+855 63 763 333",
+      facebook: "https://facebook.com/MohasalAngkorBoutique",
+      tiktok: "https://tiktok.com/@MohasalAngkor",
+      instagram: "https://instagram.com/MohasalAngkor"
+    }
+  },
+  {
+    id: 39,
+    name: "Angkor Channary Hotel",
+    type: "Hotel",
+    stars: 4,
+    location: "Siem Reap",
+    address: "Wat Bo Village, Salakamreuk, Siem Reap, Cambodia",
+    price: 60,
+    reviewer: 140,
+    rating: 4.5,
+    image: "https://picsum.photos/seed/angkorbc-hotel39/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel39-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel39-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel39-c/900/600"
+    ],
+    description:
+      "Angkor Channary Hotel combines friendly Khmer hospitality with comfortable, well-appointed rooms near Wat Bo. A refreshing pool, Khmer restaurant, and easy access to the temples make it a dependable city favorite.",
+    facilities: [
+      "Swimming Pool",
+      "Restaurant",
+      "Bar",
+      "Garden",
+      "Free Wi-Fi",
+      "Parking"
+    ],
+    services: [
+      "Airport Pickup",
+      "Tour Desk",
+      "Room Service",
+      "Laundry",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Work Desk",
+      "Safety Deposit Box",
+      "Wardrobe"
+    ],
+    roomTypes: [
+      {
+        name: "Standard Room",
+        price: 60,
+        capacity: 2,
+        description: "Comfortable room with garden views and modern amenities.",
+        available: 8
+      },
+      {
+        name: "Superior Room",
+        price: 78,
+        capacity: 2,
+        description: "Larger room with pool views and seating area.",
+        available: 6
+      },
+      {
+        name: "Family Room",
+        price: 115,
+        capacity: 4,
+        description: "Room with two double beds and extra space for families.",
+        available: 3
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Cancellation must be made 24 hours before check-in",
+      "Valid ID required at check-in"
+    ],
+    contact: {
+      hotline: "+855 63 966 700",
+      facebook: "https://facebook.com/AngkorChannaryHotel",
+      tiktok: "https://tiktok.com/@AngkorChannaryHotel",
+      instagram: "https://instagram.com/AngkorChannaryHotel"
+    }
+  },
+  {
+    id: 40,
+    name: "Asanak D'Angkor Boutique",
+    type: "Boutique",
+    stars: 4,
+    location: "Siem Reap",
+    address: "Sok San Road, Group 10, Krong Siem Reap, Cambodia",
+    price: 55,
+    reviewer: 110,
+    rating: 4.4,
+    image: "https://picsum.photos/seed/angkorbc-hotel40/900/600",
+    gallery: [
+      "https://picsum.photos/seed/angkorbc-hotel40-a/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel40-b/900/600",
+      "https://picsum.photos/seed/angkorbc-hotel40-c/900/600"
+    ],
+    description:
+      "Asanak D'Angkor Boutique is a tranquil hideaway blending rustic Khmer design with modern comfort. Wooden accents, a leafy pool area, and heartfelt hospitality offer an authentic Angkor experience at a friendly price.",
+    facilities: [
+      "Swimming Pool",
+      "Restaurant",
+      "Garden",
+      "Free Wi-Fi",
+      "Terrace",
+      "Spa"
+    ],
+    services: [
+      "Airport Pickup",
+      "Bicycle Rental",
+      "Temple Shuttle",
+      "Laundry",
+      "Breakfast Included"
+    ],
+    furniture: [
+      "King Bed",
+      "Air Conditioning",
+      "Flat-screen TV",
+      "Wooden Furniture",
+      "Wardrobe",
+      "Balcony"
+    ],
+    roomTypes: [
+      {
+        name: "Deluxe Room",
+        price: 55,
+        capacity: 2,
+        description: "Wood-accented room with garden views and modern amenities.",
+        available: 7
+      },
+      {
+        name: "Suite",
+        price: 82,
+        capacity: 3,
+        description: "Spacious suite with separate lounge and pool terrace.",
+        available: 4
+      }
+    ],
+    checkIn: "14:00",
+    checkOut: "12:00",
+    policies: [
+      "No smoking in rooms",
+      "Quiet hours after 22:00",
+      "Cancellation must be made 24 hours before check-in"
+    ],
+    contact: {
+      hotline: "+855 63 765 202",
+      facebook: "https://facebook.com/AsanakDAngkorBoutique",
+      tiktok: "https://tiktok.com/@AsanakDAngkor",
+      instagram: "https://instagram.com/AsanakDAngkor"
+    }
+  }
 
 ]

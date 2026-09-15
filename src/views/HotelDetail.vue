@@ -6,10 +6,10 @@
       <!-- Back Button -->
       <button
         @click="$router.back()"
-        class="fixed left-4 top-24 z-30 flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-1.5 text-white shadow-md transition hover:bg-blue-700"
+        class="mb-4 flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-1.5 font-medium text-white transition hover:bg-blue-700"
       >
-        <i class="bi bi-arrow-left text-lg"></i>
-        <span class="font-medium">{{ t("Back to Hotels") }}</span>
+        <i class="bi bi-arrow-left"></i>
+        <span>{{ t("Back to Hotels") }}</span>
       </button>
 
       <!-- Hero Image -->
@@ -103,8 +103,8 @@
         <!-- Divider -->
         <hr class="my-6 border-blue-200" />
 
-        <!-- Facilities + Services -->
-        <div class="grid grid-cols-2 gap-8">
+        <!-- Facilities + Services + Furniture -->
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
           <!-- Facilities -->
           <div>
@@ -131,6 +131,21 @@
                 class="flex items-center gap-2 text-sm text-blue-800"
               >
                 <i class="bi bi-check-circle-fill text-emerald-400"></i>
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+
+          <!-- Furniture in the Room -->
+          <div>
+            <h2 class="mb-3 text-xl font-semibold text-blue-800">{{ t("Furniture in the Room") }}</h2>
+            <ul class="space-y-2">
+              <li
+                v-for="item in hotel.furniture"
+                :key="item"
+                class="flex items-center gap-2 text-sm text-blue-800"
+              >
+                <i class="bi bi-check-circle-fill text-blue-400"></i>
                 {{ item }}
               </li>
             </ul>

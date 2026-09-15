@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[320px] overflow-hidden rounded-xl bg-white shadow-md ring-1 ring-blue-200 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+    class="max-w-[360px] overflow-hidden rounded-xl bg-white shadow-md ring-1 ring-blue-200 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
   >
 
     <!-- Promotion Image -->

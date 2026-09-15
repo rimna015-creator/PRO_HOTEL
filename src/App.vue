@@ -45,8 +45,18 @@ const createSuccess = (data: { name: string; email: string }) => {
   <div
     v-if="showLoginModal"
     class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
+    @click.self="closeAuthModals"
   >
-    <div class="w-full max-w-md">
+    <div class="relative w-full max-w-md">
+      <button
+        type="button"
+        @click="closeAuthModals"
+        title="Close"
+        aria-label="Close"
+        class="absolute right-4 top-4 rounded-full bg-gray-100 p-2.5 text-gray-500 transition hover:bg-gray-200 hover:text-gray-700 hover:scale-110"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
       <Login
         @login-success="loginSuccess"
         @create-account="openCreateAccount"
@@ -57,8 +67,18 @@ const createSuccess = (data: { name: string; email: string }) => {
   <div
     v-if="showCreateAccountModal"
     class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
+    @click.self="closeAuthModals"
   >
-    <div class="w-full max-w-md">
+    <div class="relative w-full max-w-md">
+      <button
+        type="button"
+        @click="closeAuthModals"
+        title="Close"
+        aria-label="Close"
+        class="absolute right-4 top-4 rounded-full bg-gray-100 p-2.5 text-gray-500 transition hover:bg-gray-200 hover:text-gray-700 hover:scale-110"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
       <CreateAccount
         @go-to-login="openLogin"
         @create-success="createSuccess"

@@ -29,7 +29,7 @@
     </div>
 
     <!-- Booking List -->
-    <div v-else class="mx-auto mt-8 max-w-3xl space-y-5">
+    <div v-else class="mx-40 mt-8 max-w-7xl space-y-5">
       <div
         v-for="booking in bookings"
         :key="booking.id"

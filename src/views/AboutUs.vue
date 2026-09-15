@@ -2,13 +2,13 @@
   <div class="min-h-screen bg-blue-50 px-6 pb-16 pt-24">
 
     <!-- Hero -->
-    <section class="mx-5 text-center">
+    <section class="mx-40 text-center">
       <h1 class="text-4xl font-bold text-blue-900">{{ t("About Us") }}</h1>
       <p class="mt-3 text-blue-500">{{ t("Who we are and why we built Angkor Booking") }}</p>
     </section>
 
     <!-- Story -->
-    <section class="mx-5 mt-12">
+    <section class="mx-40 mt-12">
       <div class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-blue-200 sm:p-10">
         <h2 class="text-2xl font-bold text-blue-900">{{ t("Our Story") }}</h2>
         <p class="mt-4 leading-relaxed text-blue-600">
@@ -24,7 +24,7 @@
     </section>
 
     <!-- Features -->
-    <section class="mx-5 mt-12">
+    <section class="mx-40 mt-12">
       <div class="mb-8 text-center">
         <h2 class="text-2xl font-bold text-blue-900">{{ t("What You Can Do") }}</h2>
         <p class="mt-2 text-blue-600">{{ t("Everything you need to plan your trip to Siem Reap") }}</p>
@@ -76,7 +76,7 @@
     </section>
 
     <!-- Design & Colors -->
-    <section class="mx-5 mt-12">
+    <section class="mx-40 mt-12">
       <div class="mb-8 text-center">
         <h2 class="text-2xl font-bold text-blue-900">{{ t("Design & Colors") }}</h2>
         <p class="mx-auto mt-2 max-w-2xl text-blue-600">
@@ -139,7 +139,7 @@
     </section>
 
     <!-- Built With -->
-    <section class="mx-5 mt-12">
+    <section class="mx-40 mt-12">
       <div class="mb-8 text-center">
         <h2 class="text-2xl font-bold text-blue-900">{{ t("Built With") }}</h2>
         <p class="mt-2 text-blue-600">{{ t("The technology that powers the platform") }}</p>
@@ -153,7 +153,7 @@
     </section>
 
     <!-- Stats -->
-    <section class="mx-5 mt-12">
+    <section class="mx-40 mt-12">
       <div class="grid grid-cols-2 gap-6 sm:grid-cols-4">
         <div class="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-blue-200">
           <p class="text-3xl font-bold text-blue-900">26+</p>
@@ -175,7 +175,7 @@
     </section>
 
     <!-- Team -->
-    <section class="mx-5 mt-12">
+    <section class="mx-40 mt-12">
       <div class="mb-8 text-center">
         <h2 class="text-2xl font-bold text-blue-900">{{ t("Meet the Team") }}</h2>
         <p class="mt-2 text-blue-600">{{ t("The students behind this project") }}</p>
@@ -199,7 +199,7 @@
     </section>
 
     <!-- Values -->
-    <section class="mx-5 mt-12">
+    <section class="mx-40 mt-12">
       <div class="mb-8 text-center">
         <h2 class="text-2xl font-bold text-blue-900">{{ t("What We Value") }}</h2>
       </div>

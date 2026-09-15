@@ -26,6 +26,24 @@
       </div>
     </div>
 
+    <p class="mt-4 text-center text-sm text-blue-600">
+      <template v-if="Number(activeStars) !== 0">
+        {{ t("Showing") }}
+        <strong>{{ filteredHotels.length }}</strong>
+        {{ t("hotels") }}
+        <i class="bi bi-star-fill text-amber-500"></i>
+        {{ activeStars }} {{ t("Star") }}
+      </template>
+      <template v-else>
+        {{ t("Showing") }}
+        <strong>{{ filteredHotels.length }}</strong>
+        {{ t("hotels") }}
+        <template v-if="activeCategory !== 'All'">
+          - {{ activeCategory }}
+        </template>
+      </template>
+    </p>
+
     <!-- Star Filter Chips -->
     <div class="mx-auto mt-4 flex max-w-4xl flex-wrap justify-center gap-1">
       <button
@@ -33,7 +51,7 @@
         :key="star.label"
         class="rounded-full border px-4 py-1.5 text-sm font-medium transition duration-300"
         :class="
-          activeStars === star.value
+          isStarActive(star.value)
             ? 'bg-blue-700 border-blue-700 text-white'
             : 'border-blue-200 text-blue-600 hover:border-blue-400 hover:text-blue-700'
         "
@@ -59,17 +77,18 @@
             ? 'bg-blue-700 border-blue-700 text-white'
             : 'border-blue-200 text-blue-600 hover:border-blue-400 hover:text-blue-700'
         "
-        @click="activeCategory = cat"
+        @click="setCategory(cat)"
       >
         {{ cat }}
       </button>
     </div>
 
-    <div v-if="filteredHotels.length" class="mt-3 flex flex-wrap justify-start gap-6">
+    <div v-if="filteredHotels.length" class="mx-auto mt-8 grid max-w-6xl grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <HotelCard
         v-for="hotel in filteredHotels"
         :key="hotel.id + hotel.reviewer"
         :hotel="hotel"
+        class="w-full max-w-[360px] overflow-hidden rounded-xl shadow-xl bg-white ring-1 ring-blue-200 transition duration-300 hover:-translate-y-1"
       />
     </div>
 
@@ -121,15 +140,23 @@ const selectStars = (value: number) => {
   if (activeStars.value !== value) {
     activeCategory.value = "All"
   }
-  activeStars.value = value
+  activeStars.value = Number(value)
+}
+
+const setCategory = (cat: string) => {
+  activeCategory.value = cat
+}
+
+const isStarActive = (value: number) => {
+  return Number(activeStars.value) === Number(value)
 }
 
 const starLevels = [
   { value: 0, label: "All Stars" },
-  { value: 5, label: "5 Star" },
-  { value: 4, label: "4 Star" },
+  { value: 2, label: "2 Star" },
   { value: 3, label: "3 Star" },
-  { value: 2, label: "2 Star" }
+  { value: 4, label: "4 Star" },
+  { value: 5, label: "5 Star" }
 ]
 
 const categories = computed(() => {
@@ -139,19 +166,28 @@ const categories = computed(() => {
 
 const filteredHotels = computed(() => {
   const query = searchQuery.value.trim().toLowerCase()
-  let byCategory =
-    activeCategory.value === "All"
-      ? availableHotels.value
-      : availableHotels.value.filter((h) => h.type === activeCategory.value)
-  if (activeStars.value !== 0) {
-    byCategory = byCategory.filter((h) => h.stars === activeStars.value)
+  const selectedStars = Number(activeStars.value)
+  const selectedCategory = activeCategory.value
+
+  let result = availableHotels.value
+
+  if (selectedCategory !== "All") {
+    result = result.filter((h) => h.type === selectedCategory)
   }
-  if (!query) return byCategory
-  return byCategory.filter(
-    (h) =>
-      h.name.toLowerCase().includes(query) ||
-      h.location.toLowerCase().includes(query)
-  )
+
+  if (selectedStars !== 0) {
+    result = result.filter((h) => Number(h.stars) === selectedStars)
+  }
+
+  if (query) {
+    result = result.filter(
+      (h) =>
+        h.name.toLowerCase().includes(query) ||
+        h.location.toLowerCase().includes(query)
+    )
+  }
+
+  return result
 })
 
 const formatDate = (date: string) => {

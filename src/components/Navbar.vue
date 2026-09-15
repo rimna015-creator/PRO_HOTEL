@@ -1,7 +1,7 @@
 <template>
   <nav class="fixed top-0 left-0 z-40 w-full overflow-hidden bg-blue-600 shadow-md">
     
-    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-4 lg:px-2">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-4 lg:px-2 ">
 
       <!-- Logo -->
       <RouterLink
@@ -13,12 +13,12 @@
 
 
       <!-- Desktop Menu -->
-      <div class="hidden items-center gap-8 md:flex">
+      <div class="hidden items-center gap-1 lg:flex xl:gap-5">
 
         <RouterLink
           to="/"
 
-          class="font-medium text-white transition hover:scale-110   rounded-lg px-4 py-2 focus:text-black"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
         >
           {{ t("Home") }}
         </RouterLink>
@@ -27,7 +27,7 @@
           to="/hotel"
           active-class=""
           exact-active-class="text-black"
-          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
         >
           {{ t("Hotel") }}
         </RouterLink>
@@ -35,7 +35,7 @@
         <RouterLink
           to="/explore"
           active-class="text-black"
-          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
         >
           {{ t("Explore") }}
         </RouterLink>
@@ -43,7 +43,7 @@
         <RouterLink
           to="/promotion"
           active-class="text-black"
-          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
         >
           {{ t("Promotion") }}
         </RouterLink>
@@ -51,7 +51,7 @@
         <RouterLink
           to="/my-booking"
           active-class="text-black"
-          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
         >
           {{ t("My Booking") }}
         </RouterLink>
@@ -59,7 +59,7 @@
         <RouterLink
           to="/about"
           active-class="text-black"
-          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
         >
           {{ t("About Us") }}
         </RouterLink>
@@ -67,7 +67,7 @@
         <RouterLink
           to="/contact"
           active-class="text-black"
-          class="font-medium text-white transition hover:scale-110 rounded-lg px-4 py-2 focus:text-black"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
         >
           {{ t("Contact Us") }}
         </RouterLink>
@@ -80,7 +80,7 @@
         <!-- Language Toggle -->
         <button
           @click="toggleLocale"
-          class="flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-2 text-sm font-medium text-white transition hover:bg-white/20"
+          class="flex items-center gap-1 rounded-full bg-white/10 px-3 py-2 text-sm font-medium text-white transition hover:bg-white/20"
           :title="t('Khmer')"
         >
           <i class="bi bi-globe2"></i>
@@ -90,7 +90,7 @@
         <RouterLink
           to="/my-account"
           active-class="bg-blue-100 ring-2 ring-blue-300"
-          class="hidden items-center rounded-full bg-white px-4 py-2 font-medium text-blue-800 shadow-sm transition hover:scale-105 md:flex"
+          class="hidden items-center rounded-full bg-white px-4 py-2 font-medium text-blue-800 shadow-sm transition hover:scale-105 lg:flex"
         >
           {{ displayName }}
         </RouterLink>
@@ -99,7 +99,7 @@
       <!-- Mobile Menu Button -->
       <button
         @click="isMenuOpen = !isMenuOpen"
-        class="rounded-lg p-2 text-white hover:bg-blue-700 md:hidden"
+        class="rounded-lg p-2 text-white hover:bg-blue-700 lg:hidden"
         aria-label="Toggle menu"
       >
         <svg
@@ -150,7 +150,7 @@
     >
     <div
       v-if="isMenuOpen"
-      class="border-t border-blue-200 bg-white md:hidden p-2 "
+      class="border-t border-blue-200 bg-white p-2 lg:hidden"
     >
       <div class="flex flex-col ">
 
@@ -244,12 +244,27 @@
 
 
 <script setup lang="ts">
-import { ref, computed } from "vue"
+import { ref, computed, onMounted, onUnmounted, watch } from "vue"
+import { useRoute } from "vue-router"
 import Logo from "./Logo.vue"
 import { currentUser } from "../store/user"
 import { locale, toggleLocale, t } from "../i18n"
 
 const isMenuOpen = ref(false)
+const route = useRoute()
+
+watch(() => route.fullPath, () => {
+  isMenuOpen.value = false
+})
+
+const handleResize = () => {
+  if (window.innerWidth >= 1024) {
+    isMenuOpen.value = false
+  }
+}
+
+onMounted(() => window.addEventListener("resize", handleResize))
+onUnmounted(() => window.removeEventListener("resize", handleResize))
 
 const displayName = computed(() => {
   if (!currentUser.value) return t("My Account")

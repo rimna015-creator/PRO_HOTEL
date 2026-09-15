@@ -64,29 +64,6 @@ export const promotions: Promotion[] = [
     location: "Siem Reap"
   },
   {
-    id: 3,
-    hotelId: 3,
-    hotelName: "Happy Family Homestay",
-    festival: "Pchum Ben",
-    title: "Pchum Ben Ancestors' Day Package",
-    description:
-      "Experience the deeply spiritual Pchum Ben festival with a warm family homestay. Join locals in morning offerings at nearby temples and learn about Khmer traditions.",
-    normalPrice: 25,
-    packagePrice: 19,
-    discount: 24,
-    availableFrom: "2026-10-07",
-    availableTo: "2026-10-10",
-    durationNights: 4,
-    includes: [
-      "Home-cooked Khmer meals",
-      "Temple offering tour",
-      "Cooking class",
-      "Free bicycle rental"
-    ],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjC_6mmixCKNDKdjuVDG5Og0Gehfm6cVfKO_PkArtMQXry7Da99NjwNYo&s=10",
-    location: "Siem Reap"
-  },
-  {
     id: 4,
     hotelId: 5,
     hotelName: "Park Hyatt Siem Reap",

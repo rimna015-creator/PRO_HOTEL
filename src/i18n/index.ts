@@ -57,11 +57,6 @@ const km: Record<string, string> = {
   "Top places to discover in Siem Reap":
     "កន្លែងទាក់ទាញដែលអ្នកគួរមកស្វែងយល់នៅសៀមរាប",
   "View All Places": "មើលកន្លែងទាំងអស់",
-  "All Stars": "តារាទាំងអស់",
-  "5 Star": "5 តារា",
-  "4 Star": "4 តារា",
-  "3 Star": "3 តារា",
-  "2 Star": "2 តារា",
   "Why Book With Us?": "ហេតុអ្វីត្រូវកក់ជាមួយយើង?",
   "Everything you need for a seamless trip to Siem Reap":
     "អ្វីគ្រប់យ៉ាងដែលអ្នកត្រូវការសម្រាប់ដំណើរកម្សាន្តដ៏រលូនទៅសៀមរាប",
@@ -133,6 +128,7 @@ const km: Record<string, string> = {
   "photo": "រូបថត",
   "Facilities": "បរិក្ខារ",
   "Services": "សេវាកម្ម",
+  "Furniture in the Room": "គ្រឿងសង្ហារឹមក្នុងបន្ទប់",
   "Room Types": "ប្រភេទបន្ទប់",
   "Up to": "ភ្ញៀវរហូតដល់",
   "persons": "នាក់",
