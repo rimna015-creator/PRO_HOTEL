@@ -216,7 +216,7 @@ name: "Steung Siemreap Thmey Hotel",
     price: 65,
     rating: 4.4,
     reviewer: 145,
-    image: "https://picsum.photos/seed/angkorbc-hotel22/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnxMfUGJTEyxmPiNf3zmuYXhP_dzQwVL92tSa2rhklKw&s=10",
     bookings: []
   },
   {
@@ -264,7 +264,7 @@ name: "Pavillon d'Orient Villa",
     price: 95,
     rating: 4.7,
     reviewer: 210,
-    image: "https://picsum.photos/seed/angkorbc-hotel27/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFicJy2sOWyRzV1tIt6XxM4cB5dae7jLP5PcV3ReP-Qw&s=10",
     bookings: []
   },
   {
@@ -276,7 +276,7 @@ name: "Pavillon d'Orient Villa",
     price: 15,
     rating: 4.3,
     reviewer: 95,
-    image: "https://picsum.photos/seed/angkorbc-hotel28/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThbXaGKNBeZKwu8KvX2Yb4uYv3tBUmsHyS3JBSuELXLg&s=10",
     bookings: []
   },
   {
@@ -288,7 +288,7 @@ name: "Pavillon d'Orient Villa",
     price: 55,
     rating: 4.5,
     reviewer: 130,
-    image: "https://picsum.photos/seed/angkorbc-hotel29/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4UVU3vlRC7MvnDyLre7egg3CMkPx_CQ7F65I6nZA6z8Vcp2Ujiicq7wE&s=10",
     bookings: []
   },
   {
@@ -300,7 +300,7 @@ name: "Pavillon d'Orient Villa",
     price: 110,
     rating: 4.8,
     reviewer: 240,
-    image: "https://picsum.photos/seed/angkorbc-hotel30/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP44aMot5pWYEgLie1ZLgLLCAqKkKgiZ_HSBmfLN742g&s=10",
     bookings: []
   },
   {
@@ -312,7 +312,7 @@ name: "Pavillon d'Orient Villa",
     price: 85,
     rating: 4.6,
     reviewer: 115,
-    image: "https://picsum.photos/seed/angkorbc-hotel31/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCdvc6WP7tcBzJkRdNdE_mbssPkUSraCcDxjFUbDJzIA&s=10",
     bookings: []
   },
   {
@@ -324,7 +324,7 @@ name: "Pavillon d'Orient Villa",
     price: 65,
     rating: 4.5,
     reviewer: 100,
-    image: "https://picsum.photos/seed/angkorbc-hotel32/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf8HDTenn_0NHAlu5qYRiZAKIadVQL9rPe9HN3Kw38gQ&s",
     bookings: []
   },
   {
@@ -336,7 +336,7 @@ name: "Pavillon d'Orient Villa",
     price: 50,
     rating: 4.4,
     reviewer: 185,
-    image: "https://picsum.photos/seed/angkorbc-hotel33/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9YDh8rp59ONFESEXb-gKtSDrOyEFfyA5mfBFOtckUww&s=10",
     bookings: []
   },
   {
@@ -348,7 +348,7 @@ name: "Pavillon d'Orient Villa",
     price: 70,
     rating: 4.6,
     reviewer: 120,
-    image: "https://picsum.photos/seed/angkorbc-hotel34/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTn8ISqWb1wAPeKfj_NqUCd9NL_GfS9vsZNOFtnbnd-Q&s=10",
     bookings: []
   },
   {
@@ -360,7 +360,7 @@ name: "Pavillon d'Orient Villa",
     price: 120,
     rating: 4.8,
     reviewer: 155,
-    image: "https://picsum.photos/seed/angkorbc-hotel35/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjnQe9Dbn0PmuABXW9EkG6BHnPxC5aoVgBzw9Fc0gbYg&s=10",
     bookings: []
   },
   {
@@ -372,7 +372,7 @@ name: "Pavillon d'Orient Villa",
     price: 40,
     rating: 4.3,
     reviewer: 90,
-    image: "https://picsum.photos/seed/angkorbc-hotel36/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStZVs8PGM9NW5UCS0Z5EdYNAwVheImkkjl0jzCIe17vA&s=10",
     bookings: []
   },
   {
@@ -384,7 +384,7 @@ name: "Pavillon d'Orient Villa",
     price: 135,
     rating: 4.9,
     reviewer: 175,
-    image: "https://picsum.photos/seed/angkorbc-hotel37/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPm2ITckZdxmlQ1mz8adwdZrR8vk8L6BHk-nvCdnIJvQ&s=10",
     bookings: []
   },
   {
@@ -396,7 +396,7 @@ name: "Pavillon d'Orient Villa",
     price: 75,
     rating: 4.6,
     reviewer: 105,
-    image: "https://picsum.photos/seed/angkorbc-hotel38/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6nDHiNixgQdGxIsQvGe3-gh5XJ4OeFNkPFCxqo52sSA&s",
     bookings: []
   },
   {
@@ -408,7 +408,7 @@ name: "Pavillon d'Orient Villa",
     price: 60,
     rating: 4.5,
     reviewer: 140,
-    image: "https://picsum.photos/seed/angkorbc-hotel39/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhFNfDW41SyXGRKgRAyFihMC_pBW8NfdRalpJPFfZBFw&s",
     bookings: []
   },
   {
@@ -420,7 +420,7 @@ name: "Pavillon d'Orient Villa",
     price: 55,
     rating: 4.4,
     reviewer: 110,
-    image: "https://picsum.photos/seed/angkorbc-hotel40/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4UDxaRvRNQxMYETYtjEs-ZUXB2fnR-kG7Oab2nshp0Q&s=10",
     bookings: []
   }
 ]

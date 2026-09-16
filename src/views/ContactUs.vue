@@ -7,7 +7,7 @@
       <p class="mt-3 text-blue-500">{{ t("We'd love to hear from you") }}</p>
     </section>
 
-    <div class="mx-40 mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2 ">
+    <div class="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
 
       <!-- Contact Info -->
       <div class="space-y-6">

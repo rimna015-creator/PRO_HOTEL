@@ -1572,11 +1572,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 15,
     reviewer: 95,
     rating: 4.3,
-    image: "https://picsum.photos/seed/angkorbc-hotel28/900/600",
+    image: "",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel28-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel28-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel28-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThbXaGKNBeZKwu8KvX2Yb4uYv3tBUmsHyS3JBSuELXLg&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRda7MSJcA1bDiSe_NCcJHYvql7U9yYW7LGJce1-Jqg3A&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO-GqTxBrZ37wsK9ly3rIsh_aQjnuZrNN7KOhnq22nZg&s=10"
     ],
     description:
       "Aborest Tropical Hostel puts you in the heart of Siem Reap's backpacker scene. Set in a garden of tropical plants, it offers comfy dorms, a lively common lounge, bicycle hire, and easy walks to Pub Street and the Old Market.",
@@ -1640,11 +1640,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 55,
     reviewer: 130,
     rating: 4.5,
-    image: "https://picsum.photos/seed/angkorbc-hotel29/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4UVU3vlRC7MvnDyLre7egg3CMkPx_CQ7F65I6nZA6z8Vcp2Ujiicq7wE&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel29-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel29-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel29-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlR-vXldkrIrw1z69LiPfnFurREyWQBJ_9T4wwnSmYcw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpgcuGZ_trTqYf0pKBGcdiZ5WRk5pSi8r94UyOeZo4Dw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR25RHLX5o07b-PVfQOo5NGiF9Evjk2J3FsJuJeoV_ITg&s=10"
     ],
     description:
       "Indochine Hotel Group SiemReap blends classic Indochine architecture with modern comforts. Guests enjoy a grand central pool, an acclaimed Khmer restaurant, and warm, professional service within easy reach of the Angkor temples.",
@@ -1719,11 +1719,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 110,
     reviewer: 240,
     rating: 4.8,
-    image: "https://picsum.photos/seed/angkorbc-hotel30/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP44aMot5pWYEgLie1ZLgLLCAqKkKgiZ_HSBmfLN742g&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel30-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel30-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel30-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJW-RGOrfP9LSPar6IQLJsYVUYlW3xh3SOKz1Zml4SPw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbd4KmphfyqpHSM0TR8aylmUH3b4UPCweuwF7q3VyeLw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu3li_XJKw95H-S9e2NYlx4zUMLe743LZ6HNV0-bNiQw&s"
     ],
     description:
       "Lotus Blanc Hotel & Resort is an elegant five-star hideaway surrounded by lotus ponds and lush tropical gardens. The resort features a magnificent infinity pool, world-class spa, and fine dining inspired by Khmer and French cuisine.",
@@ -1801,11 +1801,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 85,
     reviewer: 115,
     rating: 4.6,
-    image: "https://picsum.photos/seed/angkorbc-hotel31/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCdvc6WP7tcBzJkRdNdE_mbssPkUSraCcDxjFUbDJzIA&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel31-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel31-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel31-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKu8m7Nc7R6JYtrITmn3S78rfGCjxnOp31CgF2jNZpPQ&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrlQtw6cnq0u4esQ4FYqJLgGSQSpZDbspdZeziPTIbIQ&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cvOfRxrIZJhrhiwtSDXYosDO4hWBCX7Ep3YSc7x7hA&s"
     ],
     description:
       "Angkor Mansion & Residence offers serviced villa-style accommodation along the Siem Reap river. With spacious residences, a serene pool, and a home-away-from-home atmosphere, it is ideal for families and longer stays.",
@@ -1879,11 +1879,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 65,
     reviewer: 100,
     rating: 4.5,
-    image: "https://picsum.photos/seed/angkorbc-hotel32/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf8HDTenn_0NHAlu5qYRiZAKIadVQL9rPe9HN3Kw38gQ&s",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel32-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel32-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel32-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNrj1A1ZclEBANv-QvHrjS-eP096TkdUlOdHWA7sxC-g&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4UyKPncshoxN2Jrh_9IJuPR5Yxs-807or0h872efO0A&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGmw1nF6zmkzEBFC8YVq2oSgbAzgfytz_-KD3B121t8g&s"
     ],
     description:
       "RITHY RINE Angkor Residence is a boutique sanctuary blending Khmer artistry with boutique comfort. Set among frangipani trees, it features an intimate pool, a spa, and personalized hospitality a short tuk-tuk ride from the temples.",
@@ -1950,11 +1950,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 50,
     reviewer: 185,
     rating: 4.4,
-    image: "https://picsum.photos/seed/angkorbc-hotel33/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9YDh8rp59ONFESEXb-gKtSDrOyEFfyA5mfBFOtckUww&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel33-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel33-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel33-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhk5sdqMjsX-sbDSuxmUjXVjEBhjfYZDaKfr5yBFXENQ&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQACihcdhAqbypRRYeLfciK1eAMuMrozwyT0Uo8XNM88g&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR83YrxFMpTzS72QxKbsO7nieer4zeOFpFzV7McfsgGQw&s=10"
     ],
     description:
       "Lub d Experience blends the energy of a hostel with the comfort of a boutique hotel. Steps from the night markets, it features a vibrant pool, social bar, and design-forward rooms beloved by young travelers.",
@@ -2027,11 +2027,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 70,
     reviewer: 120,
     rating: 4.6,
-    image: "https://picsum.photos/seed/angkorbc-hotel34/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTn8ISqWb1wAPeKfj_NqUCd9NL_GfS9vsZNOFtnbnd-Q&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel34-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel34-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel34-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmMDuHYPf-oz1lOvE4eQ4wgjfCBAcj-vBO_SW5L9Itow&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLDMMENfBcmGUDm3rWqe_jSQ04rpbaIWwGZImdMf-CLA&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvf7jk1nssx5sIH4Jb7FMAyuhSi8ujYEm4RBSHcI3s6A&s=10"
     ],
     description:
       "Hotel Atelier Siem Reap is a design-led boutique hotel celebrating the art and craft of Cambodia. Curated artworks, a serene pool courtyard, and creative Khmer dining make it a gallery-like escape in the city center.",
@@ -2105,11 +2105,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 120,
     reviewer: 155,
     rating: 4.8,
-    image: "https://picsum.photos/seed/angkorbc-hotel35/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjnQe9Dbn0PmuABXW9EkG6BHnPxC5aoVgBzw9Fc0gbYg&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel35-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel35-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel35-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAmQANu2oDN2lLj19XPOTNtkGbg2F4CBWndWY9P6F6wQ&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQnXmy0vAcoIJM7h-otJ0VZmtl5Ft_yM-CywgDDum4Ug&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqbDWRzGdCxCamLWjXuMm1FWPQwnQZwxTeoP272auUxA&s=10"
     ],
     description:
       "Bronam Residence & Spa is an intimate five-star hideaway defined by Khmer-inspired architecture and rejuvenating spa rituals. Every residence is a serene retreat, steps from the Angkor Night Market and steps away from total calm.",
@@ -2186,11 +2186,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 40,
     reviewer: 90,
     rating: 4.3,
-    image: "https://picsum.photos/seed/angkorbc-hotel36/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStZVs8PGM9NW5UCS0Z5EdYNAwVheImkkjl0jzCIe17vA&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel36-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel36-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel36-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvZhyWoOr_Ess8FGxkZSeejMQHtyeZfK_PQz4RnulLKg&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX1qyHK7L0xPLnE4iz_4Dgn0kTUB49CASfLDZXXDSVfw&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkgH7QcV8b3X5nXgdv94rmvG6IyWvUEGgWaaLkAWaLxw&s=10"
     ],
     description:
       "Twizt.hotel brings playful, quirky design to budget-friendly stays in Siem Reap. Colorful rooms, a lively rooftop bar, and a friendly social atmosphere make it a favorite for budget-conscious travelers who love style.",
@@ -2255,11 +2255,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 135,
     reviewer: 175,
     rating: 4.9,
-    image: "https://picsum.photos/seed/angkorbc-hotel37/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPm2ITckZdxmlQ1mz8adwdZrR8vk8L6BHk-nvCdnIJvQ&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel37-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel37-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel37-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRohZ5-EFZtfflyvk6YtKf5zvWrVxjgepMhLSSnjbIy1A&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjYI6jbLa2M5ZsekBb8P3k8SjeRwgeayExexR9mAaMcA&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK3XWCsNkqOjb35M1hA2URixiDQfgUB1UloAwo9SkNDQ&s=10"
     ],
     description:
       "The Palace Indochine Hotel is a majestic colonial-era palace reimagined as a luxurious five-star hotel. Gilded interiors, sweeping gardens, an ornate pool, and regal service capture the grandeur of classic Indochine.",
@@ -2337,11 +2337,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 75,
     reviewer: 105,
     rating: 4.6,
-    image: "https://picsum.photos/seed/angkorbc-hotel38/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6nDHiNixgQdGxIsQvGe3-gh5XJ4OeFNkPFCxqo52sSA&s",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel38-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel38-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel38-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7bLsuyqMWe4r4GzDVBLo3oBGzYTnE6rdQ4LLeO1EjJg&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoTrr35JzO5uc3IpBF26ne-vzANL5X04f6iRREuBDL2Q&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoHCw3OBgwAh3_JgQG7ept06RklVkkU_eREVwh9MM--g&s=10"
     ],
     description:
       "Mohasal Angkor Boutique is a serene boutique retreat with a distinctive canopy pool, lush gardens, and a spa. Its intimate scale and personal service create a peaceful base on the edge of Siem Reap's vibrant center.",
@@ -2415,11 +2415,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 60,
     reviewer: 140,
     rating: 4.5,
-    image: "https://picsum.photos/seed/angkorbc-hotel39/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhFNfDW41SyXGRKgRAyFihMC_pBW8NfdRalpJPFfZBFw&s",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel39-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel39-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel39-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV-YWLNbKIF7Y9iuhNIXyMdXE2xRZnDFhBJqos7Vf1Q&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8nj3nB9fFcTe-jRMZETjl_qv4sBatLF4-IvchQ9Pbyg&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcNGhkKw6Yy0VSds0Y4GbLdMy7BZpjUyWnaNTY71CtbA&s"
     ],
     description:
       "Angkor Channary Hotel combines friendly Khmer hospitality with comfortable, well-appointed rooms near Wat Bo. A refreshing pool, Khmer restaurant, and easy access to the temples make it a dependable city favorite.",
@@ -2493,11 +2493,11 @@ export const hotelDetails: HotelDetail[] = [
     price: 55,
     reviewer: 110,
     rating: 4.4,
-    image: "https://picsum.photos/seed/angkorbc-hotel40/900/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4UDxaRvRNQxMYETYtjEs-ZUXB2fnR-kG7Oab2nshp0Q&s=10",
     gallery: [
-      "https://picsum.photos/seed/angkorbc-hotel40-a/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel40-b/900/600",
-      "https://picsum.photos/seed/angkorbc-hotel40-c/900/600"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWHVKNXn17q789ufE8wHJN7--ZB5ouWVKmgeEPJC0avQ&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdVrKarxegzdtyUJTqsc2o1mH5KECs7X9tXpA3fp43bQ&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL7_DSMf48i9S80hBMsB7YWcYd3CeQYoln61QycbYYpA&s=10"
     ],
     description:
       "Asanak D'Angkor Boutique is a tranquil hideaway blending rustic Khmer design with modern comfort. Wooden accents, a leafy pool area, and heartfelt hospitality offer an authentic Angkor experience at a friendly price.",
