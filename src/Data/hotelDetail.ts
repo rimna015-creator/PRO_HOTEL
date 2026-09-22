@@ -659,7 +659,7 @@ export const hotelDetails: HotelDetail[] = [
     price: 140,
     reviewer: 260,
     rating: 4.8,
-    image: "vhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE0oh6E1y_dKZ49OQY0Tvnvym8yFColawP8R81vGTbfA&s",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmELYcy1mzY5XJmx4KQoKcZXJ1wyU1XnQx3uU3EfTbbQ&s=10",
     gallery: [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRunIZoVlfOwygrxIbJ4OGufbL16dtfN4M0qAxKSkNJeg&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmNDUuxP1tEg6qrQ6QpJIQMpFfcJIjyn8idj-XGhrjw&s",
@@ -1572,7 +1572,7 @@ export const hotelDetails: HotelDetail[] = [
     price: 15,
     reviewer: 95,
     rating: 4.3,
-    image: "",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGGOP3PL5DKv48tRqjP2Q2JT3NzxqwbeLiVbQOw05NQw&s=10",
     gallery: [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThbXaGKNBeZKwu8KvX2Yb4uYv3tBUmsHyS3JBSuELXLg&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRda7MSJcA1bDiSe_NCcJHYvql7U9yYW7LGJce1-Jqg3A&s",
