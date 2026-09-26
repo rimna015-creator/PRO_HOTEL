@@ -251,6 +251,7 @@ import { useRoute } from "vue-router"
 import { hotelDetails } from "../Data/hotelDetail"
 import { addBooking, type BookingRecord, type PaymentInfo } from "../store/booking"
 import { currentUser } from "../store/user"
+import { openLogin } from "../store/ui"
 import PaymentSection from "../components/PaymentSection.vue"
 import { t } from "../i18n"
 
@@ -357,6 +358,11 @@ const formatDate = (date: string) => {
 }
 
 const validateGuestInfo = (): boolean => {
+  if (!currentUser.value) {
+    alert(t("Please sign in to save your booking"))
+    openLogin()
+    return false
+  }
   if (!fullName.value || !email.value || !phone.value) {
     alert(t("Please fill in your name, email and phone number"))
     return false
@@ -385,6 +391,7 @@ const onPaymentSuccess = (payment: PaymentInfo) => {
     roomType: roomType.value,
     fullName: fullName.value,
     email: email.value,
+    ownerEmail: currentUser.value!.email,
     phone: phone.value,
     checkIn: checkIn.value,
     checkOut: checkOut.value,
@@ -399,7 +406,12 @@ const onPaymentSuccess = (payment: PaymentInfo) => {
     cardLast4: payment.cardLast4
   }
 
-  addBooking(booking)
+  if (!addBooking(booking)) {
+    alert(t("Please sign in to save your booking"))
+    openLogin()
+    return
+  }
+
   localStorage.removeItem(DRAFT_KEY)
   lastBooking.value = booking
   bookingConfirmed.value = true

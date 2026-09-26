@@ -335,13 +335,7 @@ const initials = computed(() =>
     .toUpperCase()
 )
 
-const userBookings = computed(() =>
-  currentUser.value
-    ? bookings.value.filter(
-        (b) => b.email === currentUser.value?.email
-      )
-    : []
-)
+const userBookings = computed(() => bookings.value)
 
 const totalSpent = computed(() =>
   userBookings.value

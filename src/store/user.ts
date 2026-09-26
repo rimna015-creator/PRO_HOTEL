@@ -10,6 +10,8 @@ export interface UserAccount {
 
 const STORAGE_KEY = "angkorbc_current_user"
 
+export const accountKey = (email: string): string => email.trim().toLowerCase()
+
 const readSavedUser = (): UserAccount | null => {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)

@@ -176,6 +176,8 @@ const km: Record<string, string> = {
   "Check-out date must be after the check-in date":
     "ថ្ងៃចេញត្រូវតែក្រោយថ្ងៃចូល",
   "Please select a valid room type": "សូមជ្រើសរើសប្រភេទបន្ទប់ដែលត្រឹមត្រូវ",
+  "Please sign in to save your booking":
+    "សូមចូលគណនីដើម្បីរក្សាទុកការកកឋិនរបស់អ្នក",
 
   // ---- MyAccount ----
   "Member since": "ជាសមាជិកតាំងពី",
@@ -198,6 +200,8 @@ const km: Record<string, string> = {
     "សូមចូលគណនីដើម្បីមើលគណនី និងប្រវត្តិនៃការកក់របស់អ្នក។",
   "Sign In": "ចូលគណនី",
   "Create an Account": "បង្កើតគណនី",
+  "Sign in to view your bookings.":
+    "សូមចូលគណនីដើម្បីមើលការកក់របស់អ្នក។",
   "Your name cannot be empty": "ឈ្មោះរបស់អ្នកមិនអាចទទេទេ",
   "Please enter a valid email address": "សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែលដែលត្រឹមត្រូវ",
   "Your profile has been updated successfully!":

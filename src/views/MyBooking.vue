@@ -4,13 +4,47 @@
     <h1 class="text-center text-3xl font-bold text-blue-900">
       {{ t("My Bookings") }}
     </h1>
-    <p class="mt-2 text-center text-sm text-blue-600">
+    <p v-if="isLoggedIn" class="mt-2 text-center text-sm text-blue-600">
       {{ t("bookings in total") }} {{ bookings.length }}
     </p>
 
+    <!-- Not Logged In -->
+    <div v-if="!isLoggedIn" class="mx-auto mt-8 max-w-md">
+      <div class="rounded-xl bg-white p-8 text-center shadow-sm">
+
+        <div
+          class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100"
+        >
+          <i class="bi bi-person text-3xl text-blue-600"></i>
+        </div>
+
+        <h2 class="mt-4 text-xl font-bold text-blue-900">
+          {{ t("You are not signed in") }}
+        </h2>
+
+        <p class="mt-2 text-sm text-blue-500">
+          {{ t("Sign in to view your bookings.") }}
+        </p>
+
+        <button
+          @click="openLogin"
+          class="mt-5 w-full rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700"
+        >
+          {{ t("Sign In") }}
+        </button>
+
+        <button
+          @click="openCreateAccount"
+          class="mt-2 w-full rounded-lg bg-blue-100 px-5 py-2.5 text-sm font-semibold text-blue-700 transition hover:bg-blue-200"
+        >
+          {{ t("Create an Account") }}
+        </button>
+      </div>
+    </div>
+
     <!-- Empty State -->
     <div
-      v-if="!bookings.length"
+      v-else-if="!bookings.length"
       class="flex flex-col items-center justify-center py-20 text-center"
     >
       <i class="bi bi-calendar-x text-6xl text-blue-400"></i>
@@ -135,6 +169,8 @@
 
 <script setup lang="ts">
 import { bookings, cancelBooking } from "../store/booking"
+import { isLoggedIn } from "../store/user"
+import { openLogin, openCreateAccount } from "../store/ui"
 import { t } from "../i18n"
 
 const handleCancel = (id: string) => {
