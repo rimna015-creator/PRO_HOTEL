@@ -17,57 +17,58 @@
 
         <RouterLink
           to="/"
-
-          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
+          active-class=""
+          :exact-active-class="desktopActive"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110  xl:px-3"
         >
           {{ t("Home") }}
         </RouterLink>
 
         <RouterLink
           to="/hotel"
-          active-class=""
-          exact-active-class="text-black"
-          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
+          :active-class="desktopActive"
+          exact-active-class=""
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110  xl:px-3"
         >
           {{ t("Hotel") }}
         </RouterLink>
 
         <RouterLink
           to="/explore"
-          active-class="text-black"
-          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
+          :active-class="desktopActive"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110  xl:px-3"
         >
           {{ t("Explore") }}
         </RouterLink>
 
         <RouterLink
           to="/promotion"
-          active-class="text-black"
-          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
+          :active-class="desktopActive"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110  xl:px-3"
         >
           {{ t("Promotion") }}
         </RouterLink>
 
         <RouterLink
           to="/my-booking"
-          active-class="text-black"
-          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
+          :active-class="desktopActive"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110  xl:px-3"
         >
           {{ t("My Booking") }}
         </RouterLink>
 
         <RouterLink
           to="/about"
-          active-class="text-black"
-          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
+          :active-class="desktopActive"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110  xl:px-3"
         >
           {{ t("About Us") }}
         </RouterLink>
 
         <RouterLink
           to="/contact"
-          active-class="text-black"
-          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110 focus:text-black xl:px-3"
+          :active-class="desktopActive"
+          class="rounded-lg px-2 py-2 font-medium text-white transition hover:scale-110  xl:px-3"
         >
           {{ t("Contact Us") }}
         </RouterLink>
@@ -89,7 +90,7 @@
 
         <RouterLink
           to="/my-account"
-          active-class="bg-blue-100 ring-2 ring-blue-300"
+          active-class="ring-2 ring-blue-300"
           class="hidden items-center rounded-full bg-white px-4 py-2 font-medium text-blue-800 shadow-sm transition hover:scale-105 lg:flex"
         >
           {{ displayName }}
@@ -157,7 +158,8 @@
         <RouterLink
           to="/"
           @click="isMenuOpen = false" 
-          exact-active-class="bg-blue-200"
+          active-class=""
+          :exact-active-class="mobileActive"
           class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105 hover:border-blue-300 "
         >
           {{ t("Home") }}
@@ -166,8 +168,8 @@
         <RouterLink
           to="/hotel"
           @click="isMenuOpen = false"
-          active-class=""
-          exact-active-class="bg-blue-200"
+          :active-class="mobileActive"
+          exact-active-class=""
           class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ t("Hotel") }}
@@ -176,7 +178,7 @@
         <RouterLink
           to="/explore"
           @click="isMenuOpen = false"
-          active-class="bg-blue-200"
+          :active-class="mobileActive"
           class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ t("Explore") }}
@@ -185,7 +187,7 @@
         <RouterLink
           to="/promotion"
           @click="isMenuOpen = false"
-          active-class="bg-blue-200 "
+          :active-class="mobileActive"
           class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ t("Promotion") }}
@@ -194,7 +196,7 @@
         <RouterLink
           to="/my-booking"
           @click="isMenuOpen = false"
-          active-class="bg-blue-200 "
+          :active-class="mobileActive"
           class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ t("My Booking") }}
@@ -203,7 +205,7 @@
         <RouterLink
           to="/about"
           @click="isMenuOpen = false"
-          active-class="bg-blue-200 "
+          :active-class="mobileActive"
           class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ t("About Us") }}
@@ -212,7 +214,7 @@
         <RouterLink
           to="/contact"
           @click="isMenuOpen = false"
-          active-class="bg-blue-200 "
+          :active-class="mobileActive"
           class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ t("Contact Us") }}
@@ -221,7 +223,7 @@
         <RouterLink
           to="/my-account"
           @click="isMenuOpen = false"
-          active-class="bg-blue-200 "
+          :active-class="mobileActive"
           class="m-1 px-4 py-3 rounded-2xl font-medium text-blue-800 hover:bg-blue-200 active:scale-105"
         >
           {{ displayName }}
@@ -252,6 +254,9 @@ import { locale, toggleLocale, t } from "../i18n"
 
 const isMenuOpen = ref(false)
 const route = useRoute()
+
+const desktopActive = "underline text-black! decoration-2 underline-offset-4"
+const mobileActive = "bg-blue-200"
 
 watch(() => route.fullPath, () => {
   isMenuOpen.value = false

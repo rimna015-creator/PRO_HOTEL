@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-blue-50 px-6 pb-16 pt-24">
+  <div class=" bg-blue-50 px-6 pb-10 pt-24">
 
     <h1 class="text-center text-3xl font-bold text-blue-900">
       {{ t("My Bookings") }}
@@ -29,7 +29,7 @@
     </div>
 
     <!-- Booking List -->
-    <div v-else class="mx-auto mt-8 max-w-7xl space-y-5">
+    <div v-else class="mx-auto mt-8 max-w-6xl space-y-5">
       <div
         v-for="booking in bookings"
         :key="booking.id"
