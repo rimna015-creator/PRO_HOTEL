@@ -35,7 +35,7 @@
     </div>
 
     <!-- Floating Search Bar Card -->
-    <div class="relative z-10 mx-auto -mt-5 max-w-5xl px-6">
+    <div class="relative z-10 mx-auto -mt-5 max-w-6xl px-6">
       <div class="rounded-2xl bg-white p-6 shadow-xl ring-1 ring-blue-900/5 sm:p-8">
         <h2 class="mb-6 text-xl font-bold text-blue-900">
           {{ t("Search Available Hotels") }}
@@ -105,7 +105,7 @@
     </div>
 
     <!-- Featured Hotels (Horizontal Carousel / Scroll Container) -->
-    <section class="mx-5 px-6 py-20">
+    <section class="mx-auto max-w-6xl px-6 py-20">
       <div class="mb-8 flex items-end justify-between">
         <div>
           <h2 class="text-3xl font-bold tracking-tight text-blue-900">{{ t("Featured Hotels") }}</h2>
@@ -145,7 +145,7 @@
     </section>
 
     <!-- Special Promotion -->
-    <section class="mx-5 px-6 py-20">
+    <section class="mx-auto max-w-6xl px-6 py-20">
       <div class="mb-8 flex items-end justify-between">
         <div>
           <h2 class="text-3xl font-bold tracking-tight text-blue-900">{{ t("Special Promotion") }}</h2>
@@ -183,7 +183,7 @@
     </section>
 
     <!-- Explore -->
-    <section class="mx-5 px-6 py-20">
+    <section class="mx-auto max-w-6xl px-6 py-20">
       <div class="mb-8 flex items-end justify-between">
         <div>
           <h2 class="text-3xl font-bold tracking-tight text-blue-900">{{ t("Explore") }}</h2>
@@ -222,7 +222,7 @@
 
     <!-- Why Choose Us -->
     <section class="py-20">
-      <div class="mx-5 px-6">
+      <div class="mx-auto max-w-6xl px-6">
         <div class="mb-12 text-center">
           <h2 class="text-3xl font-bold tracking-tight text-blue-900">{{ t("Why Book With Us?") }}</h2>
           <p class="mt-2 text-blue-600">{{ t("Everything you need for a seamless trip to Siem Reap") }}</p>

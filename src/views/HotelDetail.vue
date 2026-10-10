@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-blue-50 pt-20">
 
-    <div v-if="hotel" class="mx-auto max-w-4xl px-6 pb-16">
+    <div v-if="hotel" class="mx-auto max-w-6xl ">
 
       <!-- Back Button -->
       <button

@@ -2,7 +2,7 @@
   <div class="min-h-screen  bg-blue-50 px-6 pb-16 pt-24">
 
     <!-- Hero -->
-    <section class="mx-5 text-center">
+    <section class="mx-auto max-w-4xl text-center">
       <h1 class="text-4xl font-bold text-blue-900">{{ t("Contact Us") }}</h1>
       <p class="mt-3 text-blue-500">{{ t("We'd love to hear from you") }}</p>
     </section>

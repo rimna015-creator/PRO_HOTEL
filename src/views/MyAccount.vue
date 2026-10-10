@@ -5,7 +5,7 @@
     </h1>
 
     <!-- Logged In -->
-    <div v-if="currentUser" class="mx-auto mt-8 max-w-4xl">
+    <div v-if="currentUser" class="mx-auto mt-8 max-w-6xl">
 
       <!-- Account Information -->
       <div class="rounded-xl bg-white p-6 shadow-sm">

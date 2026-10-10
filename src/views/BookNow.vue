@@ -12,7 +12,7 @@
     </div>
 
     <!-- Success Screen -->
-    <div v-else-if="bookingConfirmed && lastBooking" class="mx-auto max-w-2xl">
+    <div v-else-if="bookingConfirmed && lastBooking" class="mx-auto max-w-6xl">
       <div class="rounded-2xl bg-white p-8 text-center shadow-md">
         <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-green-100">
           <i class="bi bi-check-lg text-5xl text-green-600"></i>
@@ -77,7 +77,7 @@
     </div>
 
     <!-- Booking Form -->
-    <div v-else class="mx-auto max-w-3xl">
+    <div v-else class="mx-auto max-w-6xl">
 
       <!-- Back Button -->
       <button
